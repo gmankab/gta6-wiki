@@ -20,7 +20,7 @@ For the test machine and supported configurations, see the [readme](../readme.md
 | Guarded copy-back, RX 6800/Wine | **74.5 → 21.5 ms/MB** across two measured reports per build. The enabled run hit a guest watchdog null write and logged no GPU reset. | Small in-run sample. [FX #1032 report](https://github.com/fxceless/victory-fork/pull/1032#issuecomment-7171498465) |
 | Parallel GPU checksum, RX 6800/Wine | **2.73 → 0.22 ms** average per measured compare list. GPU idle for over 90% of median logged frame in both runs. | Draw counts differed, so the lists establish the comparison. [FX #1014 report](https://github.com/fxceless/victory-fork/pull/1014#issuecomment-7172695962) |
 | `cool_fox` `f4b48ad`, RX 6800/Wine/Wayland | Loading and setup at about **30 FPS**. Breakpoint on the legal terms screen. | Standalone Lavapipe run stopped before any capture. Details in [projects](projects.md). |
-| FX upstream rebase candidate `1c37f0ec` versus canonical `d56316bb` on RX 6800 | Candidate breakpoint at frame **300**; canonical reached frame **2048** in the same smoke configuration. | The faster-moving upstream candidate stayed local. |
+| FX upstream rebase candidate `1c37f0ec` versus canonical `d56316bb` on RX 6800 | The scripted candidate stopped on Navigation Experience by frame **300**. The scripted canonical build reached Finish Setup at frame **2048**. The published build and stock `06702fe8` hit the same exception when tested without input in follow-ups. | Setup results. [Controls](#fxceless-startup-controls) |
 | XCL plus existing Wine compatibility patches, RX 6800 | **27–29 FPS** in interactive setup before legal notices. | Stock build aborted before first presentation. [XCL #867](https://github.com/xcl-dev/xcl/pull/867) · [XCL #1395](https://github.com/xcl-dev/xcl/pull/1395) |
 | AnyXboxX’s pinned Victory, RX 6800/Wine | Series X loading after **3½ min**. Series S reached 3D after about **2½ min**, at **0.1–0.6 FPS** with a black window. | Presentation and renderer telemetry. |
 | KLBF Lab stable `1c3cc06`, RX 6800/Wine/Wayland, Series X and FSR off | Watchdog after **7m 23s**. Intro/watchdog retry ran **9m 04s**, black with **20–48 s/frame**. | Hundreds of pending pipelines. |
@@ -36,6 +36,21 @@ For the test machine and supported configurations, see the [readme](../readme.md
 | Native Series S worker count, Lavapipe | Median submission **2.42 s** with 12 workers and **2.40 s** with 24. | The baseline kept 12. [Series S compositor](https://github.com/spidercraft/VIctory/pull/23) |
 | Local decoded-BC7 cache, Lavapipe, same binary and first 155 s | Four-list submission median **1,972 → 392 ms** across 32 versus 146 samples. Cached run bound its first mesh pipeline at frame **516** after **111 s**. Control ran 155 s without a logged mesh bind. | Latest capture was still illustrated loading. |
 | Native descriptor and XMA sequence, Lavapipe | A 425 s run captured frame **850**. Empty-buffer and XMA variants both reached the illustrated loading screen and hit **460 s** caps. The first instrumented run hit a **305 s** cap before reproducing the descriptor VUID. The **460 s** trace recorded **22 zero-byte CBV calls**, **nine** validation messages and **zero** logged zero-range SRV/UAV calls. | After the null-CBV fix, a matched **460 s** run captured frame **750** with **zero** zero-byte CBV calls and **zero** validation messages. Both runs ended during loading. [Native port](https://github.com/spidercraft/VIctory/pull/27) |
+
+## Fxceless startup controls
+
+These runs used Wine with isolated profiles and the same read-only game directory. The scripted comparison reached different setup pages. In the paired idle runs, the published build and the newest stock Fxceless build hit the same guest breakpoint. The faulting instruction and the saved Windows exception context showed a stream writer asked to copy 1,728 bytes with 80 bytes remaining. The runtime stack put the exception on the title’s main thread. The source of the oversized payload remains unconfirmed.
+
+| Build and configuration | Result |
+|---|---|
+| Stock `06702fe8`, Series S, scripted setup, RADV | Same breakpoint after 41 s. |
+| Stock `06702fe8`, Series S, no input, RADV | Same breakpoint after 24 s with Relay on and after 24 s with Relay off. |
+| Published `d56316bb`, Series S, no input, RADV | Same breakpoint after 23 s. |
+| Stock `06702fe8` with the known checkpoint, RADV | Same breakpoint in Series S and Series X. The Series X run exited after 26 s. The Series S harness was interrupted after recording the exception. |
+| Stock `06702fe8`, Series S, no input or frame captures, RADV | Same breakpoint after 24 s, including the run with intro skipping disabled. |
+| Stock `06702fe8`, Series S, no input, DRI hidden and Lavapipe selected | Same breakpoint after 23 s. The runtime found llvmpipe and failed to create its D3D12 host device. No host draws or dispatches ran. |
+
+The idle results show that the assertion can occur before story loading even without executed GPU work. These runs yielded no gameplay frame-rate comparison.
 
 ## Isolated measurements and build times
 

@@ -211,3 +211,12 @@ tools/build/victory-openworld/xcl-6d051da.3C85eN/ge-radv.U66b3V/startup.log,2026
 tools/build/victory-openworld/xcl-6d051da.3C85eN/stock-radv.J1aUMu/startup.log,2026-11-26T01:19:11+05:00,2026-11-26T01:19:16+05:00,5.0,3,,,0,,,,0,0,0
 tools/build/victory-openworld/xcl-b49be18.UnXskn/donor.nE9n0T/startup.log,2026-11-26T06:04:58+05:00,,,124,,,0,,,,0,0,0
 tools/build/victory-openworld/xcl-b49be18.UnXskn/stock.PMhr3f/startup.log,2026-11-26T05:59:21+05:00,,,3,,,0,,,,0,0,0
+tools/build/victory-openworld/fx-upstream-06702fe.Wyzr8B/run.Z8r887/run.log,2026-11-26T10:52:00Z,2026-11-26T10:52:41Z,41.0,3,256,400,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-idle.yRssib/run.IeqVhe/run.log,2026-11-26T10:55:18Z,2026-11-26T10:55:42Z,24.0,3,256,275,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-no-relay.GkxEXs/run.AJqKHq/run.log,2026-11-26T10:56:42Z,2026-11-26T10:57:06Z,24.0,3,256,275,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-checkpoint.EcHWM4/run.k1GTKU/run.log,2026-11-26T11:00:31Z,,,,256,275,0,,,,0,0,0
+tools/build/victory-openworld/fx-d56316bb-idle.Lwv3lZ/run.HQYxZ5/run.log,2026-11-26T11:02:33Z,2026-11-26T11:02:56Z,23.0,3,256,300,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-no-capture.HUR923/run.ALQm9J/run.log,2026-11-26T11:03:46Z,2026-11-26T11:04:10Z,24.0,3,256,,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-checkpoint-series-x.5hHFtO/run.ciPnUP/run.log,2026-11-26T11:04:43Z,2026-11-26T11:05:09Z,26.0,3,64,100,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-play-intro.0thl7z/run.sbNxPo/run.log,2026-11-26T11:05:46Z,2026-11-26T11:06:10Z,24.0,3,256,,0,,,,0,0,0
+tools/build/victory-openworld/fx-06702fe-idle-lavapipe.3l1QS7/run.Yi5rSy/run.log,2026-11-26T11:07:13Z,2026-11-26T11:07:36Z,23.0,3,256,,0,,,,0,0,0
