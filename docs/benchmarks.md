@@ -117,6 +117,18 @@ A Linux native build with both changes presented its first frame after **4.21 se
 
 The RX 6800 reports `VK_EXT_external_memory_host` and a 4 KiB minimum host-pointer alignment. A Linux native fixture allocated 64 KiB through the guest VM table and imported it with `ID3D12Device13::OpenExistingHeapFromAddress1`. Two GPU transfers read the exact new CPU byte pattern after the original guest mapping changed. Vulkan validation reported zero VUIDs. This verifies direct guest reads on the hardware. The title path still uses its shadow buffers. [Existing in-place proposal](https://github.com/Marvisak/VIctory/pull/2112) · [Driver fixture](https://github.com/HansKristian-Work/vkd3d-proton/blob/71cae091b06571e51446cf2a937f0b04c237c04d/tests/d3d12_win32_exclusive.c)
 
+The opt-in `VICTORY_IMPORT_UPLOADS=1` path applies to renderer-owned placed upload buffers. A one-time GPU readback checks that the imported heap sees the original allocation. The RX 6800 fixture verified reads at a 64 KiB offset after the guest released its buffer and heap. When the driver substituted its own backing, the fixture verified the fallback shadow copy. The contribution branch passed six regular resource tests plus the direct and fallback fixtures. [Victory draft PR](https://github.com/spidercraft/VIctory/pull/34) · [Tested driver branch](https://github.com/gmankab/vkd3d-proton/tree/test/strict-host-import-typed-alignment)
+
+The 230-second RX 6800 title run logged zero imports. It reached heavy 3D preparation about 200 seconds in and reported **1.1 FPS** with 844 draws per frame, 721 pipelines pending, and **134.7 MB copied in 182.4 ms per frame**. Whole-card GPU activity had a median of 2% across 78 samples. The final captured frame, 5000, showed the illustrated loading screen. [Run index](../data/runs.csv)
+
+AMDGPU reported the same SQC data-read fault class as the previous hardware run, followed by a successful graphics-ring reset. Niri and Codex kept their process IDs. The slow submission near this reset contained 29 lists and 65 logged pipeline entries. Three entries also appeared in the previous run's final slow batch. Batch membership leaves the faulting command unidentified. Vulkan validation logged zero VUIDs, and the release driver used for the run had tracing compiled out. [Run index](../data/runs.csv)
+
+A separate build of the same driver with Meson `-Denable_trace=true` enabled `AMD_buffer_marker` breadcrumbs on the RX 6800. The placed-buffer readback passed on that build with Vulkan validation active. The check used a normal transfer fixture. [Tested driver branch](https://github.com/gmankab/vkd3d-proton/tree/test/strict-host-import-typed-alignment)
+
+## XCL startup preparation under Wine
+
+XCL `8b957bec` ran under Wine 11.21 and Lavapipe with the Series S device profile. It started preparing **26,503 shaders** before guest execution. The last reported count was **400 at 55 seconds**. The 85-second cap expired during preparation, before a gameplay frame was reported. [XCL startup preparation](https://github.com/xcl-dev/xcl/pull/2555) · [Run index](../data/runs.csv)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
