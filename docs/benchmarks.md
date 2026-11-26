@@ -113,6 +113,19 @@ A 174 MiB fixture with 87 MiB mapped and 87 MiB reserved measured **78.95 → 29
 
 A Linux native build with both changes presented its first frame after **4.21 seconds** on Lavapipe, with hardware render devices hidden. Its five-minute run reached capture **512**, which showed the illustrated loading screen. The 47 reports had a median of **0.4 FPS** and at most 11 draws per frame. Vulkan validation flagged a vertex shader using a subgroup operation that the software adapter did not list for that stage. The run ended at the time cap. [Run index](../data/runs.csv)
 
+## Linux native repeated GPU writes
+
+The heavy RX 6800 loading sample requested 2,241 shadow refreshes per frame. Each declaration of a writable range previously flushed the refresh batch. The patch keeps the first declaration for each exact range and uses the same order for copy-back. A regression across two command lists verified that an unrelated read stayed queued and separate CPU and host writes were both preserved. [Run index](../data/runs.csv) · [Victory PR](https://github.com/spidercraft/VIctory/pull/35)
+
+| Preparation fixture, 48 requests for one 4 MiB read range | Baseline | Candidate |
+|---|---:|---:|
+| RX 6800, untracked pages | 16.87 ms | 0.33 ms |
+| Lavapipe, untracked pages | 17.35 ms | 0.36 ms |
+| RX 6800, clean write-watched pages | 80.48 µs | 6.76 µs |
+| Lavapipe, clean write-watched pages | 67.24 µs | 6.07 µs |
+
+Each row is the median of 21 paired samples. Preparation copied 192 MiB before the patch and 4 MiB afterward for untracked pages. The clean write-watched case copied zero bytes in either mode. The change passed all 44 regular GPU tests on Lavapipe, and the new regression also passed on the RX 6800. The Lavapipe descriptor-slot validation warning was reproduced on the unmodified base. These are synthetic preparation timings. Open-world frame time remains unmeasured for the patch. [Victory PR](https://github.com/spidercraft/VIctory/pull/35)
+
 ## Linux native host heap import
 
 The RX 6800 reports `VK_EXT_external_memory_host` and a 4 KiB minimum host-pointer alignment. A Linux native fixture allocated 64 KiB through the guest VM table and imported it with `ID3D12Device13::OpenExistingHeapFromAddress1`. Two GPU transfers read the exact new CPU byte pattern after the original guest mapping changed. Vulkan validation reported zero VUIDs. This verifies direct guest reads on the hardware. The title path still uses its shadow buffers. [Existing in-place proposal](https://github.com/Marvisak/VIctory/pull/2112) · [Driver fixture](https://github.com/HansKristian-Work/vkd3d-proton/blob/71cae091b06571e51446cf2a937f0b04c237c04d/tests/d3d12_win32_exclusive.c)
