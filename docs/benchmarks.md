@@ -54,6 +54,10 @@ A 285-second Lavapipe run with the default watchdog provided 1,296 shader contai
 
 The exact Spidercraft contribution branch passed the register test and created all three targeted culling pipelines on the RX 6800 with native vkd3d-proton and RADV. A 120-second title smoke test on the integrated native build reached frame 2,048. Two captures showed the account picker prompts. The other 32 were black. The median of 20 startup FPS samples was 29.55, and the kernel logged no GPU reset during the test. Player control in the world remains unverified for this variant. [Run index](../data/runs.csv)
 
+A longer checkpoint-profile run used the same native binary with adjusted setup input. It reached the illustrated loading screen and then began heavier 3D submissions, with one sample at **5.6 FPS** and 260 draws per frame. The whole card was **3% busy at the median and 99% at the peak** across 89 readings. VRAM use peaked at 7,614 MiB. After 224 seconds the run exited following a graphics-ring timeout and an AMDGPU reset. Niri aborted and systemd restarted Niri and the terminal recovery service. The last captured frame still showed loading. [Run index](../data/runs.csv)
+
+The installed Vulkan layer reported an embedded-sampler count that matches a known validation-layer false positive. It also reported eight storage-buffer descriptor alignment warnings during heavier submissions. The timing establishes that those warnings preceded the timeout. The cause of the reset remains unresolved. [Khronos sampler-count fix](https://github.com/KhronosGroup/Vulkan-ValidationLayers/pull/13673)
+
 ## Fxceless startup controls
 
 These runs used Wine with isolated profiles and the same read-only game directory. The scripted comparison reached different setup pages. In the paired idle runs, the published build and stock Fxceless hit the same guest breakpoint. The faulting instruction and the saved Windows exception context showed a stream writer on the title’s main thread trying to copy 1,728 bytes with 80 bytes remaining.
