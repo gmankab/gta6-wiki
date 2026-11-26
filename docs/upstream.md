@@ -77,6 +77,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#39](https://github.com/spidercraft/VIctory/pull/39) | GPU: share dynamic descriptor tables across graphics stages | Open |
 | [#40](https://github.com/spidercraft/VIctory/pull/40) | GPU: return dynamic slots only to the heap that reserved them | Open |
 | [#41](https://github.com/spidercraft/VIctory/pull/41) | Shaders: lower 64-bit texture atomics to DXIL | Open |
+| [#42](https://github.com/spidercraft/VIctory/pull/42) | Preserve record counts on scalar SRV descriptors | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
