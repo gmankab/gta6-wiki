@@ -20,6 +20,8 @@ Standalone regressions and results belong with their upstream fixes. Local diagn
 | [#1094](https://github.com/fxceless/victory-fork/pull/1094) | Copy-back: skip zero mask bytes a word at a time | Open |
 | [#1206](https://github.com/fxceless/victory-fork/pull/1206) | GPU: cap constant view sizes before rounding | Open |
 
+The Series S report supplies a linear rebase of the second-plane proposal, carries the overlay through queued presents, and verifies the composed readback on the RX 6800. [Upstream report](https://github.com/fxceless/victory-fork/pull/188#issuecomment-7191270104) · [Contribution branch](https://github.com/gmankab/victory/tree/contrib/fx-series-s-pr188-current)
+
 ## Marvisak/VIctory
 
 | Pull request | Change | Status |

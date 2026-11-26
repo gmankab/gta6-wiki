@@ -228,3 +228,6 @@ tools/build/victory-openworld/fx-wine-stream-probe-audio-control.mvIfyW/run.l1zd
 tools/build/victory-openworld/fx-wine-checkpoint-audio-radv.NVxwWO/run.IoLbPE/run.log,2026-11-26T11:29:13Z,2026-11-26T11:30:43Z,90.0,124,1024,1024,13,16.4,0.5,30.0,0,0,0
 tools/build/victory-openworld/fx-d56316bb-checkpoint-audio-radv.2wM6Ef/run.c9CFKR/run.log,2026-11-26T11:32:29Z,2026-11-26T11:33:59Z,90.0,124,1024,1024,14,26.65,3.2,30.1,0,0,0
 tools/build/victory-openworld/fx-d56316bb-no-present-planes.8TDcX2/run.rTMyXj/run.log,2026-11-26T11:34:10Z,2026-11-26T11:35:10Z,60.0,124,1024,1024,9,29.0,2.5,30.0,0,0,0
+tools/build/victory-openworld/fx-d56316bb-audio-extended.R4ifFu/run.Mxqw6A/run.log,2026-11-26T11:37:28Z,2026-11-26T11:40:48Z,200.0,124,2048,2400,32,25.45,0.5,30.8,0,0,0
+tools/build/victory-openworld/fx-pr188-current.VmbiKb/run.YGESXE/run.log,2026-11-26T11:42:32Z,2026-11-26T11:45:32Z,180.0,124,1024,1600,27,5.6,0.7,30.0,0,0,0
+tools/build/victory-openworld/fx-pr188-composed-readback.0YrYwy/run.lmJSca/run.log,2026-11-26T11:47:00Z,2026-11-26T11:49:15Z,135.0,124,1024,1300,22,6.05,0.5,30.7,0,0,0

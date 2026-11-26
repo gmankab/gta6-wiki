@@ -69,6 +69,18 @@ The RX 6800 runs used Wine and RADV with PulseAudio available, the same checkpoi
 
 Toggling the compositor on the same build isolated the second plane as the source of the visible Series S loading screen in this test. The captured sequence ended during loading. The raw frame-rate samples in the run index cover startup and loading. [Related Fxceless report](https://github.com/fxceless/victory-fork/issues/425) · [Second-plane proposal](https://github.com/fxceless/victory-fork/pull/188)
 
+### Second-plane proposal on `ceb9e1f7`
+
+Six commits from the proposal were rebased onto `ceb9e1f7`, with a follow-up that carries the interface resource through queued presents. Wine runs used PulseAudio, RADV and the Series S checkpoint. The two runs of the port enabled asynchronous submission and presentation and used the same later Enter schedule. Their logs confirm the switches were enabled. The evidence for the compositor comes from captured frames, which use the synchronous readback path. [Tested branch](https://github.com/gmankab/victory/tree/contrib/fx-series-s-pr188-current)
+
+| Build and capture source | Result |
+|---|---|
+| Published `d56316bb`, 200 s, original input schedule | The last capture at frame 2,400 showed loading artwork. Whole-card busy samples were **1% median and 25% peak** across 101 readings. System-wide VRAM use peaked at 7,985 MiB. |
+| Rebased proposal, 180 s, first-plane readback | All 30 captures were black, although the host logged initialization of the overlay pass. |
+| Rebased proposal with composed-buffer readback, 135 s | **26 of 28** captures were nonblack. The same 28 frame numbers in the first-plane run were all black. Frame 1,300 still showed loading. |
+
+The port restored visible output during startup and illustrated loading. Both GPU readback tests ran on the RX 6800 and passed, as did the plane parser test. The recorded frame rates cover startup and loading under different configurations. [Upstream test report](https://github.com/fxceless/victory-fork/pull/188#issuecomment-7191270104)
+
 ## Isolated measurements and build times
 
 | Workload | Control and candidate | What was verified |

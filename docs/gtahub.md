@@ -13,6 +13,8 @@ The November 26, 2026 survey covered [GTAHub’s repository directory](https://g
 
 The [branch inventory](../data/gtahub-branches.csv) records the remote commit IDs. GitHub and Disroot remain the public sources for the established local Victory branches. The namespaced GTAHub copies retain additional upstream refs alongside them. See [published branches](projects.md#published-branches) for the other remotes.
 
+The Victory fork also holds the wiki mirror and the tested Fxceless second-plane rebase. [Wiki mirror](https://git.gtahub.st/gmanka/victory/src/branch/gta6-wiki) · [Second-plane rebase](https://git.gtahub.st/gmanka/victory/src/branch/contrib/fx-series-s-pr188-current)
+
 ## CLI
 
 `fgj` v0.6.1 is available in the Fedora Toolbox. Append `--hostname git.gtahub.st` to select this Forgejo instance.
