@@ -60,6 +60,10 @@ The installed Vulkan layer reported an embedded-sampler count that matches a kno
 
 The run also logged Vulkan's overlapping-occlusion-query warning. vkd3d-proton tracks the same warning in its virtual-query test. On Lavapipe with no `/dev/dri`, that test passed its readbacks both as shipped and with the warning unmuted. The unmuted build logged the same query index and pool overlap as the title run, while all 28 checks passed. The descriptor fixture separately created aligned and odd-offset typed buffer views on Lavapipe's descriptor-buffer path. The packed heap path used on RADV remains unverified by that fixture. [vkd3d-proton virtual-query issue](https://github.com/HansKristian-Work/vkd3d-proton/issues/2381)
 
+## Native occlusion query measurements
+
+A 4×4 draw fixture reproduced the title run’s overlapping-query warning on Lavapipe. The fixture used two title heaps and crossing counted and binary queries. Splitting the host measurement into intervals reduced the warnings from **three to zero** and preserved counted results **20 and 12** and binary results **1 and 1**. The native integration passed 63 regular GPU tests. The exact Spidercraft PR head passed the draw fixture and 44 regular GPU tests. Both ran with Vulkan validation and `/dev/dri` hidden. The native title’s reset and open-world frame rate still need separate verification. [Upstream patch and test](https://github.com/spidercraft/VIctory/pull/29) · [Test index](../data/test-results.csv)
+
 ## Fxceless startup controls
 
 These runs used Wine with isolated profiles and the same read-only game directory. The scripted comparison reached different setup pages. In the paired idle runs, the published build and stock Fxceless hit the same guest breakpoint. The faulting instruction and the saved Windows exception context showed a stream writer on the title’s main thread trying to copy 1,728 bytes with 80 bytes remaining.

@@ -317,6 +317,7 @@ gmanka/victory,contrib/native-indirect-budget,fd14c3000ae4c6ea352bf2147388e2c77e
 gmanka/victory,contrib/native-indirect-count,2f37af1f67ab310862a10f130cd607f3eeb261f7
 gmanka/victory,contrib/native-indirect-scratch,997e5127ddec52eb410fe5d4b51fc0b43263460b
 gmanka/victory,contrib/native-null-cbv,3c95e35b7b85319baf9ab952849efc2fb8f3e632
+gmanka/victory,contrib/native-occlusion-segments,4555376328d267fc36184207162fd5da545efb52
 gmanka/victory,contrib/native-private-indirect,fc582385cee118528a8d6bc7aa20fa3af834c4bc
 gmanka/victory,contrib/native-refresh-ranges,7878f1c35d82c89f9b8a562f6463c8edf77f8f84
 gmanka/victory,contrib/native-series-s-planes,d8f52f73e6d33d1a66ef35184bd9b6aaef510d94
@@ -430,6 +431,7 @@ gmanka/victory,test/native-post-uav-barrier,773f39765d56bc1292d6ac4de4f5fb83dfe7
 gmanka/victory,test/native-private-indirect,82b35da289c631afdb450e8a252da4dd5077f2da
 gmanka/victory,test/native-private-indirect-clwb,3d126c864618254146ec2c8096b2952d66368f68
 gmanka/victory,test/native-private-indirect-exports,505112e773b9d9206814dda3eac8a6bbee08f5e5
+gmanka/victory,test/native-serial-occlusion,bad1ad65ebb99d2795ec1f5d5bafa2cf351f297c
 gmanka/victory,test/native-series-s-compose,a911e9829da0a2d3c10ed11bccfae4f7a7253486
 gmanka/victory,test/native-series-s-planes,397facdfe150244c79d64fb45db25df58ddfc229
 gmanka/victory,test/native-single-latches,80f1118a70c3b38c9818d2ace4ff7c6867a3b13c

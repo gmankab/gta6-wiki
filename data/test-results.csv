@@ -6,6 +6,11 @@ tools/build/lavapipe-storage.LZQnj3/watchdog/loader-tests.log,25,ok,1,0,0,0,46
 tools/build/lavapipe-storage.LZQnj3/xma-ring.d7AWLW/audio-tests.log,113,ok,7,0,0,0,224
 tools/build/victory-openworld/clamp-tests-run.log,61,ok,3,0,0,0,54
 tools/build/victory-openworld/clamp-tests-run.log,177,ok,2,0,0,0,122
+tools/build/victory-openworld/native-serial-occlusion.saNFoq/baseline-run.log,58,ok,1,0,0,0,67
+tools/build/victory-openworld/native-serial-occlusion.saNFoq/candidate-focus-run.log,38,ok,1,0,0,0,67
+tools/build/victory-openworld/native-serial-occlusion.saNFoq/candidate-suite.log,105,ok,63,0,5,0,0
+tools/build/victory-openworld/native-serial-occlusion.saNFoq/upstream-run.log,37,ok,1,0,0,0,45
+tools/build/victory-openworld/native-serial-occlusion.saNFoq/upstream-suite-run.log,83,ok,44,0,2,0,0
 tools/build/victory-openworld/openworld-dual-upstream-sgd5-tests.log,14,ok,4,0,0,0,0
 tools/build/victory-openworld/stride-tests-run.log,61,ok,2,0,0,0,57
 tools/build/victory-openworld/stride-tests-run.log,124,ok,3,0,0,0,56

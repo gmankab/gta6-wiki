@@ -16,6 +16,7 @@ Disroot,contrib/native-guarded-host-copy,da822a7de85e2c1efdd41f670a4cce49c447e61
 Disroot,contrib/native-indirect-budget,fd14c3000ae4c6ea352bf2147388e2c77e15b8a2
 Disroot,contrib/native-indirect-count,2f37af1f67ab310862a10f130cd607f3eeb261f7
 Disroot,contrib/native-indirect-scratch,997e5127ddec52eb410fe5d4b51fc0b43263460b
+Disroot,contrib/native-occlusion-segments,4555376328d267fc36184207162fd5da545efb52
 Disroot,contrib/native-private-indirect,fc582385cee118528a8d6bc7aa20fa3af834c4bc
 Disroot,contrib/native-refresh-ranges,7878f1c35d82c89f9b8a562f6463c8edf77f8f84
 Disroot,contrib/native-series-s-planes,d8f52f73e6d33d1a66ef35184bd9b6aaef510d94
@@ -128,6 +129,7 @@ Disroot,test/native-post-uav-barrier,773f39765d56bc1292d6ac4de4f5fb83dfe79137
 Disroot,test/native-private-indirect,82b35da289c631afdb450e8a252da4dd5077f2da
 Disroot,test/native-private-indirect-clwb,3d126c864618254146ec2c8096b2952d66368f68
 Disroot,test/native-private-indirect-exports,505112e773b9d9206814dda3eac8a6bbee08f5e5
+Disroot,test/native-serial-occlusion,bad1ad65ebb99d2795ec1f5d5bafa2cf351f297c
 Disroot,test/native-series-s-compose,a911e9829da0a2d3c10ed11bccfae4f7a7253486
 Disroot,test/native-series-s-planes,397facdfe150244c79d64fb45db25df58ddfc229
 Disroot,test/native-single-latches,80f1118a70c3b38c9818d2ace4ff7c6867a3b13c
@@ -158,6 +160,7 @@ GitHub,contrib/native-guarded-host-copy,da822a7de85e2c1efdd41f670a4cce49c447e61a
 GitHub,contrib/native-indirect-budget,fd14c3000ae4c6ea352bf2147388e2c77e15b8a2
 GitHub,contrib/native-indirect-count,2f37af1f67ab310862a10f130cd607f3eeb261f7
 GitHub,contrib/native-indirect-scratch,997e5127ddec52eb410fe5d4b51fc0b43263460b
+GitHub,contrib/native-occlusion-segments,4555376328d267fc36184207162fd5da545efb52
 GitHub,contrib/native-private-indirect,fc582385cee118528a8d6bc7aa20fa3af834c4bc
 GitHub,contrib/native-refresh-ranges,7878f1c35d82c89f9b8a562f6463c8edf77f8f84
 GitHub,contrib/native-series-s-planes,d8f52f73e6d33d1a66ef35184bd9b6aaef510d94
@@ -178,6 +181,7 @@ GitHub,test/native-console-flow,36c0981edd1cd234394ea2720e5ab5eb4ec7cc7d
 GitHub,test/native-guarded-copy,ca99bf8b56e091c34db23146bfd3a4e04ed3c9fa
 GitHub,test/native-measured-occlusion,b77687b72a6b0dbb4500acb86b7d2454de417e3d
 GitHub,test/native-pixel-helper-lanes,e5cf1506a23469e914b953519a88acc7647a1391
+GitHub,test/native-serial-occlusion,bad1ad65ebb99d2795ec1f5d5bafa2cf351f297c
 GitHub,test/native-wave-emulation,9476c83ded9049a08c43e6cc1ac70b2753b24cb9
 Local Victory,anyxboxx-reference,9a9eab02955da7b6bb2a8152b714c65ca904adc7
 Local Victory,backup/integration-9dbd814,9dbd814f92dffe27195b21fcaaec187a499a6e77

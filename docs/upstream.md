@@ -71,6 +71,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#26](https://github.com/spidercraft/VIctory/pull/26) | GPU: mirror empty buffer views as null descriptors | Open |
 | [#27](https://github.com/spidercraft/VIctory/pull/27) | GPU: write typed null constant buffer views | Open |
 | [#28](https://github.com/spidercraft/VIctory/pull/28) | Linux shaders: translate the meshlet-culling compute pipelines | Open |
+| [#29](https://github.com/spidercraft/VIctory/pull/29) | Linux GPU: serialize overlapping occlusion measurements | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
