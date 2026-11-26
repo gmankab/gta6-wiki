@@ -837,3 +837,7 @@ tools/build/victory-openworld/native-watch-scan.6lXvp6/sparse-candidate-6.log,3,
 tools/build/victory-openworld/native-watch-scan.6lXvp6/sparse-baseline-7.log,3,"174 MiB sparse copy, median ns 78667342"
 tools/build/victory-openworld/native-watch-scan.6lXvp6/sparse-candidate-7.log,3,"174 MiB sparse copy, median ns 28057593"
 tools/build/victory-openworld/native-watch-scan.6lXvp6/sparse-upstream-bench.log,3,"174 MiB sparse copy, median ns 28370433"
+tools/build/victory-openworld/shadow-snapshots.208Kmu/snapshot-ab.log,1,"growing baseline, 49 declarations, 4315938816 bytes, median 440.232 ms"
+tools/build/victory-openworld/shadow-snapshots.208Kmu/snapshot-ab.log,2,"growing candidate, 49 declarations, 163577856 bytes, median 90.041 ms"
+tools/build/victory-openworld/shadow-snapshots.208Kmu/snapshot-ab.log,3,"distant baseline, 2 declarations, 183500800 bytes, median 19.178 ms"
+tools/build/victory-openworld/shadow-snapshots.208Kmu/snapshot-ab.log,4,"distant candidate, 2 declarations, 2097152 bytes, median 0.160 ms"
