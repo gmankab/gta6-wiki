@@ -4,7 +4,7 @@ The November 26, 2026 survey covered [GTAHub’s repository directory](https://g
 
 | Fork | Verified branches | Contents |
 |---|---:|---|
-| [Victory](https://git.gtahub.st/gmanka/victory) | 155 | Canonical `main` at `d56316bb`, original `cool_fox` at `f4b48ad`, the union of public GitHub and Disroot work, and `upstream/` namespaces for relevant Victory lineages. |
+| [Victory](https://git.gtahub.st/gmanka/victory) | 156 | Canonical `main` at `d56316bb`, original `cool_fox` at `f4b48ad`, the union of public GitHub and Disroot work, and `upstream/` namespaces for relevant Victory lineages. Includes the published native null-CBV branch. |
 | [XCL](https://git.gtahub.st/gmanka/xcl) | 5 | Source branches and `wine-rx6800-comparison`. |
 | [Leonida](https://git.gtahub.st/gmanka/leonida) | 282 | Source branches and the public contribution refs. |
 | [KLBF Lab](https://git.gtahub.st/gmanka/klbf-lab) | 6 | Stable refs and public beta refs under `upstream/beta/`. |

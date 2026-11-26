@@ -313,6 +313,7 @@ gmanka/victory,contrib/native-guarded-host-copy,da822a7de85e2c1efdd41f670a4cce49
 gmanka/victory,contrib/native-indirect-budget,fd14c3000ae4c6ea352bf2147388e2c77e15b8a2
 gmanka/victory,contrib/native-indirect-count,2f37af1f67ab310862a10f130cd607f3eeb261f7
 gmanka/victory,contrib/native-indirect-scratch,997e5127ddec52eb410fe5d4b51fc0b43263460b
+gmanka/victory,contrib/native-null-cbv,3c95e35b7b85319baf9ab952849efc2fb8f3e632
 gmanka/victory,contrib/native-private-indirect,fc582385cee118528a8d6bc7aa20fa3af834c4bc
 gmanka/victory,contrib/native-refresh-ranges,7878f1c35d82c89f9b8a562f6463c8edf77f8f84
 gmanka/victory,contrib/native-series-s-planes,d8f52f73e6d33d1a66ef35184bd9b6aaef510d94

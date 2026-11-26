@@ -67,6 +67,7 @@ Standalone regressions and results belong with their upstream fixes. Local diagn
 | [#24](https://github.com/spidercraft/VIctory/pull/24) | GPU diagnostics: report timings for single-list submissions | Open |
 | [#25](https://github.com/spidercraft/VIctory/pull/25) | GPU: bound constant-buffer views before recording copies | Open |
 | [#26](https://github.com/spidercraft/VIctory/pull/26) | GPU: mirror empty buffer views as null descriptors | Open |
+| [#27](https://github.com/spidercraft/VIctory/pull/27) | GPU: write typed null constant buffer views | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
