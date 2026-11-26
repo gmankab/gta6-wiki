@@ -25,6 +25,8 @@ JordanFromIT’s CGBJ-VIctory repository was public with an active `integration`
 
 The public `cgbj-reupload` points to codec_d’s Cool Fox commit `f4b48ad766ddbec1a1867022cd42f7645b0dd55e`. The source tree in the archive tagged `cgbj-pareto-residency` has the identical Git tree ID, `832b1ea59576e5e2688d49c2530b67f0efae43bc`. The public `cgbj-fork` has separate Cool Fox-derived changes for Windows. At the time of the check, GitHub listed 33 stars, 91 contributors and one PR for `cgbj-reupload`, and 10 stars, 92 contributors and no PRs for `cgbj-fork`. Contributor counts include inherited history. [Reupload](https://github.com/cputroll/cgbj-reupload) · [Tagged archive](https://github.com/Guernica4u/GTA6-PC-Port-Archive/tree/cgbj-pareto-residency/cool-fox) · [Windows derivative](https://github.com/Pavl3000/cgbj-fork)
 
+The consolidated Victory repository mirrors the same reupload commit as `cgbj-reupload`. The branch name follows the public source used for the mirror. [GitHub](https://github.com/gmankab/victory/tree/cgbj-reupload) · [GTAHub](https://git.gtahub.st/gmanka/victory/src/branch/cgbj-reupload) · [Disroot](https://git.disroot.org/gmanka/victory/src/branch/cgbj-reupload)
+
 ## Published branches
 
 - [gmankab/victory](https://github.com/gmankab/victory) is the canonical public Victory development fork. It was renamed from `gmankab/marvisak-victory`. [Tested main snapshot at `d56316bb`](https://github.com/gmankab/victory/commit/d56316bb283495181651a7528b6f0d9c625f32e2).
