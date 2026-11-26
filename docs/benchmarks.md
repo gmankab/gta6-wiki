@@ -82,13 +82,17 @@ An RX 6800 read-back fixture reproduced the same warning using an odd-offset `R1
 
 ## Linux native offline pipeline preparation
 
-The Linux native port of Marvisak's prebuilder uses the same creation-stream reader and host pipeline keys as a title run. All 15 format tests and all eight pipeline tests passed. The key census found 27,160 nameable records and 26,918 distinct keys. The RX 6800 prebuild processed the 28,164-record pack in **345.4 seconds** with 12 workers. It created **20,830** host pipelines, found **2,976** in the library as the pass progressed, and skipped **4,358** records. Shader translation failures accounted for 3,354 skips. [Marvisak prebuilder](https://github.com/Marvisak/VIctory/commit/9c58a1c35a384552bde9b4c9b169731f282a15a1)
+The Linux native port of Marvisak's prebuilder uses the same creation-stream reader and host pipeline keys as a title run. The contribution branch passed the release build, 15 format tests, and eight pipeline tests. The Lavapipe run used `VKD3D_FEATURE_LEVEL=12_0` so the pipeline-library fixture could create its D3D12 device. The read-only census found 27,160 nameable records and 26,918 distinct keys out of 28,164 records. [Linux native contribution](https://github.com/spidercraft/VIctory/pull/31)
+
+The separate integrated RX 6800 prebuild processed the same pack in **345.4 seconds** with 12 workers. It created **20,830** host pipelines, found **2,976** in the library as the pass progressed, and skipped **4,358** records. Shader translation failures accounted for 3,354 skips. [Marvisak prebuilder](https://github.com/Marvisak/VIctory/commit/9c58a1c35a384552bde9b4c9b169731f282a15a1)
 
 The first title run with this library and the patched vkd3d-proton reached the first presentation after **39.4 seconds**. Victory loaded the 3.9 MB host pipeline library and reached frame **8,192** in the 360-second run. The final capture showed the illustrated loading screen. The 62 frame reports had a 30 FPS median, with at most 11 draws per frame and one pipeline pending. Median sampled GPU activity was 2%, and Vulkan validation and the kernel recorded zero warnings or resets for the run. This establishes cache loading and startup behavior. The heavier 3D phase from the earlier run remained outside the observed workload. [Run index](../data/runs.csv)
 
 A longer run with DirectStorage diagnostics reached heavy 3D submissions after **296 seconds**. Across 50 reporting windows, **99.1%** of occupied storage-worker time was spent in reads, peak queued requests reached **3,329**, and staging waits totaled zero. The two heavy samples reported **1.0 and 0.9 FPS**. The first copied **316 MB in 318 ms per frame** and still had 957 pipelines queued. The final library save counted 364 loads and 52 creations. [Run index](../data/runs.csv)
 
 The longer run logged zero Vulkan VUIDs. AMDGPU reported a graphics-hub page fault and a successful graphics-ring reset. Niri and the Codex recovery service stayed active. The title then hit its watchdog and exited at **336 seconds**. The last captured frame, 7000, still showed the illustrated loading screen. The kernel record identifies the fault as an SQC data read. The originating resource or shader remains unidentified. [Run index](../data/runs.csv)
+
+A local follow-up deferred release of old resources when a directly indexed descriptor slot changes. The Lavapipe fixture held a resource through two completed submissions and released it after the third, with zero Vulkan VUIDs. Its effect on the RX 6800 title fault is unverified. [Upstream lifetime patch](https://github.com/Marvisak/VIctory/pull/609)
 
 ## Linux native parallel shadow refreshes
 
