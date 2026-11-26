@@ -807,3 +807,18 @@ tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,2,run 0 
 tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,3,run 1 0.201 ms readback=70f5de1e
 tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,4,run 2 0.201 ms readback=70f5de1e
 tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,5,run 3 0.065 ms readback=70f5de1e
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-1.log,3,"2784 blocks, median ns: clean 11614, four dirty 23126"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-1.log,3,"2784 blocks, median ns: clean 166, four dirty 11293"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-2.log,3,"2784 blocks, median ns: clean 11154, four dirty 22216"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-2.log,3,"2784 blocks, median ns: clean 162, four dirty 11307"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-3.log,3,"2784 blocks, median ns: clean 11031, four dirty 22175"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-3.log,3,"2784 blocks, median ns: clean 158, four dirty 11275"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-4.log,3,"2784 blocks, median ns: clean 11226, four dirty 22574"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-4.log,3,"2784 blocks, median ns: clean 158, four dirty 11034"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-5.log,3,"2784 blocks, median ns: clean 11029, four dirty 22316"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-5.log,3,"2784 blocks, median ns: clean 157, four dirty 11137"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-6.log,3,"2784 blocks, median ns: clean 11010, four dirty 22337"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-6.log,3,"2784 blocks, median ns: clean 161, four dirty 11212"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/baseline-7.log,3,"2784 blocks, median ns: clean 10983, four dirty 22022"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/candidate-7.log,3,"2784 blocks, median ns: clean 158, four dirty 11070"
+tools/build/victory-openworld/native-watch-scan.6lXvp6/upstream-scan.log,3,"2784 blocks, median ns: clean 156, four dirty 9637"

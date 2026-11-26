@@ -94,6 +94,17 @@ The longer run logged zero Vulkan VUIDs. AMDGPU reported a graphics-hub page fau
 
 A local follow-up deferred release of old resources when a directly indexed descriptor slot changes. The Lavapipe fixture held a resource through two completed submissions and released it after the third, with zero Vulkan VUIDs. Its effect on the RX 6800 title fault is unverified. [Upstream lifetime patch](https://github.com/Marvisak/VIctory/pull/609)
 
+## Linux native write-watch bitmap scans
+
+In the heavier RX 6800 loading sample, Victory requested one 174 MiB shadow range 31 times per frame. The range took 93.48 ms in refresh calls. Those calls include tracking, copies, and other shadow work. The Linux native loader patch walks one bitmap word at a time for private memory. Physical aliases keep their group-aware checks. [Loading run](../data/runs.csv) · [Loader PR](https://github.com/spidercraft/VIctory/pull/32)
+
+| 174 MiB private range | Baseline | Candidate |
+|---|---:|---:|
+| All blocks clean | 11.03 µs | 0.158 µs |
+| Four blocks opened and re-armed | 22.32 µs | 11.21 µs |
+
+Each result is the median of seven paired process medians from the integrated release build. The fixture verified the exact dirty block list. The integration passed 44 loader tests, and the contribution head passed 35, including the partial-word boundary regression. The measured timings cover the guard API and its protection calls. Open-world frame timing remains unverified. [Individual measurements](../data/benchmark-logs.csv)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
