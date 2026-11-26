@@ -70,7 +70,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#25](https://github.com/spidercraft/VIctory/pull/25) | GPU: bound constant-buffer views before recording copies | Open |
 | [#26](https://github.com/spidercraft/VIctory/pull/26) | GPU: mirror empty buffer views as null descriptors | Open |
 | [#27](https://github.com/spidercraft/VIctory/pull/27) | GPU: write typed null constant buffer views | Open |
-| [#28](https://github.com/spidercraft/VIctory/pull/28) | Shader: initialize unwritten scalar inputs and lower explicit-mip gather | Open |
+| [#28](https://github.com/spidercraft/VIctory/pull/28) | Linux shaders: translate the meshlet-culling compute pipelines | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 

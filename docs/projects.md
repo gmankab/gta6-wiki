@@ -45,6 +45,7 @@ The public `cgbj-reupload` points to codec_d’s Cool Fox commit `f4b48ad766ddbe
 | [`test/native-measured-occlusion` · `b77687b7`](https://github.com/gmankab/victory/tree/test/native-measured-occlusion) | GPU regression passed on RX 6800 with validation. The full title run did not exercise the measured readback path. |
 | [`test/native-pixel-helper-lanes` · `e5cf1506a`](https://github.com/gmankab/victory/tree/test/native-pixel-helper-lanes) | Shader validation and pipeline creation passed on hardware and software Vulkan. Both full software runs hit the same late null write. |
 | `test/native-empty-buffer-views` · `21990044` and `test/native-xma-ring` · `f717c2e4` | Local test variants. The published [empty-view contribution](https://github.com/gmankab/victory/tree/contrib/native-empty-buffer-views) is separate. The XMA test applied the two original commits from [Marvisak #536](https://github.com/Marvisak/VIctory/pull/536). |
+| [`contrib/native-compute-init-sgprs` · `a09ccfc5`](https://github.com/gmankab/victory/tree/contrib/native-compute-init-sgprs) | Three culling pipelines created on native RADV. The integrated startup probe reached the account picker. [Comparison](benchmarks.md#native-compute-shader-validation) |
 
 The tested Flatpak names the local `openworld-rx6800` branch and pins commit `748d150` in its source definition. The [Disroot snapshot](https://git.disroot.org/gmanka/victory/src/branch/openworld-rx6800) records the mirrored ref.
 
