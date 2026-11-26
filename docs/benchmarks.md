@@ -64,6 +64,10 @@ The run also logged Vulkan's overlapping-occlusion-query warning. vkd3d-proton t
 
 A 4×4 draw fixture reproduced the title run’s overlapping-query warning on Lavapipe. The fixture used two title heaps and crossing counted and binary queries. Splitting the host measurement into intervals reduced the warnings from **three to zero** and preserved counted results **20 and 12** and binary results **1 and 1**. The native integration passed 63 regular GPU tests. The exact Spidercraft PR head passed the draw fixture and 44 regular GPU tests. Both ran with Vulkan validation and `/dev/dri` hidden. The native title’s reset and open-world frame rate still need separate verification. [Upstream patch and test](https://github.com/spidercraft/VIctory/pull/29) · [Test index](../data/test-results.csv)
 
+## Linux native descriptor-buffer checks
+
+On the RX 6800, vkd3d-proton selected Vulkan descriptor buffers with `VKD3D_CONFIG=vk_debug,no_descriptor_heap`. The odd-offset R16 fixture created its SRV and UAV without the previous storage-buffer alignment warning. The Linux native occlusion PR’s draw fixture returned the same counted and binary results with zero overlap warnings. The integrated culling shader probe validated all three programs and created all three compute pipelines. These checks cover the two graphics warnings and pipeline creation. The title result remains open. [Occlusion hardware check](https://github.com/spidercraft/VIctory/pull/29) · [Culling patch](https://github.com/spidercraft/VIctory/pull/28)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
