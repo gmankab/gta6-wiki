@@ -57,6 +57,18 @@ All five DRI-hidden probe runs executed zero host draws and dispatches. The 41 b
 
 The earlier headless harness denied the PulseAudio socket. Granting it under Wine allowed a real playback stream to start and prevented the breakpoint within both test windows. The 60-second repeat changed only the socket permission from the failing Series S configuration. The normal Flatpak manifest already grants this socket. The title's internal reason for the repeated writes remains open.
 
+## Series S presentation with audio enabled
+
+The RX 6800 runs used Wine and RADV with PulseAudio available, the same checkpoint, and the same scripted input. Each captured the same 25 frames through frame 1,024 and reached its time cap without the startup breakpoint. The newest Fxceless baseline used the read-only stream probe.
+
+| Build and configuration | Result |
+|---|---|
+| `ceb9e1f7`, 90 s | All 25 captures were black. Host draws and dispatches executed. |
+| Published `d56316bb`, 90 s | 13 of 25 captures had visible content. Frame 200 showed the interface, and frame 1,024 showed the illustrated loading screen. |
+| Published `d56316bb`, `VICTORY_PRESENT_PLANES=0`, 60 s | All 25 captures were black again when only the first present plane was shown. |
+
+Toggling the compositor on the same build isolated the second plane as the source of the visible Series S loading screen in this test. The captured sequence ended during loading. The raw frame-rate samples in the run index cover startup and loading. [Related Fxceless report](https://github.com/fxceless/victory-fork/issues/425) · [Second-plane proposal](https://github.com/fxceless/victory-fork/pull/188)
+
 ## Isolated measurements and build times
 
 | Workload | Control and candidate | What was verified |
