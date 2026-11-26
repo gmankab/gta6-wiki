@@ -43,6 +43,7 @@ tools/build/victory-openworld/leonida-pr1867-ab.YLWAqt/guarded.hfPTC4/run.log,20
 tools/build/victory-openworld/linux-native-descriptor-buffer.4mV2ZH/world.oR7IE3/run.log,2026-11-26T13:52:04Z,2026-11-26T13:53:34Z,90.0,5,,,0,,,,0,0,0
 tools/build/victory-openworld/descriptor-retry.UUAmzZ/world.D1b6aj/run.log,2026-11-26T14:00:00Z,2026-11-26T14:02:45Z,165.0,5,1024,1100,12,19.85,0.0,30.0,0,0,0
 tools/build/victory-openworld/db-warm.gq5nqn/world.remAqt/run.log,2026-11-26T14:08:32Z,2026-11-26T14:12:07Z,215.0,5,256,320,3,0.7,0.2,1.2,0,0,0
+~/files/proj/recomp/victory-runs/db.x89tAg/world.S2Xsng/run.log,2026-11-26T14:21:59Z,2026-11-26T14:26:19Z,260.0,124,4096,5700,49,30.0,0.9,30.6,0,0,0
 tools/build/victory-openworld/marvisak-sync-first-four.LKKejV/smoke.01ggfW/startup.log,2026-11-26T03:01:26+05:00,2026-11-26T03:02:57+05:00,91.0,124,256,256,0,,,,0,0,0
 tools/build/victory-openworld/native-alias-watch.TK3zYs/smoke.xK4Wv9/startup.log,2026-11-25T23:26:57.593083Z,2026-11-25T23:27:58.386635Z,,124,512,,0,,,,0,0,0
 tools/build/victory-openworld/native-bink/diagnose-shader-software.abuSUN/startup.log,2026-11-25T17:51:17.337788Z,2026-11-25T17:51:49.369621Z,,,64,,0,,,,0,0,0
