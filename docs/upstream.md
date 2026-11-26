@@ -75,6 +75,8 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#30](https://github.com/spidercraft/VIctory/pull/30) | Parallelize independent Linux native shadow refreshes | Open |
 | [#38](https://github.com/spidercraft/VIctory/pull/38) | GPU: avoid missed and repeated Linux native descriptor searches | Open |
 | [#39](https://github.com/spidercraft/VIctory/pull/39) | GPU: share dynamic descriptor tables across graphics stages | Open |
+| [#40](https://github.com/spidercraft/VIctory/pull/40) | GPU: return dynamic slots only to the heap that reserved them | Open |
+| [#41](https://github.com/spidercraft/VIctory/pull/41) | Shaders: lower 64-bit texture atomics to DXIL | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
