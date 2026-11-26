@@ -79,6 +79,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#41](https://github.com/spidercraft/VIctory/pull/41) | Shaders: lower 64-bit texture atomics to DXIL | Open |
 | [#42](https://github.com/spidercraft/VIctory/pull/42) | Preserve record counts on scalar SRV descriptors | Open |
 | [#43](https://github.com/spidercraft/VIctory/pull/43) | Bind strides for indexed resource-heap buffer reads | Draft |
+| [#44](https://github.com/spidercraft/VIctory/pull/44) | Prove unused scalar phi inputs before substituting them | Draft |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
