@@ -37,6 +37,17 @@ For the test machine and supported configurations, see the [readme](../readme.md
 | Local decoded-BC7 cache, Lavapipe, same binary and first 155 s | Four-list submission median **1,972 → 392 ms** across 32 versus 146 samples. Cached run bound its first mesh pipeline at frame **516** after **111 s**. Control ran 155 s without a logged mesh bind. | Latest capture was still illustrated loading. |
 | Native descriptor and XMA sequence, Lavapipe | A 425 s run captured frame **850**. Empty-buffer and XMA variants both reached the illustrated loading screen and hit **460 s** caps. The first instrumented run hit a **305 s** cap before reproducing the descriptor VUID. The **460 s** trace recorded **22 zero-byte CBV calls**, **nine** validation messages and **zero** logged zero-range SRV/UAV calls. | After the null-CBV fix, a matched **460 s** run captured frame **750** with **zero** zero-byte CBV calls and **zero** validation messages. Both runs ended during loading. [Native port](https://github.com/spidercraft/VIctory/pull/27) |
 
+## Cool Fox under the CGBJ reupload name
+
+The public `cgbj-reupload` resolves to the original Cool Fox `f4b48ad` commit. Both runs used the locally built Windows-target binary, the `pareto-residency` Series S profile, Wine/Wayland, RADV on the RX 6800, and a read-only title directory. The rerun granted Wine access to PulseAudio. [Source check](projects.md#cgbj-source-checks)
+
+| Setup | Result |
+|---|---|
+| Fresh data and scripted input, 155 s | Rendered the intro and advanced to Legal Notices. The last capture, frame 3,900, still showed Legal Notices. Median **30.0 FPS** across 27 startup and setup samples. |
+| Copied checkpoint profile and adjusted input, 155 s | Advanced beyond Legal Notices to the illustrated loading screen, which remained visible in the last capture at frame 3,600. Median **30.0 FPS** across 26 startup and loading samples. |
+
+Both runs reached their time caps and the kernel logged no GPU reset. Player control and an in-world frame rate remain unverified for this commit on the RX 6800. [Run index](../data/runs.csv)
+
 ## Native compute shader validation
 
 A 285-second Lavapipe run with the default watchdog provided 1,296 shader containers. A lane-mask candidate passed its RX 6800 fixture and left every result in this set unchanged. Defaulting reads of written but uninitialized general-purpose scalar registers to zero cleared three compute translation failures. Those shaders then reached an unsupported explicit-mip gather, which the second port implemented. Together the changes increased validated compute programs from **650 to 657** and preserved all **579** previously validated vertex and pixel programs. [Register rule](https://github.com/Marvisak/VIctory/pull/1261) · [Gather implementation](https://github.com/Marvisak/VIctory/commit/0b35b7fe) · [Native ports](https://github.com/spidercraft/VIctory/pull/28)
