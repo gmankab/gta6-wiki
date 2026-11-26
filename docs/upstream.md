@@ -74,6 +74,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#29](https://github.com/spidercraft/VIctory/pull/29) | Linux GPU: serialize overlapping occlusion measurements | Open |
 | [#30](https://github.com/spidercraft/VIctory/pull/30) | Parallelize independent Linux native shadow refreshes | Open |
 | [#38](https://github.com/spidercraft/VIctory/pull/38) | GPU: avoid missed and repeated Linux native descriptor searches | Open |
+| [#39](https://github.com/spidercraft/VIctory/pull/39) | GPU: share dynamic descriptor tables across graphics stages | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
