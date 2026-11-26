@@ -1,6 +1,7 @@
 source_log,line,suite_result,passed,failed,ignored,measured,filtered_out
 tools/build/lavapipe-storage.LZQnj3/empty.VBnKc8/empty-rust-test.log,36,ok,1,0,0,0,64
 tools/build/lavapipe-storage.LZQnj3/empty.VBnKc8/empty-windows-test.log,25,ok,1,0,0,0,46
+tools/build/lavapipe-storage.LZQnj3/native-sgpr-guarded.VSbSE7/upstream-register-test.log,23,ok,1,0,0,0,73
 tools/build/lavapipe-storage.LZQnj3/watchdog/loader-tests.log,25,ok,1,0,0,0,46
 tools/build/lavapipe-storage.LZQnj3/xma-ring.d7AWLW/audio-tests.log,113,ok,7,0,0,0,224
 tools/build/victory-openworld/clamp-tests-run.log,61,ok,3,0,0,0,54

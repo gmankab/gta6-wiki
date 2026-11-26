@@ -231,3 +231,5 @@ tools/build/victory-openworld/fx-d56316bb-no-present-planes.8TDcX2/run.rTMyXj/ru
 tools/build/victory-openworld/fx-d56316bb-audio-extended.R4ifFu/run.Mxqw6A/run.log,2026-11-26T11:37:28Z,2026-11-26T11:40:48Z,200.0,124,2048,2400,32,25.45,0.5,30.8,0,0,0
 tools/build/victory-openworld/fx-pr188-current.VmbiKb/run.YGESXE/run.log,2026-11-26T11:42:32Z,2026-11-26T11:45:32Z,180.0,124,1024,1600,27,5.6,0.7,30.0,0,0,0
 tools/build/victory-openworld/fx-pr188-composed-readback.0YrYwy/run.lmJSca/run.log,2026-11-26T11:47:00Z,2026-11-26T11:49:15Z,135.0,124,1024,1300,22,6.05,0.5,30.7,0,0,0
+tools/build/lavapipe-storage.LZQnj3/native-mask-baseline.acLQaA/world.nptAe1/run.log,2026-11-26T11:55:21Z,2026-11-26T12:00:06Z,285.0,124,512,750,44,1.9,0.3,10.1,0,0,0
+tools/build/lavapipe-storage.LZQnj3/native-culling-radv.7I7KuJ/world.XWwtZT/run.log,2026-11-26T12:29:29Z,2026-11-26T12:31:29Z,120.0,124,2048,2048,20,29.55,15.0,30.3,0,0,0

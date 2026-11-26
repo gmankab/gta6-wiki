@@ -306,6 +306,7 @@ gmanka/victory,contrib/fx-series-s-pr188-current,19cca8561fdfed01b74ce2aa5715251
 gmanka/victory,contrib/fxceless-constant-size-overflow,917a5a44c62750eadc62eb0859ecf12e557197da
 gmanka/victory,contrib/native-alias-watch,0ac99e76671c99d5a4a3d7f5b90c20f8bf683446
 gmanka/victory,contrib/native-bounded-texture-staging,19cdd019483e011ecd4dbfb28669165b3eff49c9
+gmanka/victory,contrib/native-compute-init-sgprs,a09ccfc5200451cff771264fb17c49104ae41d22
 gmanka/victory,contrib/native-constant-view-limit,3b96b261989720161a2817db218b594dcd18f650
 gmanka/victory,contrib/native-device-local-budget,5e1717141e6501e876632d6e0ed4c8551812678d
 gmanka/victory,contrib/native-device-local-indirect,7f9fb9263df471c10befd5b7a3914343aad9bfee

@@ -7,6 +7,7 @@ Disroot,contrib/fx-series-s-pr188-current,19cca8561fdfed01b74ce2aa57152514126bdd
 Disroot,contrib/fxceless-constant-size-overflow,917a5a44c62750eadc62eb0859ecf12e557197da
 Disroot,contrib/native-alias-watch,0ac99e76671c99d5a4a3d7f5b90c20f8bf683446
 Disroot,contrib/native-bounded-texture-staging,19cdd019483e011ecd4dbfb28669165b3eff49c9
+Disroot,contrib/native-compute-init-sgprs,a09ccfc5200451cff771264fb17c49104ae41d22
 Disroot,contrib/native-constant-view-limit,3b96b261989720161a2817db218b594dcd18f650
 Disroot,contrib/native-device-local-budget,5e1717141e6501e876632d6e0ed4c8551812678d
 Disroot,contrib/native-device-local-indirect,7f9fb9263df471c10befd5b7a3914343aad9bfee
@@ -146,6 +147,7 @@ GitHub,contrib/check-live-page-pairs,646363e2f2464543f0eff8983ae3e47d67e05e71
 GitHub,contrib/fx-series-s-pr188-current,19cca8561fdfed01b74ce2aa57152514126bddd9
 GitHub,contrib/native-alias-watch,0ac99e76671c99d5a4a3d7f5b90c20f8bf683446
 GitHub,contrib/native-bounded-texture-staging,19cdd019483e011ecd4dbfb28669165b3eff49c9
+GitHub,contrib/native-compute-init-sgprs,a09ccfc5200451cff771264fb17c49104ae41d22
 GitHub,contrib/native-constant-view-limit,3b96b261989720161a2817db218b594dcd18f650
 GitHub,contrib/native-device-local-budget,5e1717141e6501e876632d6e0ed4c8551812678d
 GitHub,contrib/native-device-local-indirect,7f9fb9263df471c10befd5b7a3914343aad9bfee
