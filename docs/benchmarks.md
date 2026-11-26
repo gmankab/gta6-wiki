@@ -111,6 +111,12 @@ The heavier loading sample reported 912 MB per frame of guest bytes that could n
 
 A 174 MiB fixture with 87 MiB mapped and 87 MiB reserved measured **78.95 → 29.20 ms** per copy across seven paired process medians. The contribution head measured **28.37 ms** in its own fixture and passed six regular host tests. The integration passed 13 regular host tests. Both verified the bytes after a hole that ended inside a 64 KiB copy piece. The integration also verified both hole cases with guarded reads enabled. These timings measure stand-alone CPU copies. [Individual measurements](../data/benchmark-logs.csv)
 
+A Linux native build with both changes presented its first frame after **4.21 seconds** on Lavapipe, with hardware render devices hidden. Its five-minute run reached capture **512**, which showed the illustrated loading screen. The 47 reports had a median of **0.4 FPS** and at most 11 draws per frame. Vulkan validation flagged a vertex shader using a subgroup operation that the software adapter did not list for that stage. The run ended at the time cap. [Run index](../data/runs.csv)
+
+## Linux native host heap import
+
+The RX 6800 reports `VK_EXT_external_memory_host` and a 4 KiB minimum host-pointer alignment. A Linux native fixture allocated 64 KiB through the guest VM table and imported it with `ID3D12Device13::OpenExistingHeapFromAddress1`. Two GPU transfers read the exact new CPU byte pattern after the original guest mapping changed. Vulkan validation reported zero VUIDs. This verifies direct guest reads on the hardware. The title path still uses its shadow buffers. [Existing in-place proposal](https://github.com/Marvisak/VIctory/pull/2112) · [Driver fixture](https://github.com/HansKristian-Work/vkd3d-proton/blob/71cae091b06571e51446cf2a937f0b04c237c04d/tests/d3d12_win32_exclusive.c)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
