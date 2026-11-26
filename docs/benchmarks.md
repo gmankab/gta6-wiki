@@ -80,6 +80,10 @@ The heavier phase reported **0.9–3.8 FPS**. In the slowest sample, Victory spe
 
 An RX 6800 read-back fixture reproduced the same warning using an odd-offset `R16_UINT` SRV and UAV. vkd3d-proton wrote a packed storage-buffer alias at the typed view's two-byte-aligned address. A local driver patch writes a null alias for that case and preserves the typed texel descriptor. The validation result changed from **two warnings to zero**. Both builds returned **1235 and 5679** with the surrounding elements unchanged. This verifies the affected descriptor path in the fixture. The next title run will check the wider workload.
 
+## Linux native offline pipeline preparation
+
+The Linux native port of Marvisak's prebuilder uses the same creation-stream reader and host pipeline keys as a title run. All 15 format tests and all eight pipeline tests passed. The key census found 27,160 nameable records and 26,918 distinct keys. The RX 6800 prebuild processed the 28,164-record pack in **345.4 seconds** with 12 workers. It created **20,830** host pipelines, found **2,976** in the library as the pass progressed, and skipped **4,358** records. Shader translation failures accounted for 3,354 skips. [Marvisak prebuilder](https://github.com/Marvisak/VIctory/commit/9c58a1c35a384552bde9b4c9b169731f282a15a1)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
