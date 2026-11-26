@@ -125,6 +125,8 @@ AMDGPU reported the same SQC data-read fault class as the previous hardware run,
 
 A separate build of the same driver with Meson `-Denable_trace=true` enabled `AMD_buffer_marker` breadcrumbs on the RX 6800. The placed-buffer readback passed on that build with Vulkan validation active. The check used a normal transfer fixture. [Tested driver branch](https://github.com/gmankab/vkd3d-proton/tree/test/strict-host-import-typed-alignment)
 
+The three compute shaders shared by the two slow batches passed offline DXIL validation. All three also created D3D12 pipeline objects using Linux native vkd3d-proton and Lavapipe with `VKD3D_SHADER_MODEL=6_6` and hardware render devices hidden. The shaders use descriptor tables and inline constants. The test ended at pipeline creation, so the runtime bindings and the faulting command remain unverified. [Tested driver branch](https://github.com/gmankab/vkd3d-proton/tree/test/strict-host-import-typed-alignment)
+
 ## XCL startup preparation under Wine
 
 XCL `8b957bec` ran under Wine 11.21 and Lavapipe with the Series S device profile. It started preparing **26,503 shaders** before guest execution. The last reported count was **400 at 55 seconds**. The 85-second cap expired during preparation, before a gameplay frame was reported. [XCL startup preparation](https://github.com/xcl-dev/xcl/pull/2555) · [Run index](../data/runs.csv)
