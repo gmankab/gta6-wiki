@@ -72,6 +72,8 @@ The first checkpoint run with the combined Linux native build exited with status
 
 A retry with best-effort I/O priority 0 reached Vulkan and presented its first frame after 28 seconds. The live Linux native process loaded RADV and vkd3d-proton. All 25 sampled frames were black, and the log reported up to 583 pipelines pending. The title hit the same watchdog after 165 seconds and Victory exited with status 5. Vulkan validation logged no VUIDs, and the kernel logged no AMDGPU fault or reset. The retry saved pipeline cache data for a follow-up run. [Marvisak watchdog analysis](https://github.com/Marvisak/VIctory/pull/454) · [Run index](../data/runs.csv)
 
+The warm-cache run reused the retry's Victory, Mesa, and vkd3d-proton caches. vkd3d-proton mapped its saved cache, and the first reported shader-cache sample showed 79 hits and zero misses. The first presentation took 95 seconds under USB I/O contention. All 10 sampled frames were black. The title reached the same watchdog with 589 host pipelines pending and exited after 215 seconds. The kernel logged no AMDGPU fault or reset. [Run index](../data/runs.csv)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
