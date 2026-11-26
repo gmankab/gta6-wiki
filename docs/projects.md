@@ -19,6 +19,12 @@ The status column gives the furthest stage established by the cited local run. V
 | [PastiiJay/klbf-lab](https://github.com/PastiiJay/klbf-lab) / [beta](https://github.com/PastiiJay/klbf-lab-beta) | Stable `1c3cc06` and `37ad2d2`, beta `67ee19c` and `f9f2419` | Wine pipeline cache and FXC selection mattered. Beta with an updated compiler rendered the courtyard at 0.1–0.6 FPS. See [the KLBF comparison](benchmarks.md#title-runs). |
 | [OpenScarlett](https://github.com/californiaAlmonds/OpenScarlett), [Five-Star Recomp](https://github.com/ThatRecompDev/five-star-recomp), [Palmwave](https://github.com/fablinoo/palmwave) | Local survey refs `46d8e2c`, `12e7f30`, `ecb988c` | Source and repository survey. No verified game benchmark was recorded for these projects. |
 
+## CGBJ source checks
+
+JordanFromIT’s CGBJ-VIctory repository was public with an active `integration` branch. GitHub and its source archive endpoint returned 404 on November 26. Software Heritage's visit found no snapshot. The project reported a 3.7 FPS median in the world on an RX 7900 XTX with stock Proton Experimental on CachyOS. Its exact build remains untested here. [Original repository](https://github.com/JordanFromIT/CGBJ-VIctory) · [Contemporary project record](https://gtapcport.org/cgbj-gta-6)
+
+The public `cgbj-reupload` points to codec_d’s Cool Fox commit `f4b48ad766ddbec1a1867022cd42f7645b0dd55e`. The source tree in the archive tagged `cgbj-pareto-residency` has the identical Git tree ID, `832b1ea59576e5e2688d49c2530b67f0efae43bc`. The public `cgbj-fork` has separate Cool Fox-derived changes for Windows. At the time of the check, GitHub listed 33 stars, 91 contributors and one PR for `cgbj-reupload`, and 10 stars, 92 contributors and no PRs for `cgbj-fork`. Contributor counts include inherited history. [Reupload](https://github.com/cputroll/cgbj-reupload) · [Tagged archive](https://github.com/Guernica4u/GTA6-PC-Port-Archive/tree/cgbj-pareto-residency/cool-fox) · [Windows derivative](https://github.com/Pavl3000/cgbj-fork)
+
 ## Published branches
 
 - [gmankab/victory](https://github.com/gmankab/victory) is the canonical public Victory development fork. It was renamed from `gmankab/marvisak-victory`. [Tested main snapshot at `d56316bb`](https://github.com/gmankab/victory/commit/d56316bb283495181651a7528b6f0d9c625f32e2).
