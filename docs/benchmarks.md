@@ -105,6 +105,12 @@ In the heavier RX 6800 loading sample, Victory requested one 174 MiB shadow rang
 
 Each result is the median of seven paired process medians from the integrated release build. The fixture verified the exact dirty block list. The integration passed 44 loader tests, and the contribution head passed 35, including the partial-word boundary regression. The measured timings cover the guard API and its protection calls. Open-world frame timing remains unverified. [Individual measurements](../data/benchmark-logs.csv)
 
+## Linux native sparse guest copies
+
+The heavier loading sample reported 912 MB per frame of guest bytes that could not be read by copy probes. The loader now lets the copy fallback zero a whole known unreadable run after a failed read. Ranges outside the loader's table still use the existing page probes. [Loading run](../data/runs.csv) · [Sparse-copy PR](https://github.com/spidercraft/VIctory/pull/33)
+
+A 174 MiB fixture with 87 MiB mapped and 87 MiB reserved measured **78.95 → 29.20 ms** per copy across seven paired process medians. The contribution head measured **28.37 ms** in its own fixture and passed six regular host tests. The integration passed 13 regular host tests. Both verified the bytes after a hole that ended inside a 64 KiB copy piece. The integration also verified both hole cases with guarded reads enabled. These timings measure stand-alone CPU copies. [Individual measurements](../data/benchmark-logs.csv)
+
 ## Linux native parallel shadow refreshes
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
