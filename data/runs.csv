@@ -220,3 +220,8 @@ tools/build/victory-openworld/fx-06702fe-no-capture.HUR923/run.ALQm9J/run.log,20
 tools/build/victory-openworld/fx-06702fe-checkpoint-series-x.5hHFtO/run.ciPnUP/run.log,2026-11-26T11:04:43Z,2026-11-26T11:05:09Z,26.0,3,64,100,0,,,,0,0,0
 tools/build/victory-openworld/fx-06702fe-play-intro.0thl7z/run.sbNxPo/run.log,2026-11-26T11:05:46Z,2026-11-26T11:06:10Z,24.0,3,256,,0,,,,0,0,0
 tools/build/victory-openworld/fx-06702fe-idle-lavapipe.3l1QS7/run.Yi5rSy/run.log,2026-11-26T11:07:13Z,2026-11-26T11:07:36Z,23.0,3,256,,0,,,,0,0,0
+tools/build/victory-openworld/fx-wine-stream-probe.jATWB5/run.oaHBpS/run.log,2026-11-26T11:19:55Z,2026-11-26T11:20:18Z,23.0,3,256,,0,,,,0,0,0
+tools/build/victory-openworld/fx-wine-stream-probe-current.38Qlp4/run.NEbxqa/run.log,2026-11-26T11:23:26Z,2026-11-26T11:23:50Z,24.0,3,256,,0,,,,0,0,0
+tools/build/victory-openworld/fx-wine-stream-probe-series-x.suvEQo/run.dxPbAt/run.log,2026-11-26T11:24:22Z,2026-11-26T11:24:48Z,26.0,3,128,,0,,,,0,0,0
+tools/build/victory-openworld/fx-wine-stream-probe-pulse.nrL3CA/run.XdOVUa/run.log,2026-11-26T11:26:42Z,2026-11-26T11:27:52Z,70.0,124,1024,,0,,,,0,0,0
+tools/build/victory-openworld/fx-wine-stream-probe-audio-control.mvIfyW/run.l1zdLZ/run.log,2026-11-26T11:28:04Z,2026-11-26T11:29:04Z,60.0,124,1024,,0,,,,0,0,0
