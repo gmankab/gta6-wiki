@@ -1,0 +1,745 @@
+source_log,line,measurement_as_logged
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7-srgb.log,2,run 0 525.337 ms readback=2d76c331
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7-srgb.log,3,run 1 430.314 ms readback=2d76c331
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7-srgb.log,4,run 2 430.078 ms readback=863dff20
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7-srgb.log,5,run 3 430.122 ms readback=863dff20
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7.log,2,run 0 581.477 ms readback=a4d13399
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7.log,3,run 1 489.936 ms readback=a4d13399
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7.log,4,run 2 457.797 ms readback=ccb4e1bc
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-bc7.log,5,run 3 457.651 ms readback=ccb4e1bc
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-rgba.log,2,run 0 60.206 ms readback=0fe5ccac
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-rgba.log,3,run 1 8.665 ms readback=0fe5ccac
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-rgba.log,4,run 2 8.758 ms readback=f8636dc3
+tools/build/lavapipe-bptc.KxaLnH/bench/baseline-rgba.log,5,run 3 8.829 ms readback=f8636dc3
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7-srgb.log,2,run 0 159.023 ms readback=2d76c331
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7-srgb.log,3,run 1 64.692 ms readback=2d76c331
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7-srgb.log,4,run 2 64.444 ms readback=863dff20
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7-srgb.log,5,run 3 64.254 ms readback=863dff20
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7.log,2,run 0 144.233 ms readback=a4d13399
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7.log,3,run 1 88.283 ms readback=a4d13399
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7.log,4,run 2 87.827 ms readback=ccb4e1bc
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-bc7.log,5,run 3 86.145 ms readback=ccb4e1bc
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-rgba.log,2,run 0 59.481 ms readback=0fe5ccac
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-rgba.log,3,run 1 8.885 ms readback=0fe5ccac
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-rgba.log,4,run 2 8.582 ms readback=f8636dc3
+tools/build/lavapipe-bptc.KxaLnH/bench/cached-rgba.log,5,run 3 8.811 ms readback=f8636dc3
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,2,"65536,1,1,14.0851"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,3,"65536,2,1,7.7032"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,4,"65536,0,1,15.7934"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,5,"65536,2,2,7.9534"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,6,"65536,0,2,14.5064"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,7,"65536,1,2,14.5544"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,8,"65536,0,3,15.0440"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,9,"65536,1,3,15.8146"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,10,"65536,2,3,7.3733"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,11,"65536,1,4,15.0819"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,12,"65536,2,4,7.7396"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,13,"65536,0,4,15.1246"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,14,"65536,2,5,7.3342"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,15,"65536,0,5,16.0061"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,16,"65536,1,5,14.5735"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,17,"65536,0,6,15.0991"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,18,"65536,1,6,14.4922"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,19,"65536,2,6,7.0647"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,20,"65536,1,7,14.1674"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,21,"65536,2,7,7.2618"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,22,"65536,0,7,15.1259"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,23,"1048576,1,1,16.8114"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,24,"1048576,2,1,10.5341"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,25,"1048576,0,1,12.4152"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,26,"1048576,2,2,10.5840"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,27,"1048576,0,2,12.7926"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,28,"1048576,1,2,15.4128"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,29,"1048576,0,3,13.9010"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,30,"1048576,1,3,15.0641"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,31,"1048576,2,3,11.5012"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,32,"1048576,1,4,15.5642"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,33,"1048576,2,4,11.8039"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,34,"1048576,0,4,12.7970"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,35,"1048576,2,5,10.4874"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,36,"1048576,0,5,11.8398"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,37,"1048576,1,5,14.1082"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,38,"1048576,0,6,12.7289"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,39,"1048576,1,6,15.6879"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,40,"1048576,2,6,11.4767"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,41,"1048576,1,7,16.6574"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,42,"1048576,2,7,10.5680"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,43,"1048576,0,7,12.4253"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,44,"2097152,1,1,16.2293"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,45,"2097152,2,1,10.9963"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,46,"2097152,0,1,12.8969"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,47,"2097152,2,2,11.6760"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,48,"2097152,0,2,13.8603"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,49,"2097152,1,2,14.3526"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,50,"2097152,0,3,12.7629"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,51,"2097152,1,3,15.7610"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,52,"2097152,2,3,11.1890"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,53,"2097152,1,4,16.1500"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,54,"2097152,2,4,10.8785"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,55,"2097152,0,4,12.0323"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,56,"2097152,2,5,11.0460"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,57,"2097152,0,5,12.9684"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,58,"2097152,1,5,15.6118"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,59,"2097152,0,6,13.3507"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,60,"2097152,1,6,14.7794"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,61,"2097152,2,6,11.0188"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,62,"2097152,1,7,14.1968"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,63,"2097152,2,7,11.3225"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,64,"2097152,0,7,12.5704"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,65,"8388608,1,1,16.9600"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,66,"8388608,2,1,11.9528"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,67,"8388608,0,1,13.9331"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,68,"8388608,2,2,12.1354"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,69,"8388608,0,2,12.8397"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,70,"8388608,1,2,18.8641"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,71,"8388608,0,3,12.9982"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,72,"8388608,1,3,20.3632"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,73,"8388608,2,3,15.3077"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,74,"8388608,1,4,16.4524"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,75,"8388608,2,4,11.5197"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,76,"8388608,0,4,12.8734"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,77,"8388608,2,5,12.8590"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,78,"8388608,0,5,13.6181"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,79,"8388608,1,5,17.9581"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,80,"8388608,0,6,13.8845"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,81,"8388608,1,6,21.1781"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,82,"8388608,2,6,12.4582"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,83,"8388608,1,7,18.9826"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,84,"8388608,2,7,12.3737"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,85,"8388608,0,7,12.6447"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,86,"16777216,1,1,30.2272"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,87,"16777216,2,1,24.1631"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,88,"16777216,0,1,16.0124"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,89,"16777216,2,2,24.3599"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,90,"16777216,0,2,15.0471"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,91,"16777216,1,2,32.1643"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,92,"16777216,0,3,14.2399"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,93,"16777216,1,3,26.1766"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,94,"16777216,2,3,23.3951"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,95,"16777216,1,4,31.5793"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,96,"16777216,2,4,23.6318"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,97,"16777216,0,4,14.7890"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,98,"16777216,2,5,28.6356"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,99,"16777216,0,5,14.9714"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,100,"16777216,1,5,31.5820"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,101,"16777216,0,6,17.1719"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,102,"16777216,1,6,30.0730"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,103,"16777216,2,6,24.9381"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,104,"16777216,1,7,29.4800"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,105,"16777216,2,7,24.0744"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,106,"16777216,0,7,14.6988"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,107,"67108864,1,1,32.9486"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,108,"67108864,2,1,28.4951"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,109,"67108864,0,1,23.0009"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,110,"67108864,2,2,28.6782"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,111,"67108864,0,2,23.0639"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,112,"67108864,1,2,34.1240"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,113,"67108864,0,3,25.3962"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,114,"67108864,1,3,33.4909"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,115,"67108864,2,3,28.3034"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,116,"67108864,1,4,32.5157"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,117,"67108864,2,4,28.0985"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,118,"67108864,0,4,22.4811"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,119,"67108864,2,5,28.2914"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,120,"67108864,0,5,22.8370"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,121,"67108864,1,5,34.3165"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,122,"67108864,0,6,22.9132"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,123,"67108864,1,6,37.1812"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,124,"67108864,2,6,29.6203"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,125,"67108864,1,7,35.9975"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,126,"67108864,2,7,31.7137"
+tools/build/victory-openworld/linux-kernel-copy.pTzA5d/raw.csv,127,"67108864,0,7,23.6771"
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-1.log,3,test bench_unrolled_loads ...  16 steps x 4 loads:     17.15 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-1.log,4,128 steps x 4 loads:    180.88 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-1.log,5,384 steps x 4 loads:    745.72 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-2.log,3,test bench_unrolled_loads ...  16 steps x 4 loads:     17.42 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-2.log,4,128 steps x 4 loads:    181.41 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/candidate/bench-2.log,5,384 steps x 4 loads:    744.84 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-1.log,3,test bench_unrolled_loads ...  16 steps x 4 loads:     81.45 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-1.log,4,128 steps x 4 loads:   4440.97 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-1.log,5,384 steps x 4 loads:  42230.98 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-2.log,3,test bench_unrolled_loads ...  16 steps x 4 loads:     79.87 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-2.log,4,128 steps x 4 loads:   4449.00 us/track (median)
+tools/build/victory-openworld/marvisak-ssa-control.bJTLsW/control/bench-2.log,5,384 steps x 4 loads:  41673.26 us/track (median)
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,1,"1,blocks32,1,10.38653"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,2,"1,blocks64,1,8.00810"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,3,"1,words,1,2.79080"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,4,"1,scalar,1,5.63676"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,5,"1,blocks64,2,8.17533"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,6,"1,words,2,2.53443"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,7,"1,scalar,2,5.79117"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,8,"1,blocks32,2,10.65236"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,9,"1,words,3,2.52383"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,10,"1,scalar,3,5.73935"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,11,"1,blocks32,3,10.42497"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,12,"1,blocks64,3,7.81241"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,13,"1,scalar,4,5.51089"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,14,"1,blocks32,4,11.00102"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,15,"1,blocks64,4,7.72989"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,16,"1,words,4,2.56356"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,17,"1,blocks32,5,10.99582"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,18,"1,blocks64,5,7.27423"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,19,"1,words,5,2.49986"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,20,"1,scalar,5,5.71249"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,21,"1,blocks64,6,8.02962"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,22,"1,words,6,2.62028"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,23,"1,scalar,6,5.82461"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,24,"1,blocks32,6,10.89642"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,25,"1,words,7,2.52553"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,26,"1,scalar,7,5.92538"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,27,"1,blocks32,7,10.97691"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,28,"1,blocks64,7,7.77322"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,29,"2,blocks32,1,8.71287"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,30,"2,blocks64,1,6.74716"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,31,"2,words,1,2.15188"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,32,"2,scalar,1,6.60069"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,33,"2,blocks64,2,6.91324"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,34,"2,words,2,2.48554"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,35,"2,scalar,2,6.63758"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,36,"2,blocks32,2,10.03703"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,37,"2,words,3,2.40871"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,38,"2,scalar,3,6.78115"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,39,"2,blocks32,3,9.80560"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,40,"2,blocks64,3,7.22874"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,41,"2,scalar,4,6.95033"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,42,"2,blocks32,4,9.18394"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,43,"2,blocks64,4,7.20471"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,44,"2,words,4,2.35070"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,45,"2,blocks32,5,9.01704"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,46,"2,blocks64,5,6.79763"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,47,"2,words,5,2.39399"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,48,"2,scalar,5,6.95276"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,49,"2,blocks64,6,7.01288"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,50,"2,words,6,2.56265"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,51,"2,scalar,6,6.86315"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,52,"2,blocks32,6,8.70830"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,53,"2,words,7,2.55021"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,54,"2,scalar,7,6.72272"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,55,"2,blocks32,7,9.12925"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,56,"2,blocks64,7,6.89407"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,57,"8,blocks32,1,9.25216"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,58,"8,blocks64,1,6.88634"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,59,"8,words,1,2.38077"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,60,"8,scalar,1,5.59866"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,61,"8,blocks64,2,6.86344"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,62,"8,words,2,2.27204"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,63,"8,scalar,2,5.48330"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,64,"8,blocks32,2,8.95971"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,65,"8,words,3,2.43069"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,66,"8,scalar,3,5.63790"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,67,"8,blocks32,3,8.60218"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,68,"8,blocks64,3,7.00031"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,69,"8,scalar,4,5.36141"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,70,"8,blocks32,4,8.39494"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,71,"8,blocks64,4,6.74334"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,72,"8,words,4,2.31890"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,73,"8,blocks32,5,8.78599"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,74,"8,blocks64,5,7.12634"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,75,"8,words,5,2.36007"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,76,"8,scalar,5,5.13387"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,77,"8,blocks64,6,6.85957"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,78,"8,words,6,2.42681"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,79,"8,scalar,6,5.01837"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,80,"8,blocks32,6,8.88259"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,81,"8,words,7,2.50590"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,82,"8,scalar,7,5.07931"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,83,"8,blocks32,7,8.77276"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,84,"8,blocks64,7,7.29201"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,85,"64,blocks32,1,5.92344"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,86,"64,blocks64,1,7.17781"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,87,"64,words,1,2.34758"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,88,"64,scalar,1,5.08912"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,89,"64,blocks64,2,6.93436"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,90,"64,words,2,2.36314"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,91,"64,scalar,2,5.17124"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,92,"64,blocks32,2,6.19081"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,93,"64,words,3,2.25254"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,94,"64,scalar,3,5.06184"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,95,"64,blocks32,3,6.06900"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,96,"64,blocks64,3,7.10691"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,97,"64,scalar,4,5.17841"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,98,"64,blocks32,4,6.03893"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,99,"64,blocks64,4,7.32803"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,100,"64,words,4,2.57515"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,101,"64,blocks32,5,5.77360"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,102,"64,blocks64,5,6.92797"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,103,"64,words,5,2.55046"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,104,"64,scalar,5,5.16488"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,105,"64,blocks64,6,7.27186"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,106,"64,words,6,2.56268"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,107,"64,scalar,6,5.18848"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,108,"64,blocks32,6,6.18785"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,109,"64,words,7,2.42892"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,110,"64,scalar,7,5.06704"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,111,"64,blocks32,7,5.92539"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,112,"64,blocks64,7,7.05755"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,113,"512,blocks32,1,3.82028"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,114,"512,blocks64,1,2.84082"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,115,"512,words,1,2.41151"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,116,"512,scalar,1,5.37050"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,117,"512,blocks64,2,2.88374"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,118,"512,words,2,2.42529"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,119,"512,scalar,2,5.28623"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,120,"512,blocks32,2,4.03772"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,121,"512,words,3,2.34317"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,122,"512,scalar,3,5.27983"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,123,"512,blocks32,3,3.91371"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,124,"512,blocks64,3,2.71978"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,125,"512,scalar,4,4.90302"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,126,"512,blocks32,4,3.95245"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,127,"512,blocks64,4,2.84229"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,128,"512,words,4,2.38569"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,129,"512,blocks32,5,4.02322"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,130,"512,blocks64,5,2.81912"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,131,"512,words,5,2.36509"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,132,"512,scalar,5,5.01755"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,133,"512,blocks64,6,3.01511"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,134,"512,words,6,2.35498"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,135,"512,scalar,6,5.27031"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,136,"512,blocks32,6,3.97019"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,137,"512,words,7,2.54509"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,138,"512,scalar,7,5.12961"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,139,"512,blocks32,7,4.15193"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,140,"512,blocks64,7,3.00846"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,141,"4096,blocks32,1,3.26475"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,142,"4096,blocks64,1,2.59143"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,143,"4096,words,1,2.42370"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,144,"4096,scalar,1,4.87789"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,145,"4096,blocks64,2,2.58400"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,146,"4096,words,2,2.48786"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,147,"4096,scalar,2,5.14054"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,148,"4096,blocks32,2,3.08007"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,149,"4096,words,3,2.34345"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,150,"4096,scalar,3,5.09678"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,151,"4096,blocks32,3,3.48306"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,152,"4096,blocks64,3,2.68336"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,153,"4096,scalar,4,4.90781"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,154,"4096,blocks32,4,3.47615"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,155,"4096,blocks64,4,2.64925"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,156,"4096,words,4,2.38001"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,157,"4096,blocks32,5,3.27175"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,158,"4096,blocks64,5,2.62849"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,159,"4096,words,5,2.43326"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,160,"4096,scalar,5,5.18934"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,161,"4096,blocks64,6,2.62268"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,162,"4096,words,6,2.38260"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,163,"4096,scalar,6,5.09583"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,164,"4096,blocks32,6,3.42205"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,165,"4096,words,7,2.43796"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,166,"4096,scalar,7,5.04426"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,167,"4096,blocks32,7,3.36731"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/exact.csv,168,"4096,blocks64,7,2.60132"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,1,"1,blocks32,1,11.41190"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,2,"1,blocks64,1,7.93742"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,3,"1,words,1,2.87078"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,4,"1,scalar,1,5.95109"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,5,"1,blocks64,2,7.96197"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,6,"1,words,2,2.52163"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,7,"1,scalar,2,5.91732"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,8,"1,blocks32,2,11.01055"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,9,"1,words,3,2.53746"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,10,"1,scalar,3,5.81426"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,11,"1,blocks32,3,10.90393"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,12,"1,blocks64,3,11.32997"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,13,"1,scalar,4,5.89536"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,14,"1,blocks32,4,10.88473"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,15,"1,blocks64,4,8.07149"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,16,"1,words,4,2.46259"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,17,"1,blocks32,5,11.11902"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,18,"1,blocks64,5,12.35185"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,19,"1,words,5,2.46903"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,20,"1,scalar,5,5.84835"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,21,"1,blocks64,6,8.10854"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,22,"1,words,6,2.54508"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,23,"1,scalar,6,5.83277"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,24,"1,blocks32,6,10.81479"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,25,"1,words,7,2.42276"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,26,"1,scalar,7,6.22530"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,27,"1,blocks32,7,10.93530"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,28,"1,blocks64,7,8.12489"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,29,"2,blocks32,1,9.54169"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,30,"2,blocks64,1,7.13034"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,31,"2,words,1,2.38130"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,32,"2,scalar,1,6.86561"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,33,"2,blocks64,2,7.05775"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,34,"2,words,2,2.34423"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,35,"2,scalar,2,6.84480"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,36,"2,blocks32,2,9.04320"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,37,"2,words,3,2.40860"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,38,"2,scalar,3,6.86729"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,39,"2,blocks32,3,9.06643"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,40,"2,blocks64,3,7.13400"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,41,"2,scalar,4,6.87190"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,42,"2,blocks32,4,9.08122"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,43,"2,blocks64,4,7.27287"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,44,"2,words,4,2.40345"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,45,"2,blocks32,5,9.14359"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,46,"2,blocks64,5,7.07830"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,47,"2,words,5,2.43562"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,48,"2,scalar,5,6.97997"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,49,"2,blocks64,6,7.21960"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,50,"2,words,6,2.35817"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,51,"2,scalar,6,6.85546"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,52,"2,blocks32,6,9.05332"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,53,"2,words,7,2.45009"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,54,"2,scalar,7,6.87140"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,55,"2,blocks32,7,9.06023"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,56,"2,blocks64,7,7.38589"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,57,"8,blocks32,1,12.78590"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,58,"8,blocks64,1,7.47881"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,59,"8,words,1,2.38162"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,60,"8,scalar,1,5.49420"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,61,"8,blocks64,2,7.53178"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,62,"8,words,2,2.40537"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,63,"8,scalar,2,5.48996"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,64,"8,blocks32,2,9.23311"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,65,"8,words,3,2.36148"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,66,"8,scalar,3,5.36742"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,67,"8,blocks32,3,9.08286"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,68,"8,blocks64,3,7.21948"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,69,"8,scalar,4,5.41555"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,70,"8,blocks32,4,8.99966"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,71,"8,blocks64,4,7.19630"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,72,"8,words,4,2.37236"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,73,"8,blocks32,5,8.96362"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,74,"8,blocks64,5,7.22782"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,75,"8,words,5,2.44855"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,76,"8,scalar,5,5.39007"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,77,"8,blocks64,6,7.19182"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,78,"8,words,6,2.38791"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,79,"8,scalar,6,5.40764"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,80,"8,blocks32,6,8.97927"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,81,"8,words,7,2.44534"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,82,"8,scalar,7,5.42003"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,83,"8,blocks32,7,13.13107"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,84,"8,blocks64,7,7.40397"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,85,"64,blocks32,1,6.67341"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,86,"64,blocks64,1,7.34077"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,87,"64,words,1,2.39359"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,88,"64,scalar,1,5.06783"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,89,"64,blocks64,2,7.44425"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,90,"64,words,2,2.38738"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,91,"64,scalar,2,5.17519"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,92,"64,blocks32,2,6.04160"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,93,"64,words,3,2.35267"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,94,"64,scalar,3,5.07434"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,95,"64,blocks32,3,6.08373"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,96,"64,blocks64,3,7.38490"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,97,"64,scalar,4,5.10768"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,98,"64,blocks32,4,6.06269"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,99,"64,blocks64,4,7.34066"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,100,"64,words,4,2.39487"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,101,"64,blocks32,5,6.04134"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,102,"64,blocks64,5,7.34594"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,103,"64,words,5,2.37110"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,104,"64,scalar,5,5.07550"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,105,"64,blocks64,6,7.31787"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,106,"64,words,6,2.39057"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,107,"64,scalar,6,5.06351"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,108,"64,blocks32,6,5.99225"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,109,"64,words,7,2.73273"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,110,"64,scalar,7,5.12252"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,111,"64,blocks32,7,6.00080"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,112,"64,blocks64,7,7.31380"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,113,"512,blocks32,1,3.90688"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,114,"512,blocks64,1,2.85416"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,115,"512,words,1,2.73415"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,116,"512,scalar,1,5.24167"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,117,"512,blocks64,2,2.90142"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,118,"512,words,2,2.43479"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,119,"512,scalar,2,5.22264"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,120,"512,blocks32,2,3.87345"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,121,"512,words,3,2.47804"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,122,"512,scalar,3,5.27575"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,123,"512,blocks32,3,3.95404"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,124,"512,blocks64,3,2.84766"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,125,"512,scalar,4,5.35324"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,126,"512,blocks32,4,4.42380"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,127,"512,blocks64,4,2.84523"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,128,"512,words,4,2.40071"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,129,"512,blocks32,5,3.95629"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,130,"512,blocks64,5,2.83896"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,131,"512,words,5,2.43211"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,132,"512,scalar,5,5.23510"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,133,"512,blocks64,6,2.90488"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,134,"512,words,6,2.35517"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,135,"512,scalar,6,5.23778"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,136,"512,blocks32,6,3.88159"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,137,"512,words,7,2.40059"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,138,"512,scalar,7,5.55760"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,139,"512,blocks32,7,3.90406"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,140,"512,blocks64,7,2.84838"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,141,"4096,blocks32,1,3.33462"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,142,"4096,blocks64,1,2.60334"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,143,"4096,words,1,2.35435"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,144,"4096,scalar,1,5.24317"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,145,"4096,blocks64,2,2.61707"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,146,"4096,words,2,2.37332"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,147,"4096,scalar,2,5.06446"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,148,"4096,blocks32,2,3.40114"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,149,"4096,words,3,2.31997"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,150,"4096,scalar,3,5.08035"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,151,"4096,blocks32,3,3.36589"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,152,"4096,blocks64,3,2.59658"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,153,"4096,scalar,4,5.13916"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,154,"4096,blocks32,4,3.40318"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,155,"4096,blocks64,4,2.54572"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,156,"4096,words,4,2.42625"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,157,"4096,blocks32,5,3.34225"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,158,"4096,blocks64,5,2.55229"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,159,"4096,words,5,2.34828"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,160,"4096,scalar,5,5.16265"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,161,"4096,blocks64,6,2.53714"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,162,"4096,words,6,2.29637"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,163,"4096,scalar,6,5.05725"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,164,"4096,blocks32,6,3.76758"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,165,"4096,words,7,2.49908"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,166,"4096,scalar,7,5.12720"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,167,"4096,blocks32,7,3.32270"
+tools/build/victory-openworld/native-copyback-blocks.MpaQTk/raw.csv,168,"4096,blocks64,7,2.51073"
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,1,4096 guarded 4.807
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,2,4096 probes 134.775
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,3,4096 probes 136.985
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,4,4096 guarded 5.070
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,5,4096 guarded 5.146
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,6,4096 probes 143.108
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,7,4096 probes 145.010
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,8,4096 guarded 5.118
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,9,4096 guarded 4.988
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,10,4096 probes 142.887
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,11,65536 guarded 10.934
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,12,65536 probes 22.826
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,13,65536 probes 22.368
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,14,65536 guarded 11.161
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,15,65536 guarded 10.978
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,16,65536 probes 22.737
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,17,65536 probes 22.627
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,18,65536 guarded 11.015
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,19,65536 guarded 11.336
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,20,65536 probes 22.455
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,21,262144 guarded 12.134
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,22,262144 probes 16.576
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,23,262144 probes 16.823
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,24,262144 guarded 12.163
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,25,262144 guarded 12.236
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,26,262144 probes 16.667
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,27,262144 probes 16.544
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,28,262144 guarded 12.231
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,29,262144 guarded 12.126
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,30,262144 probes 16.543
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,31,524288 guarded 12.453
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,32,524288 probes 13.778
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,33,524288 probes 12.758
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,34,524288 guarded 11.094
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,35,524288 guarded 10.279
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,36,524288 probes 11.825
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,37,524288 probes 12.624
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,38,524288 guarded 10.184
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,39,524288 guarded 10.778
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,40,524288 probes 11.885
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,41,1048576 guarded 10.084
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,42,1048576 probes 11.465
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,43,1048576 probes 11.297
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,44,1048576 guarded 10.230
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,45,1048576 guarded 10.220
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,46,1048576 probes 11.413
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,47,1048576 probes 11.343
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,48,1048576 guarded 10.267
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,49,1048576 guarded 10.009
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,50,1048576 probes 11.585
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,51,2097152 guarded 10.037
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,52,2097152 probes 11.321
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,53,2097152 probes 11.258
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,54,2097152 guarded 10.712
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,55,2097152 guarded 10.936
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,56,2097152 probes 11.701
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,57,2097152 probes 12.956
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,58,2097152 guarded 10.290
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,59,2097152 guarded 11.109
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,60,2097152 probes 12.921
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,61,4194304 guarded 12.141
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,62,4194304 probes 14.581
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,63,4194304 probes 14.204
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,64,4194304 guarded 11.522
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,65,4194304 guarded 11.477
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,66,4194304 probes 14.562
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,67,4194304 probes 13.881
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,68,4194304 guarded 11.033
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,69,4194304 guarded 13.054
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,70,4194304 probes 17.162
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,71,8388608 guarded 17.997
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,72,8388608 probes 16.197
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,73,8388608 probes 15.767
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,74,8388608 guarded 15.303
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,75,8388608 guarded 14.110
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,76,8388608 probes 15.962
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,77,8388608 probes 15.397
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,78,8388608 guarded 15.295
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,79,8388608 guarded 16.691
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,80,8388608 probes 14.544
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,81,16777216 guarded 30.208
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,82,16777216 probes 23.553
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,83,16777216 probes 19.930
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,84,16777216 guarded 28.099
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,85,16777216 guarded 32.057
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,86,16777216 probes 26.698
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,87,16777216 probes 25.144
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,88,16777216 guarded 31.611
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,89,16777216 guarded 31.752
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark-expanded.tsv,90,16777216 probes 25.307
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,1,65536 guarded 7.231
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,2,65536 probes 21.354
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,3,65536 probes 20.898
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,4,65536 guarded 8.518
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,5,65536 guarded 8.716
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,6,65536 probes 22.641
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,7,65536 probes 22.602
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,8,65536 guarded 8.614
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,9,65536 guarded 8.690
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,10,65536 probes 22.798
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,11,1048576 guarded 13.363
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,12,1048576 probes 15.599
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,13,1048576 probes 15.718
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,14,1048576 guarded 13.287
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,15,1048576 guarded 13.288
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,16,1048576 probes 15.761
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,17,1048576 probes 15.677
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,18,1048576 guarded 12.595
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,19,1048576 guarded 12.488
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,20,1048576 probes 14.662
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,21,16777216 guarded 29.319
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,22,16777216 probes 22.841
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,23,16777216 probes 22.577
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,24,16777216 guarded 29.771
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,25,16777216 guarded 30.332
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,26,16777216 probes 22.009
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,27,16777216 probes 23.275
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,28,16777216 guarded 30.898
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,29,16777216 guarded 31.201
+tools/build/victory-openworld/native-guarded-copy.WQDuXW/copy-benchmark.tsv,30,16777216 probes 21.832
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-1.log,30,"records=1 median_ticks_per_clamp=196 samples=[195, 195, 195, 195, 196, 196, 196, 196]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-1.log,31,"records=64 median_ticks_per_clamp=294 samples=[294, 294, 294, 294, 294, 295, 295, 295]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-1.log,32,"records=4096 median_ticks_per_clamp=1805 samples=[1796, 1797, 1798, 1803, 1805, 1807, 1808, 1821]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-1.log,33,"records=16384 median_ticks_per_clamp=7240 samples=[7204, 7224, 7228, 7232, 7240, 7240, 7244, 7256]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-2.log,30,"records=1 median_ticks_per_clamp=203 samples=[195, 196, 196, 199, 203, 204, 204, 204]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-2.log,31,"records=64 median_ticks_per_clamp=299 samples=[293, 293, 294, 299, 299, 301, 302, 303]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-2.log,32,"records=4096 median_ticks_per_clamp=1805 samples=[1789, 1794, 1797, 1800, 1805, 1809, 1815, 1817]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/bench-tests-rx-2.log,33,"records=16384 median_ticks_per_clamp=7232 samples=[7212, 7220, 7228, 7232, 7232, 7236, 7252, 7280]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/candidate-bench-lvp.log,23,"records=1 median_ticks_per_clamp=18156 samples=[17907, 17972, 17985, 18000, 18156, 18189, 18273, 18319]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/candidate-bench-lvp.log,24,"records=64 median_ticks_per_clamp=20872 samples=[20072, 20555, 20739, 20850, 20872, 22515, 23181, 24845]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/candidate-bench-lvp.log,25,"records=4096 median_ticks_per_clamp=102413 samples=[100852, 101807, 101987, 102325, 102413, 103068, 103308, 105754]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/candidate-bench-lvp.log,26,"records=16384 median_ticks_per_clamp=367825 samples=[344654, 351198, 365861, 366853, 367825, 367836, 375457, 378593]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-1.log,32,"records=1 median_ticks_per_clamp=288 samples=[288, 288, 288, 288, 288, 288, 288, 288]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-1.log,33,"records=64 median_ticks_per_clamp=374 samples=[374, 374, 374, 374, 374, 374, 374, 374]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-1.log,34,"records=4096 median_ticks_per_clamp=2133 samples=[2125, 2125, 2130, 2132, 2133, 2135, 2137, 2139]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-1.log,35,"records=16384 median_ticks_per_clamp=8336 samples=[8328, 8332, 8332, 8332, 8336, 8336, 8340, 8352]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-2.log,30,"records=1 median_ticks_per_clamp=281 samples=[281, 281, 281, 281, 281, 281, 281, 281]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-2.log,31,"records=64 median_ticks_per_clamp=372 samples=[372, 372, 372, 372, 372, 372, 372, 378]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-2.log,32,"records=4096 median_ticks_per_clamp=2131 samples=[2122, 2123, 2125, 2126, 2131, 2133, 2137, 2141]"
+tools/build/victory-openworld/native-indirect-budget-local.Unpfkz/control-benchmark-tests-rx-2.log,33,"records=16384 median_ticks_per_clamp=8352 samples=[8336, 8340, 8344, 8344, 8352, 8356, 8356, 8356]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-lvp.log,25,"records=1 median_ticks_per_clamp=14924 samples=[14669, 14764, 14837, 14848, 14924, 15079, 15198, 15221]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-lvp.log,26,"records=64 median_ticks_per_clamp=18295 samples=[17812, 17817, 17897, 18127, 18295, 18608, 18684, 19400]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-lvp.log,27,"records=4096 median_ticks_per_clamp=154243 samples=[153428, 153507, 153843, 153864, 154243, 154427, 156390, 160177]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-lvp.log,28,"records=16384 median_ticks_per_clamp=542130 samples=[535163, 538945, 541230, 541445, 542130, 583031, 584206, 594913]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-1.log,33,"records=1 median_ticks_per_clamp=353 samples=[353, 353, 353, 353, 353, 353, 353, 353]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-1.log,34,"records=64 median_ticks_per_clamp=406 samples=[405, 405, 405, 406, 406, 406, 406, 406]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-1.log,35,"records=4096 median_ticks_per_clamp=1236 samples=[1232, 1234, 1235, 1235, 1236, 1240, 1241, 1456]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-1.log,36,"records=16384 median_ticks_per_clamp=4240 samples=[4228, 4236, 4236, 4236, 4240, 4244, 4248, 4252]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-2.log,30,"records=1 median_ticks_per_clamp=353 samples=[353, 353, 353, 353, 353, 353, 353, 353]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-2.log,31,"records=64 median_ticks_per_clamp=405 samples=[405, 405, 405, 405, 405, 405, 405, 405]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-2.log,32,"records=4096 median_ticks_per_clamp=1235 samples=[1231, 1232, 1234, 1235, 1235, 1236, 1237, 1241]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/baseline-bench-rx-2.log,33,"records=16384 median_ticks_per_clamp=4228 samples=[4212, 4216, 4220, 4228, 4228, 4232, 4240, 4244]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-lvp.log,25,"records=1 median_ticks_per_clamp=15457 samples=[14155, 14623, 14641, 14685, 15457, 15798, 16009, 16013]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-lvp.log,26,"records=64 median_ticks_per_clamp=19202 samples=[18814, 18864, 18880, 19072, 19202, 19232, 19300, 20477]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-lvp.log,27,"records=4096 median_ticks_per_clamp=93549 samples=[91601, 92742, 93076, 93372, 93549, 94144, 95172, 95346]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-lvp.log,28,"records=16384 median_ticks_per_clamp=334527 samples=[283550, 313713, 314898, 326816, 334527, 358272, 363168, 368611]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-1.log,32,"records=1 median_ticks_per_clamp=370 samples=[370, 370, 370, 370, 370, 370, 372, 372]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-1.log,33,"records=64 median_ticks_per_clamp=464 samples=[464, 464, 464, 464, 464, 464, 464, 464]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-1.log,34,"records=4096 median_ticks_per_clamp=2632 samples=[2626, 2629, 2630, 2631, 2632, 2633, 2634, 2635]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-1.log,35,"records=16384 median_ticks_per_clamp=10248 samples=[10240, 10240, 10248, 10248, 10248, 10256, 10260, 10260]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-2.log,30,"records=1 median_ticks_per_clamp=370 samples=[370, 370, 370, 370, 370, 370, 370, 370]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-2.log,31,"records=64 median_ticks_per_clamp=465 samples=[465, 465, 465, 465, 465, 465, 465, 466]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-2.log,32,"records=4096 median_ticks_per_clamp=2635 samples=[2628, 2633, 2633, 2635, 2635, 2638, 2638, 2642]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/candidate-bench-rx-2.log,33,"records=16384 median_ticks_per_clamp=10240 samples=[10232, 10236, 10236, 10240, 10240, 10248, 10248, 10256]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-lvp.log,25,"records=1 median_ticks_per_clamp=15020 samples=[14418, 14593, 14727, 14827, 15020, 15100, 15318, 15524]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-lvp.log,26,"records=64 median_ticks_per_clamp=19865 samples=[18955, 19381, 19639, 19697, 19865, 20072, 20150, 20226]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-lvp.log,27,"records=4096 median_ticks_per_clamp=103139 samples=[98922, 99074, 101207, 101212, 103139, 103339, 103734, 106806]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-lvp.log,28,"records=16384 median_ticks_per_clamp=374993 samples=[343771, 354192, 372282, 373146, 374993, 380020, 385044, 395987]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-1.log,32,"records=1 median_ticks_per_clamp=372 samples=[372, 372, 372, 372, 372, 372, 372, 372]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-1.log,33,"records=64 median_ticks_per_clamp=877 samples=[877, 877, 877, 877, 877, 877, 877, 877]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-1.log,34,"records=4096 median_ticks_per_clamp=2748 samples=[2740, 2746, 2747, 2748, 2748, 2751, 2754, 2756]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-1.log,35,"records=16384 median_ticks_per_clamp=10248 samples=[10220, 10232, 10236, 10236, 10248, 10252, 10252, 10256]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-2.log,30,"records=1 median_ticks_per_clamp=370 samples=[370, 370, 370, 370, 370, 370, 370, 370]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-2.log,31,"records=64 median_ticks_per_clamp=877 samples=[877, 877, 877, 877, 877, 877, 877, 877]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-2.log,32,"records=4096 median_ticks_per_clamp=2733 samples=[2726, 2729, 2730, 2733, 2733, 2743, 2745, 2763]"
+tools/build/victory-openworld/native-indirect-saturation.BehLEg/initial-benchmark/candidate-bench-rx-2.log,33,"records=16384 median_ticks_per_clamp=10232 samples=[10212, 10212, 10224, 10232, 10232, 10236, 10240, 10256]"
+tools/build/victory-openworld/native-indirect-scratch.8k2po2/vram-benchmark-lvp.log,25,"records=1 median_ticks_per_clamp=16271 samples=[15723, 15892, 16109, 16189, 16271, 18445, 19409, 19793]"
+tools/build/victory-openworld/native-indirect-scratch.8k2po2/vram-benchmark-lvp.log,26,"records=64 median_ticks_per_clamp=20576 samples=[20124, 20282, 20388, 20400, 20576, 20687, 21041, 21635]"
+tools/build/victory-openworld/native-indirect-scratch.8k2po2/vram-benchmark-lvp.log,27,"records=4096 median_ticks_per_clamp=99260 samples=[94612, 96889, 98152, 98264, 99260, 100023, 101664, 104122]"
+tools/build/victory-openworld/native-indirect-scratch.8k2po2/vram-benchmark-lvp.log,28,"records=16384 median_ticks_per_clamp=400459 samples=[360058, 379695, 396222, 398668, 400459, 400602, 412572, 429326]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-0.log,24,"records=1 median_ticks_per_clamp_and_dispatch=42753 samples=[40859, 41893, 42371, 42669, 42753, 42933, 43757, 45740]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-0.log,25,"records=8 median_ticks_per_clamp_and_dispatch=154313 samples=[133947, 137470, 144731, 151776, 154313, 157479, 159034, 159898]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-0.log,26,"records=64 median_ticks_per_clamp_and_dispatch=826120 samples=[814675, 818995, 821104, 824322, 826120, 830004, 840766, 858026]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-0.log,27,"records=256 median_ticks_per_clamp_and_dispatch=3649956 samples=[3375411, 3413215, 3523662, 3603526, 3649956, 3692255, 3985068, 3990322]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-1.log,24,"records=1 median_ticks_per_clamp_and_dispatch=41656 samples=[40729, 41015, 41155, 41249, 41656, 41788, 41799, 42369]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-1.log,25,"records=8 median_ticks_per_clamp_and_dispatch=132849 samples=[129381, 129448, 129558, 132302, 132849, 133447, 135485, 137457]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-1.log,26,"records=64 median_ticks_per_clamp_and_dispatch=832861 samples=[797555, 798853, 811101, 831710, 832861, 833888, 835991, 846853]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/lvp-bench-1.log,27,"records=256 median_ticks_per_clamp_and_dispatch=3219472 samples=[3113313, 3172254, 3207852, 3217402, 3219472, 3286693, 3288600, 3293198]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-1.log,31,"records=1 median_ticks_per_clamp_and_dispatch=553 samples=[552, 553, 553, 553, 553, 557, 557, 557]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-1.log,32,"records=8 median_ticks_per_clamp_and_dispatch=566 samples=[564, 565, 565, 566, 566, 566, 566, 567]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-1.log,33,"records=64 median_ticks_per_clamp_and_dispatch=816 samples=[815, 815, 815, 815, 816, 816, 817, 817]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-1.log,34,"records=256 median_ticks_per_clamp_and_dispatch=1435 samples=[1431, 1432, 1432, 1434, 1435, 1444, 1444, 1444]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-2.log,31,"records=1 median_ticks_per_clamp_and_dispatch=554 samples=[553, 553, 553, 554, 554, 554, 557, 557]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-2.log,32,"records=8 median_ticks_per_clamp_and_dispatch=565 samples=[564, 564, 565, 565, 565, 565, 568, 568]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-2.log,33,"records=64 median_ticks_per_clamp_and_dispatch=813 samples=[812, 812, 813, 813, 813, 814, 814, 814]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-0-2.log,34,"records=256 median_ticks_per_clamp_and_dispatch=1434 samples=[1432, 1434, 1434, 1434, 1434, 1445, 1445, 1446]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-1.log,33,"records=1 median_ticks_per_clamp_and_dispatch=553 samples=[552, 552, 552, 553, 553, 557, 557, 559]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-1.log,34,"records=8 median_ticks_per_clamp_and_dispatch=567 samples=[566, 566, 566, 566, 567, 567, 567, 567]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-1.log,35,"records=64 median_ticks_per_clamp_and_dispatch=812 samples=[811, 811, 812, 812, 812, 812, 812, 813]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-1.log,36,"records=256 median_ticks_per_clamp_and_dispatch=1435 samples=[1432, 1433, 1433, 1434, 1435, 1436, 1446, 1446]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,31,"records=1 median_ticks_per_clamp_and_dispatch=558 samples=[554, 554, 554, 555, 558, 559, 559, 560]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,32,"records=8 median_ticks_per_clamp_and_dispatch=567 samples=[565, 566, 567, 567, 567, 567, 567, 568]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,33,"records=64 median_ticks_per_clamp_and_dispatch=813 samples=[813, 813, 813, 813, 813, 813, 813, 814]"
+tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,34,"records=256 median_ticks_per_clamp_and_dispatch=1437 samples=[1434, 1435, 1436, 1437, 1437, 1437, 1447, 1448]"
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,32,sample=0 allocated_budget=false cpu_ns_per_command=99 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,33,sample=1 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,34,sample=2 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,35,sample=3 allocated_budget=false cpu_ns_per_command=75 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,36,sample=4 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,37,sample=5 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,38,sample=6 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,39,sample=7 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,40,sample=8 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,41,sample=9 allocated_budget=false cpu_ns_per_command=85 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,42,commands=512 median_cpu_ns_per_command=76 median_gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,30,sample=0 allocated_budget=false cpu_ns_per_command=90 gpu_ticks_per_batch=56
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,31,sample=1 allocated_budget=false cpu_ns_per_command=77 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,32,sample=2 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,33,sample=3 allocated_budget=false cpu_ns_per_command=74 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,34,sample=4 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,35,sample=5 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,36,sample=6 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=64
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,37,sample=7 allocated_budget=false cpu_ns_per_command=88 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,38,sample=8 allocated_budget=false cpu_ns_per_command=100 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,39,sample=9 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
+tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-2.log,40,commands=512 median_cpu_ns_per_command=76 median_gpu_ticks_per_batch=64
+tools/build/victory-openworld/page-mapping-runs.aZy5E8/microbench.log,1,"individual 4096 x 4 pages 830.165 ms, readback passed"
+tools/build/victory-openworld/page-mapping-runs.aZy5E8/microbench.log,2,"batch 4096 x 4 pages 196.987 ms, readback passed"
+tools/build/victory-openworld/page-mapping-runs.aZy5E8/microbench.log,3,"individual 4096 x 4 pages 820.734 ms, readback passed"
+tools/build/victory-openworld/page-mapping-runs.aZy5E8/microbench.log,4,"batch 4096 x 4 pages 196.327 ms, readback passed"
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-bc7.log,2,run 0 1504.395 ms readback=e6be7b72
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-bc7.log,3,run 1 1197.294 ms readback=e6be7b72
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-bc7.log,4,run 2 1237.059 ms readback=e6be7b72
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-bc7.log,5,run 3 1369.298 ms readback=e6be7b72
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-rgba.log,2,run 0 186.979 ms readback=ffac1488
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-rgba.log,3,run 1 31.372 ms readback=ffac1488
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-rgba.log,4,run 2 37.706 ms readback=ffac1488
+tools/build/victory-openworld/texture-sample-bench.XAic1q/lavapipe-rgba.log,5,run 3 32.737 ms readback=ffac1488
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-bc7.log,2,run 0 0.201 ms readback=db2b31fc
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-bc7.log,3,run 1 0.097 ms readback=db2b31fc
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-bc7.log,4,run 2 0.063 ms readback=db2b31fc
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-bc7.log,5,run 3 0.064 ms readback=db2b31fc
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,2,run 0 0.211 ms readback=70f5de1e
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,3,run 1 0.201 ms readback=70f5de1e
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,4,run 2 0.201 ms readback=70f5de1e
+tools/build/victory-openworld/texture-sample-bench.XAic1q/radv-rgba.log,5,run 3 0.065 ms readback=70f5de1e
