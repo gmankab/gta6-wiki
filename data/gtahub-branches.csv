@@ -305,6 +305,7 @@ gmanka/victory,contrib/check-live-page-pairs,646363e2f2464543f0eff8983ae3e47d67e
 gmanka/victory,contrib/fx-mask-runs,fefaa15dde84b5b08c0348fe3b082d7e9b7d9f82
 gmanka/victory,contrib/fx-series-s-pr188-current,19cca8561fdfed01b74ce2aa57152514126bddd9
 gmanka/victory,contrib/fxceless-constant-size-overflow,917a5a44c62750eadc62eb0859ecf12e557197da
+gmanka/victory,contrib/linux-native-parallel-refresh,b3873b04cbb33127203e6c5213f0b6b3f10b005d
 gmanka/victory,contrib/native-alias-watch,0ac99e76671c99d5a4a3d7f5b90c20f8bf683446
 gmanka/victory,contrib/native-bounded-texture-staging,19cdd019483e011ecd4dbfb28669165b3eff49c9
 gmanka/victory,contrib/native-compute-init-sgprs,a09ccfc5200451cff771264fb17c49104ae41d22
@@ -426,6 +427,7 @@ gmanka/victory,test/native-loading-mip-filter,d905aef2f1dc538b221ea2a437fb83ecb4
 gmanka/victory,test/native-loading-sampler-trace,9ca4a713a6cc8ca55ba6e1c7226401658e257eb7
 gmanka/victory,test/native-map-diagnostics,e32f95d928ec8bffca24ac76d14d23869dd0ee2a
 gmanka/victory,test/native-measured-occlusion,b77687b72a6b0dbb4500acb86b7d2454de417e3d
+gmanka/victory,test/native-parallel-refresh,40552f6e9d583da9f098c628bb5433d000cdc3f9
 gmanka/victory,test/native-pixel-helper-lanes,e5cf1506a23469e914b953519a88acc7647a1391
 gmanka/victory,test/native-post-uav-barrier,773f39765d56bc1292d6ac4de4f5fb83dfe79137
 gmanka/victory,test/native-private-indirect,82b35da289c631afdb450e8a252da4dd5077f2da

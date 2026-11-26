@@ -701,6 +701,70 @@ tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-
 tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,32,"records=8 median_ticks_per_clamp_and_dispatch=567 samples=[565, 566, 567, 567, 567, 567, 567, 568]"
 tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,33,"records=64 median_ticks_per_clamp_and_dispatch=813 samples=[813, 813, 813, 813, 813, 813, 813, 814]"
 tools/build/victory-openworld/native-indirect-sync.U9qa6V/contribution/rx-bench-1-2.log,34,"records=256 median_ticks_per_clamp_and_dispatch=1437 samples=[1434, 1435, 1436, 1437, 1437, 1437, 1447, 1448]"
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-1-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=61783
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-1-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5964065
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-2-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=70951
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-2-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5941525
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-3-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=69857
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-3-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5762692
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-4-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=68783
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-4-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5735067
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-5-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=68676
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-00-5-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6250970
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-1-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=40257
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-1-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5777790
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-2-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=40000
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-2-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5622776
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-3-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=41855
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-3-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6185108
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-4-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=41732
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-4-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6039122
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-5-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=41928
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-01-5-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6344223
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-1-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=20856
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-1-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3811895
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-2-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=28058
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-2-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4100154
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-3-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=20893
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-3-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3794114
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-4-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=28293
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-4-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3893102
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-5-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=43392
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-10-5-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4083434
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-1-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=17741
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-1-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3791516
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-2-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=24862
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-2-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3915422
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-3-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=31928
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-3-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4779841
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-4-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=23277
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-4-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3696993
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-5-run.log,34,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=20055
+tools/build/victory-openworld/native-parallel-refresh.czagsT/bench-11-5-run.log,36,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4514129
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-1.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=70173
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-1.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6402241
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-2.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=69123
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-2.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5700340
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-3.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=68679
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-3.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5666080
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-4.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=69897
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-4.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=5973161
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-5.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=70218
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-0-5.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6135719
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-1.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=40025
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-1.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4422936
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-2.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=39435
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-2.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3882519
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-3.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=28874
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-3.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3828878
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-4.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=31923
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-4.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3801042
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-5.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=24406
+tools/build/victory-openworld/native-parallel-refresh.czagsT/radv-1-5.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=3863013
+tools/build/victory-openworld/native-parallel-refresh.czagsT/upstream-radv/radv-0-1.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=70926
+tools/build/victory-openworld/native-parallel-refresh.czagsT/upstream-radv/radv-0-1.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=6796416
+tools/build/victory-openworld/native-parallel-refresh.czagsT/upstream-radv/radv-1-1.log,32,refresh workload=small buffers=8 bytes=524288 samples=21 median_ns=20989
+tools/build/victory-openworld/native-parallel-refresh.czagsT/upstream-radv/radv-1-1.log,33,refresh workload=large buffers=8 bytes=46137344 samples=21 median_ns=4527768
 tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,32,sample=0 allocated_budget=false cpu_ns_per_command=99 gpu_ticks_per_batch=64
 tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,33,sample=1 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
 tools/build/victory-openworld/native-skip-indirect.5W5oDA/bench-rx-1.log,34,sample=2 allocated_budget=false cpu_ns_per_command=76 gpu_ticks_per_batch=60
