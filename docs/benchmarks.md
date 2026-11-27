@@ -16,6 +16,8 @@ The repeat run seeded the shader and pipeline caches and loaded 203 shader progr
 
 The prologue autosave produced during the Xbox tests passed the importer’s header checksum. The importer copied the story blob byte for byte into a separate PS5 profile, retaining the PS5 settings. Stock Kyty reproduced the same guest exception, and a file watch recorded no read of the imported story blob during its observed window. A separate repeat using `--guest-tsc` also reached the same exception. [Save importer](https://git.disroot.org/flo/kyty/src/commit/46ee35c30decd065db378233ad9a600c9f10bbc3/docs/xbox-saves.md)
 
+The Disroot Kyty fork at `46ee35c3` presented about 30 guest flips per second on the illustrated loading screen. Its first launch exited with a userspace `SIGTRAP` on the graphics thread during 3D startup. The repeat recorded no guest flips across 11 consecutive 10-second windows while shader and pipeline compilation continued. One pipeline wait lasted 8.85 seconds. Over a 65.2-second sample from that stall, AMDGPU attributed 0.20% graphics-engine activity to Kyty and reported up to 7.79 GiB of VRAM. The figures describe the loading-to-3D transition. [Tested fork revision](https://git.disroot.org/flo/kyty/src/commit/46ee35c30decd065db378233ad9a600c9f10bbc3)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
