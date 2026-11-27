@@ -41,6 +41,12 @@ GitHub counts observed on November 27, 2026. Contributor counts include inherite
 | AnyPS5 | 62,519 | 6,098 | 415 | 2,366 |
 | KytyPS5 | 12,858 | 1,611 | 121 | 234 |
 
+## PS5 and Xbox storage comparison
+
+The 201.64 GiB PS5 package and Xbox working directory reside on the same Btrfs volume with `compress=zstd:8`. Btrfs applies compression to extents. `compsize` measured a physical-to-uncompressed extent ratio of about 100.0% for the PS5 package and 99.8% for the Xbox directory.
+
+A read-only view of the PS5 package exposed 198 files. The Xbox working directory contained 109 files. Seventy-five PS5 files shared an Xbox basename, and only one matched by size and SHA-256. It was a one-byte alignment marker. This comparison checked whole logical files. It leaves partial-block overlap in the raw package unmeasured. The package view avoided extracting another copy, and the comparison wrote no data to either build.
+
 ## Foxhound and Belobug source checks
 
 GitHub API counts observed on November 27, 2026. Contributors include people listed through inherited history.
