@@ -156,6 +156,8 @@ REA captured successful full virtual-memory suite runs with legacy backing, DMA-
 
 **Profile** REA summarized a **24.1-second** Tracy capture from the beginning of the 3D cinematic. Zero-copy read fences recorded **8,752** waits and **9.54 seconds of summed thread time**. The two busiest threads spent **2.19** and **1.31 seconds** there. Threads can wait concurrently. The indirect-dispatch handler used **5.31 seconds** of exclusive instrumented time across the trace. The profile covers a cinematic and the start of buffer promotion.
 
+**Follow-up fixture** The local candidate keeps neighboring pages watched when speculative write-window widening would wait for an outstanding GPU read. The exact write fault retains its wait. REA captured the passing Vulkan fixture and the failure of its speculative-window check with the original behavior selected. Title timing for this candidate is pending.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
@@ -163,6 +165,16 @@ REA captured successful full virtual-memory suite runs with legacy backing, DMA-
 With the nested reservation patch applied, the cold run recorded **104 presents over 13.09 seconds** in its saved trace and then continued shader preparation until the 125-second cap. The shader-cache replay recorded **270 presents over 10.03 seconds** and **3 more over 31.82 seconds** before stalling. The median present interval in its first window was **33.37 ms**. Sampled screenshots in both runs were black. By the 205-second cap, the replay registered 7,575 shader-cache hits and 2,800 misses. Its 139.9-second AMDGPU process sample added 11.7 ms of graphics-engine time and zero compute-engine time. [Linux reservation test](https://github.com/boykopovar/AnyPS5/pull/27563#issuecomment-7220622753) · [Related shader-preparation issue](https://github.com/boykopovar/AnyPS5/issues/27705)
 
 Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,667 presents over 190.21 seconds**, or **29.79 presents/s** across the recorded intervals, before the 205-second test cap. Every sampled screenshot was black. AMDGPU attributed **1.62%** graphics-engine activity to AnyPS5 over a **164-second** process sample. Its focused shader-preparation CTest passed with Khronos validation inserted and zero VUID errors. Both title runs used host RADV 26.2.6. The focused test used Toolbox RADV 26.2.7. [AnyPS5 REWIND patch and Linux result](https://github.com/boykopovar/AnyPS5/pull/27821#issuecomment-7221266032)
+
+## November 28, 2026 · AnyPS5 Intel conversion and packed-color retest
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Relinker** REA captured the stock AnyPS5 relinker rejecting an AMD-only instruction during Intel conversion of `PPSA38500`, on upstream `a2d8d409`. Applying the current short-instruction fix to that revision passed `amd64_only_converter` and `to_intel_linux_stubs`. It also completed the title dry run, produced a Linux ELF and both bundled modules in a private conversion, and passed the dynamic-loader check with the local startup runtime. [Upstream base](https://github.com/boykopovar/AnyPS5/commit/a2d8d409dba36d4cc0d531d49b828f808bc93a16) · [Intel conversion PR](https://github.com/boykopovar/AnyPS5/pull/27560)
+
+**Packed color** Both synthetic tests rejected color format 19, number type 0, component swap 1 on the Linux startup stack with its existing decoder. With PR `fc78d6bb` applied to the same stack, both tests and `agc_driver_graphics` passed on the RX 6800. Both packed tests loaded Khronos validation 1.4.350 on Toolbox RADV 26.2.7. The logs contained zero VUID entries. [Upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
+
+**Warm-cache title** The newly relinked executable ran with the existing Linux startup patches and the packed-color candidate on host RADV 26.2.6. It recorded **6,756 presents in 230.23 seconds (29.35/s)** before the 240-second cap. All **17** captured images matched the same black frame. AMDGPU recorded **1.50%** graphics-engine activity and no measurable compute-engine activity over **169.8 seconds**. The log showed **19** deferred geometry-stage preparations and no packed-color swap-1 refusal. The run leaves the cause of the black output unresolved.
 
 ## Title runs
 
