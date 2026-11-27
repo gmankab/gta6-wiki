@@ -24,6 +24,10 @@ On the same GPU, Kyty fork revision `8072a783` precompiled the cold run’s save
 
 Warm-cache retries of `8072a783` reached 3D startup and raised `SIGTRAP` inside RADV on Mesa **26.2.6** and **26.2.7**. The graphics stack reached `Addr2ComputeSurfaceInfo` during Vulkan image creation. A Vulkan-validation retry confirmed that Kyty requested **12 mip levels for a 512×512×1 image**, whose complete chain has **10** levels. The 30 FPS samples still describe loading. [Vulkan image creation limits](https://docs.vulkan.org/refpages/latest/refpages/source/VkImageCreateInfo.html#VUID-VkImageCreateInfo-mipLevels-00958)
 
+## PS5 AnyPS5 startup cache
+
+With the nested reservation patch applied, the cold run recorded **104 presents over 13.09 seconds** in its saved trace and then continued shader preparation until the 125-second cap. The shader-cache replay recorded **270 presents over 10.03 seconds** and **3 more over 31.82 seconds** before stalling. The median present interval in its first window was **33.37 ms**. Sampled screenshots in both runs were black. By the 205-second cap, the replay registered 7,575 shader-cache hits and 2,800 misses. Its 139.9-second AMDGPU process sample added 11.7 ms of graphics-engine time and zero compute-engine time. [Linux reservation test](https://github.com/boykopovar/AnyPS5/pull/27563#issuecomment-7220622753) · [Related shader-preparation issue](https://github.com/boykopovar/AnyPS5/issues/27705)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
