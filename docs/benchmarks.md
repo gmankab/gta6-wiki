@@ -18,6 +18,10 @@ The prologue autosave produced during the Xbox tests passed the importer’s hea
 
 The Disroot Kyty fork at `46ee35c3` presented about 30 guest flips per second on the illustrated loading screen. Its first launch exited with a userspace `SIGTRAP` on the graphics thread during 3D startup. The repeat recorded no guest flips across 11 consecutive 10-second windows while shader and pipeline compilation continued. One pipeline wait lasted 8.85 seconds. Over a 65.2-second sample from that stall, AMDGPU attributed 0.20% graphics-engine activity to Kyty and reported up to 7.79 GiB of VRAM. The figures describe the loading-to-3D transition. [Tested fork revision](https://git.disroot.org/flo/kyty/src/commit/46ee35c30decd065db378233ad9a600c9f10bbc3)
 
+The cold run later produced three guest flips after the long loading gap. A visible 3D night scene appeared after the first of those flips, and player control remained unverified. The run ended at the 390-second test cap after the emulator reported holding the guest clock for 201.6 seconds while GPU queues waited for compilation.
+
+On the same GPU, Kyty fork revision `8072a783` precompiled the cold run’s saved recipes offline with 12 workers. It translated 1,092 modules and created 984 pipelines in 35.2 seconds, with zero reported failures and zero recipe pipelines missing a stage. The following title launch reported zero recipe modules left to translate. [Offline precompile change](https://git.disroot.org/flo/kyty/commit/8072a7834520353e0a79acd7f5f9d059471f1711)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
