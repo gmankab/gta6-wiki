@@ -140,6 +140,8 @@ Disroot Kyty `70f82dbb` includes a dedicated Vulkan copy queue for buffer readba
 
 On the dedicated path, each readback took **296–308 µs** on average. With the queue off, the fused path took **413–433 µs** on average. The handler spent more time overall with the queue on, and the remaining readbacks that flushed the graphics queue took longer. The cinematic workload changed across samples, so this run leaves the frame-rate effect unresolved.
 
+**CPU write-fault window comparison** Later in the same run, I alternated the write-watch window between **64 KiB** and **256 KiB**, with the dedicated queue enabled. REA summarized four 25-second windows. Write faults per 10,000 draws and dispatches were **2,829 → 2,599 → 3,935 → 1,471**. Buffer uploads were **40.8 → 66.2 → 59.8 → 80.3 MB/s**. Summed fault-handler time across threads rose in both 256 KiB samples. Scene changes and shader compilation prevent attributing the differences in FPS to the window size. The run returned to 64 KiB. A lower-priority build was running during both comparisons.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
