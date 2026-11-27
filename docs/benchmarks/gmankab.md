@@ -129,6 +129,17 @@ The Linux kernel killed the emulator during a global out-of-memory event about *
 
 Disroot Kyty `70f82dbb` includes a dedicated Vulkan copy queue for buffer readbacks. A local candidate also restricted the prepared frame to the resolution registered by the title. With host RADV 26.2.6, the 1920×1080 Continue screen still occupied the top-left **640×360** of the 1280×720 Wayland output. The extent change failed the title test. REA captured the readback batch, detached submission, and refused-import fixtures passing with Vulkan validation on Toolbox RADV 26.2.7. These fixtures exercise the readback and fallback behavior. [Disroot copy queue](https://git.disroot.org/flo/kyty/commit/70f82dbb504a73cfb06b869a4e9ec70ae7ca2196)
 
+**Dedicated copy queue comparison** The title opened and read the imported story save during loading. In the first 3D cinematic, I switched the queue off, on, off, and on in the same process. REA summarized five complete five-second intervals per setting after each switch. No new pipelines were created in these intervals.
+
+| Sample | Dedicated queue | FPS | Draws and dispatches per flip | Readback handler µs/call | Graphics engine | Compute engine |
+|---|---|---:|---:|---:|---:|---:|
+| 1 | Off | 2.56 | 1,730 | 397 | 17.74% | 0.00% |
+| 2 | On | 2.68 | 1,894 | 463 | 16.19% | 2.82% |
+| 3 | Off | 2.72 | 1,881 | 400 | 19.40% | 0.00% |
+| 4 | On | 1.96 | 2,267 | 474 | 14.76% | 2.53% |
+
+On the dedicated path, each readback took **296–308 µs** on average. With the queue off, the fused path took **413–433 µs** on average. The handler spent more time overall with the queue on, and the remaining readbacks that flushed the graphics queue took longer. The cinematic workload changed across samples, so this run leaves the frame-rate effect unresolved.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
