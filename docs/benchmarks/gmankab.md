@@ -55,6 +55,14 @@ The run opened and read the imported story blob about **386 seconds** after laun
 
 During that black loading stretch, a 14-second profile of the busiest guest thread attributed **33.66% of sampled instructions** to Kyty's x86 instruction emulator and **14.38%** to its exception handler. Line-level samples included the AMD `CLZERO` handler on the Xeon, which lacks that instruction. These weights describe one thread during loading. A separate 3D graphics command-thread profile showed the image heap, resource materialization, and texture-cache work. [Kyty CLZERO trap implementation](https://git.disroot.org/flo/kyty/commit/dc69e6b4e18e021621d48d50e6c8549db77079ce)
 
+## November 28, 2026 · Molier Kyty 3D startup
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** Molier `bringup` at `b4957bc7`, built in Fedora 45 Toolbox. The RX 6800 ran the title through RADV 26.2.6 in a private 1280×720 Wayland session. The fork opened its own empty shader store. [Tested revision](https://github.com/Molier/KytyPS5/tree/b4957bc741631dcad798236482f14530444d0088)
+
+**Result** The Continue prompt and illustrated loading screen rendered at about 30 FPS. The fork then recorded at least **30 seconds without a frame** while processing 3D work, with a **5.27-second** compute-pipeline build among the reported waits. The emulator logged a fatal exception at about 320 seconds. REA independently decoded the failing guest instruction as a direct write to address zero. The fork already provides the VideoOut import mentioned in one report for this crash address. The logs establish a stall and subsequent guest abort, with the condition that triggered the abort still unverified. [Related Kyty compatibility report](https://github.com/KytyPS5/KytyPS5/issues/2571)
+
 ## PS5 AnyPS5 startup cache
 
 With the nested reservation patch applied, the cold run recorded **104 presents over 13.09 seconds** in its saved trace and then continued shader preparation until the 125-second cap. The shader-cache replay recorded **270 presents over 10.03 seconds** and **3 more over 31.82 seconds** before stalling. The median present interval in its first window was **33.37 ms**. Sampled screenshots in both runs were black. By the 205-second cap, the replay registered 7,575 shader-cache hits and 2,800 misses. Its 139.9-second AMDGPU process sample added 11.7 ms of graphics-engine time and zero compute-engine time. [Linux reservation test](https://github.com/boykopovar/AnyPS5/pull/27563#issuecomment-7220622753) · [Related shader-preparation issue](https://github.com/boykopovar/AnyPS5/issues/27705)
