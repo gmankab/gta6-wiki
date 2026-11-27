@@ -14,6 +14,8 @@ The first run through setup streamed assets for about 2½ minutes and started co
 
 The repeat run seeded the shader and pipeline caches and loaded 203 shader programs and 188 pipelines. It reached the illustrated loading screen and reproduced the same guest exception. Opening black frames and program startup are the furthest verified stock results so far.
 
+The prologue autosave produced during the Xbox tests passed the importer’s header checksum. The importer copied the story blob byte for byte into a separate PS5 profile, retaining the PS5 settings. Stock Kyty reproduced the same guest exception, and a file watch recorded no read of the imported story blob during its observed window. A separate repeat using `--guest-tsc` also reached the same exception. [Save importer](https://git.disroot.org/flo/kyty/src/commit/46ee35c30decd065db378233ad9a600c9f10bbc3/docs/xbox-saves.md)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
