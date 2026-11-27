@@ -17,6 +17,8 @@ Run by [@gmankab](https://github.com/gmankab) on the machine below. Each result 
 
 ## PS5 KytyPS5 startup
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 KytyPS5 official Linux release `61db2f8` booted `PPSA38500` version `01.002.001` from the read-only package view on a Xeon E5-2670 v3 and Radeon RX 6800. The test used a private 1280×720 Wayland session with Weston’s GL renderer and a virtual controller. REA captured the launcher lifecycle, Kyty’s overlay measured presentation rate, and AMDGPU counters confirmed graphics work. This run used SDL’s dummy audio driver. [KytyPS5 revision](https://github.com/KytyPS5/KytyPS5/tree/61db2f8874d4a94fd2908a87cefa973ddc48ef6e) · [Package path](../projects.md#ps5-runtime-checks)
 
 A virtual controller advanced the 30 FPS initial setup screen to the eagle intro. The stock CPU path presented the intro at about **1.8 FPS**. With `--amd-cpu`, the same intro presented at **30.0 FPS** and passed through to the Rockstar logo. The loader reported 22,260 native replacements for `VRSQRTPS`, six for `EXTRQ`, and ten for `CLWB`. The flag still uses traps for some instructions. The flag changes several instruction families together. [CPU patch selection](https://github.com/KytyPS5/KytyPS5/blob/61db2f8874d4a94fd2908a87cefa973ddc48ef6e/src/loader/runtimeLinker.cpp#L1612)
@@ -65,11 +67,15 @@ During that black loading stretch, a 14-second profile of the busiest guest thre
 
 ## PS5 AnyPS5 startup cache
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 With the nested reservation patch applied, the cold run recorded **104 presents over 13.09 seconds** in its saved trace and then continued shader preparation until the 125-second cap. The shader-cache replay recorded **270 presents over 10.03 seconds** and **3 more over 31.82 seconds** before stalling. The median present interval in its first window was **33.37 ms**. Sampled screenshots in both runs were black. By the 205-second cap, the replay registered 7,575 shader-cache hits and 2,800 misses. Its 139.9-second AMDGPU process sample added 11.7 ms of graphics-engine time and zero compute-engine time. [Linux reservation test](https://github.com/boykopovar/AnyPS5/pull/27563#issuecomment-7220622753) · [Related shader-preparation issue](https://github.com/boykopovar/AnyPS5/issues/27705)
 
 Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,667 presents over 190.21 seconds**, or **29.79 presents/s** across the recorded intervals, before the 205-second test cap. Every sampled screenshot was black. AMDGPU attributed **1.62%** graphics-engine activity to AnyPS5 over a **164-second** process sample. Its focused shader-preparation CTest passed with Khronos validation inserted and zero VUID errors. Both title runs used host RADV 26.2.6. The focused test used Toolbox RADV 26.2.7. [AnyPS5 REWIND patch and Linux result](https://github.com/boykopovar/AnyPS5/pull/27821#issuecomment-7221266032)
 
 ## Title runs
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 | Build and renderer | Stage and measured result | Scope of result |
 |---|---|---|
@@ -106,9 +112,13 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 
 ## Linux build checks for Foxhound and Belobug AMD
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 Both Fedora Linux 45 release builds failed in `victory-loader` on Windows API references. [Published benchmarks from the project authors](external.md#windows-fork-source-comparison)
 
 ## Cool Fox under the CGBJ reupload name
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 The public `cgbj-reupload` resolves to the original Cool Fox `f4b48ad` commit. Both runs used the locally built Windows-target binary, the `pareto-residency` Series S profile, Wine/Wayland, RADV on the RX 6800, and a read-only title directory. The rerun granted Wine access to PulseAudio. [Source check](../projects.md#cgbj-source-checks)
 
@@ -120,6 +130,8 @@ The public `cgbj-reupload` resolves to the original Cool Fox `f4b48ad` commit. B
 Both runs reached their time caps and the kernel logged no GPU reset. Player control and an in-world frame rate remain unverified for this commit on the RX 6800. [Run index](../../data/benchmarks/gmankab/runs.csv)
 
 ## Native compute shader validation
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 A 285-second Lavapipe run with the default watchdog provided 1,296 shader containers. A lane-mask candidate passed its RX 6800 fixture and left every result in this set unchanged. Defaulting reads of written but uninitialized general-purpose scalar registers to zero cleared three compute translation failures. Those shaders then reached an unsupported explicit-mip gather, which the second port implemented. Together the changes increased validated compute programs from **650 to 657** and preserved all **579** previously validated vertex and pixel programs. [Register rule](https://github.com/Marvisak/VIctory/pull/1261) · [Gather implementation](https://github.com/Marvisak/VIctory/commit/0b35b7fe) · [Native ports](https://github.com/spidercraft/VIctory/pull/28)
 
@@ -133,9 +145,13 @@ The run also logged Vulkan's overlapping-occlusion-query warning. vkd3d-proton t
 
 ## Native occlusion query measurements
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 A 4×4 draw fixture reproduced the title run’s overlapping-query warning on Lavapipe. The fixture used two title heaps and crossing counted and binary queries. Splitting the host measurement into intervals reduced the warnings from **three to zero** and preserved counted results **20 and 12** and binary results **1 and 1**. The native integration passed 63 regular GPU tests. The exact Spidercraft PR head passed the draw fixture and 44 regular GPU tests. Both ran with Vulkan validation and `/dev/dri` hidden. The native title’s reset and open-world frame rate still need separate verification. [Upstream patch and test](https://github.com/spidercraft/VIctory/pull/29) · [Test index](../../data/benchmarks/gmankab/test-results.csv)
 
 ## Linux native descriptor-buffer checks
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 On the RX 6800, vkd3d-proton selected Vulkan descriptor buffers with `VKD3D_CONFIG=vk_debug,no_descriptor_heap`. The Linux native occlusion PR’s draw fixture returned the same counted and binary results with zero overlap warnings. The integrated culling shader probe validated all three programs and created all three compute pipelines. The first analysis of the odd-offset R16 fixture checked the descriptor-heap warning ID `12351`. Its retained log records the equivalent descriptor-buffer warning `12266` for both views. [Occlusion hardware check](https://github.com/spidercraft/VIctory/pull/29) · [Culling patch](https://github.com/spidercraft/VIctory/pull/28)
 
@@ -153,6 +169,8 @@ An RX 6800 read-back fixture reproduced the same warning using an odd-offset `R1
 
 ## Linux native offline pipeline preparation
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The Linux native port of Marvisak's prebuilder uses the same creation-stream reader and host pipeline keys as a title run. The contribution branch passed the release build, 15 format tests, and eight pipeline tests. The Lavapipe run used `VKD3D_FEATURE_LEVEL=12_0` so the pipeline-library fixture could create its D3D12 device. The read-only census found 27,160 nameable records and 26,918 distinct keys out of 28,164 records. [Linux native contribution](https://github.com/spidercraft/VIctory/pull/31)
 
 The separate integrated RX 6800 prebuild processed the same pack in **345.4 seconds** with 12 workers. It created **20,830** host pipelines, found **2,976** in the library as the pass progressed, and skipped **4,358** records. Shader translation failures accounted for 3,354 skips. [Marvisak prebuilder](https://github.com/Marvisak/VIctory/commit/9c58a1c35a384552bde9b4c9b169731f282a15a1)
@@ -169,6 +187,8 @@ A local follow-up deferred release of old resources when a directly indexed desc
 
 ## Linux native write-watch bitmap scans
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 In the heavier RX 6800 loading sample, Victory requested one 174 MiB shadow range 31 times per frame. The range took 93.48 ms in refresh calls. Those calls include tracking, copies, and other shadow work. The Linux native loader patch walks one bitmap word at a time for private memory. Physical aliases keep their group-aware checks. [Loading run](../../data/benchmarks/gmankab/runs.csv) · [Loader PR](https://github.com/spidercraft/VIctory/pull/32)
 
 | 174 MiB private range | Baseline | Candidate |
@@ -180,6 +200,8 @@ Each result is the median of seven paired process medians from the integrated re
 
 ## Linux native sparse guest copies
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The heavier loading sample reported 912 MB per frame of guest bytes that could not be read by copy probes. The loader now lets the copy fallback zero a whole known unreadable run after a failed read. Ranges outside the loader's table still use the existing page probes. [Loading run](../../data/benchmarks/gmankab/runs.csv) · [Sparse-copy PR](https://github.com/spidercraft/VIctory/pull/33)
 
 A 174 MiB fixture with 87 MiB mapped and 87 MiB reserved measured **78.95 → 29.20 ms** per copy across seven paired process medians. The contribution head measured **28.37 ms** in its own fixture and passed six regular host tests. The integration passed 13 regular host tests. Both verified the bytes after a hole that ended inside a 64 KiB copy piece. The integration also verified both hole cases with guarded reads enabled. These timings measure stand-alone CPU copies. [Individual measurements](../../data/benchmarks/gmankab/benchmark-logs.csv)
@@ -187,6 +209,8 @@ A 174 MiB fixture with 87 MiB mapped and 87 MiB reserved measured **78.95 → 29
 A Linux native build with both changes presented its first frame after **4.21 seconds** on Lavapipe, with hardware render devices hidden. Its five-minute run reached capture **512**, which showed the illustrated loading screen. The 47 reports had a median of **0.4 FPS** and at most 11 draws per frame. Vulkan validation flagged a vertex shader using a subgroup operation that the software adapter did not list for that stage. The run ended at the time cap. [Run index](../../data/benchmarks/gmankab/runs.csv)
 
 ## Linux native repeated GPU writes
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 The heavy RX 6800 loading sample requested 2,241 shadow refreshes per frame. Each declaration of a writable range previously flushed the refresh batch. The patch keeps the first declaration for each exact range and uses the same order for copy-back. A regression across two command lists verified that an unrelated read stayed queued and separate CPU and host writes were both preserved. [Run index](../../data/benchmarks/gmankab/runs.csv) · [Victory PR](https://github.com/spidercraft/VIctory/pull/35)
 
@@ -203,6 +227,8 @@ The later Linux native GPU snapshot port saves each declared byte on first use a
 
 ## Linux native overlapping GPU writebacks
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 A synthetic 174 MiB shared buffer received 49 growing declarations. The existing copy-back repeatedly visited the same bytes. The patch remembers the portions that have already been compared or written and leaves failed portions available for a later retry. On the RX 6800, the fixture measured the following times after submission preparation. Each figure is the median of two process medians, with seven timed trials per process.
 
 | Declarations | Previous | With overlap tracking |
@@ -216,6 +242,8 @@ The stand-alone contribution passed 45 regular GPU tests on each backend. The RX
 
 ## Linux native pipeline requests and prewarming
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 A synthetic compute pipeline stayed queued until its draw's wait ended. The runtime recorded it for prewarming on the next launch. The stand-alone contribution passed all 44 regular GPU tests on the RX 6800 and Lavapipe. The integration passed all 75 on both backends. [Linux native PR](https://github.com/spidercraft/VIctory/pull/46) · [Tested integration](https://github.com/gmankab/victory/tree/test/linux-native-remember-requested-pipelines)
 
 The first 1080p Series S run on Lavapipe started with 292 pipeline keys and saved 1,420. All 1,128 additions were requested by the title, and 1,119 of them never became available to a draw or dispatch during the recorded run. The process exited after 421 seconds on a guest null write. The last captured frame was 1,300. The last image showed the illustrated loading screen.
@@ -228,6 +256,8 @@ Both title runs seeded with the learned list timed out at 450 seconds. The previ
 
 ## Linux native dynamic descriptor exhaustion
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The two preceding RX 6800 runs reported exhaustion of dynamic descriptor slots shortly before AMDGPU reset the graphics queue. The Linux native port of the merged fix drops a draw or dispatch if its required dynamic table cannot be created and preserves the smaller reserve on capped heaps. A test exhausted the reserve, verified that no table offset was returned, then released the reserve and verified successful allocation. The regression passed on the RX 6800 and Lavapipe. The integrated Lavapipe build passed 68 regular GPU tests. [Original Victory PR](https://github.com/Marvisak/VIctory/pull/336) · [Linux native contribution](https://github.com/spidercraft/VIctory/pull/36)
 
 The integrated RX 6800 title run loaded the driver-compatible library in **10 ms**. It reached heavy 3D work at about **199 seconds**. Eleven heavy samples ranged from **0.8 to 1.5 FPS**, with a **1.5 FPS** median, **196.2 ms** median preparation, and up to **639** pipelines pending. Vulkan validation emitted no VUIDs, and the kernel logged no AMDGPU fault or reset. Dynamic allocation succeeded throughout the title run. Whole-card GPU activity was **2%** at the median and **19%** at the peak. [Tested branch](https://github.com/gmankab/victory/tree/test/linux-native-dynamic-descriptor-exhaustion) · [Run index](../../data/benchmarks/gmankab/runs.csv)
@@ -235,6 +265,8 @@ The integrated RX 6800 title run loaded the driver-compatible library in **10 ms
 Victory exited with status 5 after **259 seconds** following a guest invalid read. The last capture, frame 5000, showed the illustrated loading screen. REA and the saved stack confirmed that a guest lookup tried three alternatives and dereferenced the result of the last call, which was null. Two raw DirectStorage requests logged generic file-read failures within ten seconds before the exit. Pipeline tracing recorded **678** library loads and **76** creations. **73 of 710** used pipeline keys had no exact match in the archive census. [Run index](../../data/benchmarks/gmankab/runs.csv)
 
 ## Linux native guarded DirectStorage reads
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 The DirectStorage fixture confirmed that a raw file read into two blocks rearmed by write watch returns `EFAULT`. The retry staged up to 64 KiB at a time and held the VM lock only while transferring bytes already read. The fixture verified all 132 requested bytes, the two neighboring bytes, and that both blocks were marked dirty for the next refresh. The contribution branch passed 12 DirectStorage tests and 14 VM tests. The integrated build passed 12 DirectStorage tests and 16 VM tests. The older run's generic status leaves its original Linux error unknown. [Victory PR](https://github.com/spidercraft/VIctory/pull/37) · [Linux file read semantics](https://man7.org/linux/man-pages/man2/pread.2.html) · [Linux process memory transfers](https://man7.org/linux/man-pages/man2/process_vm_writev.2.html)
 
@@ -246,11 +278,15 @@ The 26 heavy samples ranged from **0.8 to 2.1 FPS**, with a median of **1.4 FPS*
 
 ## Linux native dynamic descriptor allocation
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The cursor backport found all 41,472 expected results in a CPU harness that checked every occupancy pattern, cursor, and request size for a nine-slot heap. The original search missed 996 valid allocations. An RX 6800 host-heap test also verified that a free run can cross the search cursor and that separate slots at the physical ends of the heap do not form a run. [Original cursor fix](https://github.com/Marvisak/VIctory/pull/974)
 
 For bursts of 4,096 failed requests against 65,536 occupied slots, the median of seven synthetic bursts fell from **668.45 ms** with the cursor fix alone to **0.256 ms** with failed searches cached. A release that joined free runs let a previously impossible request succeed immediately. Three focused checks passed on each of the RX 6800 and Lavapipe for the contribution and six passed per backend for the integration build. The integrated Linux native executable built successfully. Gameplay performance and GPU stability with these allocator changes remain unmeasured. [Failure-cache source](https://github.com/Marvisak/VIctory/pull/2394) · [Linux native contribution](https://github.com/spidercraft/VIctory/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/linux-native-descriptor-allocator)
 
 ## Linux native descriptor sharing across graphics stages
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 Victory's test recorded graphics stages that needed 64 and 104 slots from the same table. Sharing reduced the reservation from **168 to 104 slots**, about **38%**, and passed the second stage's deferred GPU write through to copy-back tracking. It also checked that a stage using the mirrored table keeps that binding and that sharing does not extend beyond the guest heap. The fixture passed on RX 6800 and Lavapipe on the exact contribution branch. [Linux native PR](https://github.com/spidercraft/VIctory/pull/39) · [Fxceless source](https://github.com/fxceless/victory-fork/commit/5d659e0c8c64cb4e8628d6b7b5d8f953bd16b457)
 
@@ -259,6 +295,8 @@ The first software launch failed to create a D3D12 device because its harness en
 Leonida uses a Vulkan descriptor hash table and retires replaced generations after in-flight submissions finish. Its benchmark passed the CPU/GPU lookup checks and all **99** timing cases on the RX 6800 with Vulkan validation enabled. For 524,288 divergent lookups against 100,000 entries, the median of seven runs was **0.126 ms** in device-local memory and **0.403 ms** in host-visible system memory. The divergent-miss case took **0.360 ms** and **14.412 ms** respectively. Host-visible device-local memory tracked device-local performance on this card. XCL uses a shared shader-visible descriptor heap and maps pages on first use. The measurements apply to Leonida's lookup path. [Leonida benchmark](https://github.com/ubiquitarianism/leonida/blob/bdbc7e9236465c5d6a1305de6edd3fc09c2d6fd9/runtime/test/vk_descriptor_bench.cpp) · [Leonida descriptor lifetime](https://github.com/ubiquitarianism/leonida/blob/bdbc7e9236465c5d6a1305de6edd3fc09c2d6fd9/runtime/src/vulkan_bindless.h) · [XCL descriptor heap](https://github.com/xcl-dev/xcl/blob/3867e7bc6889707959fb61fafc11dc5851ef3610/crates/xcl/src/hle/d3d12x/console_heap.rs)
 
 ## Linux native missing shader pipelines
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 The last RX 6800 timing sample with an empty pipeline queue logged **778** draws or dispatches per frame skipped for unavailable pipelines. The five largest groups accounted for about **483** of those skips. The runtime refused their shaders during scalar memory reads, 64-bit image atomics, structured-buffer stride inference, compute root-argument loads, and reading a lane mask as data. A comparison of those exact five inputs on the November 26 source snapshots found that both Fxceless and Marvisak emitted DXIL that passed DXC validation for all five. Those translators' integration and gameplay output remain unverified on the Linux native branch. [Fxceless snapshot](https://github.com/fxceless/victory-fork/commit/52ac4ec0f8a03f103c146e60228e53612759d435) · [Marvisak snapshot](https://github.com/Marvisak/VIctory/commit/63bcca43c6a00a758510398fa43096ce7e4f7df0)
 
@@ -280,6 +318,8 @@ The Linux native descriptor lifetime backport carries a host heap identity in ev
 
 ## Linux native host heap import
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The RX 6800 reports `VK_EXT_external_memory_host` and a 4 KiB minimum host-pointer alignment. A Linux native fixture allocated 64 KiB through the guest VM table and imported it with `ID3D12Device13::OpenExistingHeapFromAddress1`. Two GPU transfers read the exact new CPU byte pattern after the original guest mapping changed. Vulkan validation reported zero VUIDs. This verifies direct guest reads on the hardware. The title path still uses its shadow buffers. [Existing in-place proposal](https://github.com/Marvisak/VIctory/pull/2112) · [Driver fixture](https://github.com/HansKristian-Work/vkd3d-proton/blob/71cae091b06571e51446cf2a937f0b04c237c04d/tests/d3d12_win32_exclusive.c)
 
 The opt-in `VICTORY_IMPORT_UPLOADS=1` path applies to renderer-owned placed upload buffers. A one-time GPU readback checks that the imported heap sees the original allocation. The RX 6800 fixture verified reads at a 64 KiB offset after the guest released its buffer and heap. When the driver substituted its own backing, the fixture verified the fallback shadow copy. The contribution branch passed six regular resource tests plus the direct and fallback fixtures. [Victory draft PR](https://github.com/spidercraft/VIctory/pull/34) · [Tested driver branch](https://github.com/gmankab/vkd3d-proton/tree/test/strict-host-import-typed-alignment)
@@ -294,9 +334,13 @@ The three compute shaders shared by the two slow batches passed offline DXIL val
 
 ## XCL startup preparation under Wine
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 XCL `8b957bec` ran under Wine 11.21 and Lavapipe with the Series S device profile. It started preparing **26,503 shaders** before guest execution. The last reported count was **400 at 55 seconds**. The 85-second cap expired during preparation, before a gameplay frame was reported. [XCL startup preparation](https://github.com/xcl-dev/xcl/pull/2555) · [Run index](../../data/benchmarks/gmankab/runs.csv)
 
 ## Linux native parallel shadow refreshes
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counter, including 28.28 ms in memory moves and 6.56 ms in write-watch queries. The Linux native port of Fxceless's parallel refresh approach gives each worker a separate host mapping and joins all jobs at the existing flush boundary. It is opt-in with `VICTORY_WIDE_REFRESH=1`. [Fxceless proposal](https://github.com/fxceless/victory-fork/pull/38) · [Tested integration](https://github.com/gmankab/victory/tree/test/native-parallel-refresh)
 
@@ -309,6 +353,8 @@ The heavier RX 6800 title sample reported 42.8 ms in the copy preparation counte
 Each table entry is the median of five process medians. Each process timed 21 flushes after six warmups, using the same eight host mappings and alternating test order. The fixtures verified every byte and checked that disjoint requests left the intervening bytes untouched. A separate RX 6800 pair on the exact Linux native PR head measured **6.80 → 4.53 ms** at 44 MiB and passed the same byte checks. That head also passed 46 regular GPU tests on Lavapipe. Open-world frame time and the effect on write-watched gameplay ranges remain unverified. [Upstream PR](https://github.com/spidercraft/VIctory/pull/30) · [Individual measurements](../../data/benchmarks/gmankab/benchmark-logs.csv)
 
 ## Fxceless startup controls
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 These runs used Wine with isolated profiles and the same read-only game directory. The scripted comparison reached different setup pages. In the paired idle runs, the published build and stock Fxceless hit the same guest breakpoint. The faulting instruction and the saved Windows exception context showed a stream writer on the title’s main thread trying to copy 1,728 bytes with 80 bytes remaining.
 
@@ -330,6 +376,8 @@ The earlier headless harness denied the PulseAudio socket. Granting it under Win
 
 ## Series S presentation with audio enabled
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 The RX 6800 runs used Wine and RADV with PulseAudio available, the same checkpoint, and the same scripted input. Each captured the same 25 frames through frame 1,024 and reached its time cap without the startup breakpoint. The newest Fxceless baseline used the read-only stream probe.
 
 | Build and configuration | Result |
@@ -342,6 +390,8 @@ Toggling the compositor on the same build isolated the second plane as the sourc
 
 ### Second-plane proposal on `ceb9e1f7`
 
+**Run by** [@gmankab](https://github.com/gmankab)
+
 Six commits from the proposal were rebased onto `ceb9e1f7`, with a follow-up that carries the interface resource through queued presents. Wine runs used PulseAudio, RADV and the Series S checkpoint. The two runs of the port enabled asynchronous submission and presentation and used the same later Enter schedule. Their logs confirm the switches were enabled. The evidence for the compositor comes from captured frames, which use the synchronous readback path. [Tested branch](https://github.com/gmankab/victory/tree/contrib/fx-series-s-pr188-current)
 
 | Build and capture source | Result |
@@ -353,6 +403,8 @@ Six commits from the proposal were rebased onto `ceb9e1f7`, with a follow-up tha
 The port restored visible output during startup and illustrated loading. Both GPU readback tests ran on the RX 6800 and passed, as did the plane parser test. The recorded frame rates cover startup and loading under different configurations. [Upstream test report](https://github.com/fxceless/victory-fork/pull/188#issuecomment-7191270104)
 
 ## Isolated measurements and build times
+
+**Run by** [@gmankab](https://github.com/gmankab)
 
 | Workload | Control and candidate | What was verified |
 |---|---|---|
