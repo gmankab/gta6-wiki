@@ -8,6 +8,8 @@ KytyPS5 official Linux release `61db2f8` booted `PPSA38500` version `01.002.001`
 
 A virtual controller advanced the 30 FPS initial setup screen to the eagle intro. The stock CPU path presented the intro at about **1.8 FPS**. With `--amd-cpu`, the same intro presented at **30.0 FPS** and passed through to the Rockstar logo. The loader reported 22,260 native replacements for `VRSQRTPS`, six for `EXTRQ`, and ten for `CLWB`. The flag still uses traps for some instructions. The flag changes several instruction families together. [CPU patch selection](https://github.com/KytyPS5/KytyPS5/blob/61db2f8874d4a94fd2908a87cefa973ddc48ef6e/src/loader/runtimeLinker.cpp#L1612)
 
+The repeat run loaded 35 shader programs from its saved cache and used the virtual controller through setup and Legal Notices. It reached the separate Legal Terms & Policies page at 30 FPS. That page requires both the Privacy Policy acknowledgment and Terms of Service agreement to continue. Gameplay performance remains unmeasured.
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
