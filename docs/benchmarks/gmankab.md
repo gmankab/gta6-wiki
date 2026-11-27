@@ -142,6 +142,16 @@ On the dedicated path, each readback took **296–308 µs** on average. With the
 
 **CPU write-fault window comparison** Later in the same run, I alternated the write-watch window between **64 KiB** and **256 KiB**, with the dedicated queue enabled. REA summarized four 25-second windows. Write faults per 10,000 draws and dispatches were **2,829 → 2,599 → 3,935 → 1,471**. Buffer uploads were **40.8 → 66.2 → 59.8 → 80.3 MB/s**. Summed fault-handler time across threads rose in both 256 KiB samples. Scene changes and shader compilation prevent attributing the differences in FPS to the window size. The run returned to 64 KiB. A lower-priority build was running during both comparisons.
 
+**Later opening scenes** Without a cinematic skip, the 1080p run presented **246 flips in 215 seconds (1.14 FPS)**. AMDGPU recorded **52.94%** graphics-engine activity and **1.17%** compute-engine activity over the corresponding 212-second sample. The command thread used **393.9 ms of CPU time per flip**. The next 90-second window averaged **1.67 FPS**, with **35.27%** graphics-engine activity over 87 seconds and **331.9 ms** of command-thread CPU time per flip. Later Right Stick, Left Stick, and Start probes during the twilight sequence and scene transitions did not establish camera or movement control.
+
+## November 28, 2026 · Vulkan guest memory on the RX 6800
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+Disroot Kyty `968870c8` can allocate guest memory in Vulkan DMA-BUF chunks and import eligible buffers into the renderer. I tested the 4 GiB cap and the 0 MiB cap for chunked memfd fallback. On the first validation run, the alias checks passed, then the test aborted at shutdown because its static subsystem owner destroyed the allocation device after the validation layer had released its dispatch state. Moving ownership into the test program's main scope fixed the abort.
+
+REA captured successful full virtual-memory suite runs with legacy backing, DMA-BUF backing, and chunked memfd backing under Khronos Vulkan validation in Fedora Linux 45 Toolbox. The RX 6800's DMA-BUF run passed the fixture for aliased reads and writes across chunk boundaries. The separate Vulkan fixture also passed for a refused host-pointer import and detached readbacks. These tests cover backing and fallback behavior. Renderer imports and title performance require a separate title run. [DMA-BUF allocator](https://git.disroot.org/flo/kyty/commit/374f99fd0c4ffd23bf032534a9cc336b1e173845) · [Renderer import](https://git.disroot.org/flo/kyty/commit/fe9b11f3602f3ea6f424d1ee9f6d4342141166ab) · [Read fences](https://git.disroot.org/flo/kyty/commit/968870c8de73a4817b8d6bf810d47c5291e9f499)
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
