@@ -89,6 +89,73 @@ During that black loading stretch, a 14-second profile of the busiest guest thre
 
 **Loading replay** REA captured runs in baseline, indexed, indexed, baseline order, with three passes per run. All 12 passes completed four flips and four submissions with zero pacing timeouts. All four final PNGs matched byte for byte. The warm passes took **0.518–0.542 s** on the baseline and **0.513–0.524 s** with the index. These ranges overlap, and the capture covers illustrated loading.
 
+## November 28, 2026 · Kyty 3D street capture and shader cache verification
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**3D workload** A second launch of Disroot Kyty `d054552d` with the same compressed mip fix and Xeon loader change used host RADV 26.2.6. Before the recorder started, it issued **328 guest flip requests in 80 seconds (4.10/s)** during the night street cinematic. In the corresponding 79.1-second sample, AMDGPU attributed **29.28%** graphics-engine activity to Kyty. The graphics command thread used **76.56%** of one CPU core. REA captured the calculation from the runtime and DRM counters. The four-frame recording ended after 189.6 seconds of recording overhead, with 20,359 call records. Those timings describe the recorder, whose per-call memory comparisons slow the title. The later skip reached black loading before the time cap. The story save watch saw no read in this run.
+
+**Cache verification** The newer Disroot revision `ee39d796` switches the shader loop limit off by default. On this machine it retranslated **3,465 of 3,465 stored modules** from an older uncapped store in **123.9 seconds** and retained each module and all **1,719** stored pipeline records. Its shader-store fixture passed under REA in Fedora 45 Toolbox. [Default loop setting](https://git.disroot.org/flo/kyty/commit/f5281f6020f4b7b04d0305a91f6868a9a2d59958) · [Partial store carry-over](https://git.disroot.org/flo/kyty/commit/ee39d796f9e5e826e46eafdbda5062cb3e2d2ee4)
+
+**3D replay** The cold baseline reached its 150-second limit during shader and pipeline compilation. A retry started with copies of the title run's shader and driver caches and reached its 115-second limit before completing a pass. REA captured both exits. These attempts yielded no comparison between the scan and index in 3D.
+
+## November 28, 2026 · Kyty zero-copy import failures on the RX 6800
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** Disroot Kyty `ee39d796` with the compressed mip fix and the reviewed streaming-store `CLZERO` patch. The 1280×720 Wayland session ran host RADV 26.2.6. Kyty reported a 4K output and the title registered two 3840×2160 buffers. Zero-copy guest-memory promotion was enabled. [Disroot revision](https://git.disroot.org/flo/kyty/commit/ee39d796f9e5e826e46eafdbda5062cb3e2d2ee4) · [Zero-copy implementation](https://git.disroot.org/flo/kyty/commit/a89247f3dcd0f7ed72194c01eea527e6f92c3894) · [CPU patch](https://github.com/KytyPS5/KytyPS5/pull/2599)
+
+**Result** REA counted **3,973** reported import refusals and zero imports in the observed log prefix. The most frequently refused range accounted for **2,505** attempts. The opening cinematic issued **222 flip requests over 105 seconds (2.11/s)** and used **18.58%** of the graphics engine over 103.1 seconds. After the title read the imported save at about **389 seconds**, a subsequent 3D sample recorded **69 flip requests in 60 seconds (1.15/s)** and used **26.08%** of the graphics engine over 59.1 seconds. The command thread used **87.28%** and **80.93%** of one CPU core in those windows. This run used a different executable and settings from the earlier guarded-shader run.
+
+The Linux kernel killed the emulator during a global out-of-memory event about **862 seconds** after launch. The last sampled 3D window recorded seven flip requests in five seconds. The run had reached the credits and additional 3D scenes. Camera and locomotion remained unverified.
+
+## November 28, 2026 · Kyty with 1080p video-out and a failed-import fallback
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** The same Disroot base and shader-cache seed, with the local image-heap index toggle and a change that keeps the resident buffer after Vulkan refuses a zero-copy promotion. `--output-1080p` produced two **1920×1080** registered video-out buffers and the texture log included a **1280×720** target. Host RADV was 26.2.6. The initial Continue prompt occupied the upper-left quarter. The following 3D scene filled the window. [Disroot 1080p mode](https://git.disroot.org/flo/kyty/commit/1e9c7b99cc8d2fbca594c06449d397584ee5468b)
+
+**Result** REA counted **61 refused imports**, each with a different logged address and size, and no successful import in that sample. The night street cinematic issued **231 flip requests in 90 seconds (2.57/s)**. AMDGPU recorded **22.43%** graphics-engine activity over 89.1 seconds, and the command thread averaged **83.08%** of one CPU core. Output resolution, the loaded frames, and the image-heap mode differ from the 4K run, so its flip-request rate serves as a separate observation.
+
+**Within-run image-heap comparison** In three consecutive 15-second samples, the scan, index, and scan used **192,102**, **157,506**, and **172,168** command-thread instructions per draw or dispatch. The three samples averaged **1,680**, **2,128**, and **2,592** operations per flip request. This shows lower CPU instruction cost per operation in the indexed sample, with a changing cinematic workload. Disroot subsequently landed its own serial index and a fix for membership when an element resolves twice. [Disroot index](https://git.disroot.org/flo/kyty/commit/94275a4ed7076dfb1a6abd00d0b281aae88c60cf) · [Membership fix](https://git.disroot.org/flo/kyty/commit/d2d63985ad20924c416f674508888e594a772681)
+
+**Regression test** The RX 6800 Vulkan fixture forced rejection of a mapped guest buffer. It requested promotion twice and verified one import attempt, zero copies and the same Vulkan buffer still registered for the page. REA captured the passing exit with Toolbox RADV 26.2.7 and Vulkan validation.
+
+**Later story sequence** After dismissing a “Couldn't save” prompt, the run reached a daylight scene with characters, buildings, and missing geometry. The next recorded 150-second window averaged **1.15 flip requests/s**. A later 195-second window averaged **0.63 flip requests/s**, including shader compilation. Opposing camera inputs, forward and backward movement, and a late pause attempt did not establish control. The emulator wrote save-memory files earlier in the run. The cause of the save prompt remains undetermined.
+
+## November 28, 2026 · Kyty 1080p presentation retest
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+Disroot Kyty `70f82dbb` includes a dedicated Vulkan copy queue for buffer readbacks. A local candidate also restricted the prepared frame to the resolution registered by the title. With host RADV 26.2.6, the 1920×1080 Continue screen still occupied the top-left **640×360** of the 1280×720 Wayland output. The extent change failed the title test. REA captured the readback batch, detached submission, and refused-import fixtures passing with Vulkan validation on Toolbox RADV 26.2.7. These fixtures exercise the readback and fallback behavior. [Disroot copy queue](https://git.disroot.org/flo/kyty/commit/70f82dbb504a73cfb06b869a4e9ec70ae7ca2196)
+
+**Dedicated copy queue comparison** The title opened and read the imported story save during loading. In the first 3D cinematic, I switched the queue off, on, off, and on in the same process. REA summarized five complete five-second intervals per setting after each switch. No new pipelines were created in these intervals. Kyty's performance summary counts accepted guest flip requests when they enter the video-out queue.
+
+| Sample | Dedicated queue | Flip requests/s | Draws and dispatches per flip request | Readback handler µs/call | Graphics engine | Compute engine |
+|---|---|---:|---:|---:|---:|---:|
+| 1 | Off | 2.56 | 1,730 | 397 | 17.74% | 0.00% |
+| 2 | On | 2.68 | 1,894 | 463 | 16.19% | 2.82% |
+| 3 | Off | 2.72 | 1,881 | 400 | 19.40% | 0.00% |
+| 4 | On | 1.96 | 2,267 | 474 | 14.76% | 2.53% |
+
+On the dedicated path, each readback took **296–308 µs** on average. With the queue off, the fused path took **413–433 µs** on average. The handler spent more time overall with the queue on, and the remaining readbacks that flushed the graphics queue took longer. The cinematic workload changed across samples, so the throughput effect remains unresolved.
+
+**CPU write-fault window comparison** Later in the same run, I alternated the write-watch window between **64 KiB** and **256 KiB**, with the dedicated queue enabled. REA summarized four 25-second windows. Write faults per 10,000 draws and dispatches were **2,829 → 2,599 → 3,935 → 1,471**. Buffer uploads were **40.8 → 66.2 → 59.8 → 80.3 MB/s**. Summed fault-handler time across threads rose in both 256 KiB samples. Scene changes and shader compilation prevent attributing the differences in flip-request rate to the window size. The run returned to 64 KiB. A lower-priority build was running during both comparisons.
+
+**Later opening scenes** Without a cinematic skip, the 1080p run issued **246 flip requests in 215 seconds (1.14/s)**. AMDGPU recorded **52.94%** graphics-engine activity and **1.17%** compute-engine activity over the corresponding 212-second sample. The command thread used **393.9 ms of CPU time per flip request**. The next 90-second window averaged **1.67 flip requests/s**, with **35.27%** graphics-engine activity over 87 seconds and **331.9 ms** of command-thread CPU time per flip request. Later Right Stick, Left Stick, and Start probes during the twilight sequence and scene transitions did not establish camera or movement control.
+
+## November 28, 2026 · Vulkan guest memory on the RX 6800
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+Disroot Kyty `968870c8` can allocate guest memory in Vulkan DMA-BUF chunks and import eligible buffers into the renderer. I tested the 4 GiB cap and the 0 MiB cap for chunked memfd fallback. On the first validation run, the alias checks passed, then the test aborted at shutdown because its static subsystem owner destroyed the allocation device after the validation layer had released its dispatch state. Moving ownership into the test program's main scope fixed the abort.
+
+REA captured successful full virtual-memory suite runs with legacy backing, DMA-BUF backing, and chunked memfd backing under Khronos Vulkan validation in Fedora Linux 45 Toolbox. The RX 6800's DMA-BUF run passed the fixture for aliased reads and writes across chunk boundaries. The separate Vulkan fixture also passed for a refused host-pointer import and detached readbacks. These tests cover backing and fallback behavior. [DMA-BUF allocator](https://git.disroot.org/flo/kyty/commit/374f99fd0c4ffd23bf032534a9cc336b1e173845) · [Renderer import](https://git.disroot.org/flo/kyty/commit/fe9b11f3602f3ea6f424d1ee9f6d4342141166ab) · [Read fences](https://git.disroot.org/flo/kyty/commit/968870c8de73a4817b8d6bf810d47c5291e9f499)
+
+**Title run** Kyty on host RADV 26.2.6 imported all four 1 GiB DMA-BUF chunks into the renderer. The log recorded **62 successful buffer promotions and two refused attempts** through the first 64 numbered entries. Later successful promotions are sampled in the log. After the profiling interval, VideoOut recorded **139 presentation events in 70 seconds (1.99/s)** during the opening cinematic, with **13.40%** graphics activity over 67 seconds and **85.1%** use of one CPU core by the command thread. It averaged **10 buffer readbacks per 1,000 draws and dispatches**. The following 35 seconds recorded **66 presentation events (1.89/s)**. The previous copy-queue comparison used different scene windows, so a frame-rate gain remains unverified.
+
+**Profile** REA summarized a **24.1-second** Tracy capture from the beginning of the 3D cinematic. Zero-copy read fences recorded **8,752** waits and **9.54 seconds of summed thread time**. The two busiest threads spent **2.19** and **1.31 seconds** there. Threads can wait concurrently. The indirect-dispatch handler used **5.31 seconds** of exclusive instrumented time across the trace. The profile covers a cinematic and the start of buffer promotion.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)

@@ -204,3 +204,20 @@ The AMD shader cache had grown to 15 GB across several builds. About 1 GB of it 
 **Ray tracing on Series S** The picture is nearly the same, with slightly deeper shadows under caps, inside the boat and indoors. FPS is −17% and free RAM much lower. Without ray tracing, the layer fills the title's traced indirect light with an estimate taken from the frame, `VICTORY_AMBIENT`. That is why the difference outdoors in daylight is small.
 
 [All scenario runs](../../data/benchmarks/sillynocodecat/2026-11-27-eik-amd-scenarios.csv)
+
+## November 28, 2026 · eikkapine/victory-amd, manual play
+
+**Run by** [@sillynocodecat](https://github.com/sillynocodecat)
+
+**Build and setup** The `2b88c2e` build from the entry above, with the tree fix (`VICTORY_PORT_CONSTANTS_ORDER_ALONE=all`). Ray-tracing pipelines from a Series S run were added to the Series X pipeline book: 5,007 more pipelines, made ahead in 30 s. The window was made borderless fullscreen from outside, with no change to the layer.
+
+**Workload** Save 02, played by hand: opening cinematics, then the boat. FPS is the median of the layer's 5-second lines with at least 1,000 draws per frame, which covers the cinematics and play together.
+
+| Setup | World time sampled | FPS median | Worst 10% | Picture |
+|---|---|---|---|---|
+| Series S, ray tracing, `VICTORY_SUBMIT_FRAMES=0` | 16.8 min | 17.7 | 13.9 | Good |
+| Series X, 4K output, FSR 4.1.2 quality from 2560×1440, ray tracing, `VICTORY_AMBIENT_AIR=1.5`, 3840×2160 monitor | 6.8 min | 11.6 | 7.3 | Best seen on this machine |
+| Series S with a 1280×720 output (`VICTORY_OUTPUT`), which draws 853×480 | Not measured | Not measured | Not measured | Too pixelated to play; the interface text was unreadable |
+
+- **Trees still sway back and forth** in both ray-traced sessions, with `VICTORY_SUBMIT_FRAMES=0` as well. The drop-out fix does not cover it, and this matches the uneven frame presentation in the pacing data above.
+- **Series S output** cannot go lower without a loss: below 1920×1080 the interface goes with it. `VICTORY_FFX_SCALE` crashed the title on Series S in an earlier fork test (division by zero at `+0x28f03e8`).
