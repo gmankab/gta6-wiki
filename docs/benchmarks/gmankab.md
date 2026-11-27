@@ -107,6 +107,20 @@ During that black loading stretch, a 14-second profile of the busiest guest thre
 
 **Result** REA counted **3,973** reported import refusals and zero imports in the observed log prefix. The most frequently refused range accounted for **2,505** attempts. The opening cinematic presented **222 flips over 105 seconds (2.11 FPS)** and used **18.58%** of the graphics engine over 103.1 seconds. After the title read the imported save at about **389 seconds**, a subsequent 3D sample presented **69 flips in 60 seconds (1.15 FPS)** and used **26.08%** of the graphics engine over 59.1 seconds. The command thread used **87.28%** and **80.93%** of one CPU core in those windows. This run used a different executable and settings from the earlier guarded-shader run.
 
+The Linux kernel killed the emulator during a global out-of-memory event about **862 seconds** after launch. The last sampled 3D window presented seven flips in five seconds. The run had reached the credits and additional 3D scenes. Camera and locomotion remained unverified.
+
+## November 28, 2026 · Kyty with 1080p video-out and a failed-import fallback
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** The same Disroot base and shader-cache seed, with the local image-heap index toggle and a change that keeps the resident buffer after Vulkan refuses a zero-copy promotion. `--output-1080p` produced two **1920×1080** registered video-out buffers and the texture log included a **1280×720** target. Host RADV was 26.2.6. The initial Continue prompt occupied the upper-left quarter. The following 3D scene filled the window. [Disroot 1080p mode](https://git.disroot.org/flo/kyty/commit/1e9c7b99cc8d2fbca594c06449d397584ee5468b)
+
+**Result** REA counted **61 refused imports**, each with a different logged address and size, and no successful import in that sample. The night street cinematic presented **231 flips in 90 seconds (2.57 FPS)**. AMDGPU recorded **22.43%** graphics-engine activity over 89.1 seconds, and the command thread averaged **83.08%** of one CPU core. Output resolution, the loaded frames, and the image-heap mode differ from the 4K run, so its frame rate serves as a separate observation.
+
+**Within-run image-heap comparison** In three consecutive 15-second samples, the scan, index, and scan used **192,102**, **157,506**, and **172,168** command-thread instructions per draw or dispatch. The three samples averaged **1,680**, **2,128**, and **2,592** operations per flip. This shows lower CPU instruction cost per operation in the indexed sample, with a changing cinematic workload and no isolated frame-rate improvement. Disroot subsequently landed its own serial index and a fix for membership when an element resolves twice. [Disroot index](https://git.disroot.org/flo/kyty/commit/94275a4ed7076dfb1a6abd00d0b281aae88c60cf) · [Membership fix](https://git.disroot.org/flo/kyty/commit/d2d63985ad20924c416f674508888e594a772681)
+
+**Regression test** The RX 6800 Vulkan fixture forced rejection of a mapped guest buffer. It requested promotion twice and verified one import attempt, zero copies and the same Vulkan buffer still registered for the page. REA captured the passing exit with Toolbox RADV 26.2.7 and Vulkan validation.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
