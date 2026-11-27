@@ -36,6 +36,8 @@ A report for `PPSA38500` on Arch Linux with an RX 6800 XT reached the menu and t
 
 AnyPS5 relinks PS5 ELF executables against reimplemented libraries. The report for the same `01.002.001` build describes shader preparation stalls in AGC submissions. The Xeon E5-2670 v3 has AVX2 and lacks SSE4a. The local Intel conversion test passed with synthetic input. Title compatibility on this CPU remains unverified. [AnyPS5 input and CPU requirements](https://github.com/boykopovar/AnyPS5/blob/978eb901961fcb6e8f4bd6bbc15ac29e72c4ef42/docs/user/USAGE.md) · [Shader preparation report](https://github.com/boykopovar/AnyPS5/issues/27705)
 
+The follow-up Linux native dry run of the actual PS5 title stopped during `--to-intel` conversion. The reported branch target follows three-byte `CLZERO`, which needs extra space for a trampoline. Applying the existing movable-instruction fix to AnyPS5 `4243438` let the dry run finish with the executable and two bundled modules. The focused AMD instruction converter suite passed. The dry run listed 736 external PRX references and produced no runnable output. [AnyPS5 PR #27560](https://github.com/boykopovar/AnyPS5/pull/27560)
+
 GitHub counts observed on November 27, 2026. Contributor counts include inherited history.
 
 | Project | Stars | Forks | Contributors | Open PRs |
