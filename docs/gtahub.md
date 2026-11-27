@@ -24,7 +24,7 @@ toolbox run fgj --version
 toolbox run fgj repo view gmanka/victory --hostname git.gtahub.st
 ```
 
-The executable is stored at `/var/mnt/ssd/tools/fgj/bin/fgj`. [fgj release](https://codeberg.org/romaintb/fgj/releases/tag/v0.6.1)
+The executable is stored at `~/files/proj/recomp/tools/fgj/bin/fgj`. [fgj release](https://codeberg.org/romaintb/fgj/releases/tag/v0.6.1)
 
 ## Development activity
 
