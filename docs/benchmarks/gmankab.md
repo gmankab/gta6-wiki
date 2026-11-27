@@ -65,6 +65,18 @@ During that black loading stretch, a 14-second profile of the busiest guest thre
 
 **Result** The Continue prompt and illustrated loading screen rendered at about 30 FPS. The fork then recorded at least **30 seconds without a frame** while processing 3D work, with a **5.27-second** compute-pipeline build among the reported waits. The emulator logged a fatal exception at about 320 seconds. REA independently decoded the failing guest instruction as a direct write to address zero. The fork already provides the VideoOut import mentioned in one report for this crash address. The logs establish a stall and subsequent guest abort, with the condition that triggered the abort still unverified. [Related Kyty compatibility report](https://github.com/KytyPS5/KytyPS5/issues/2571)
 
+## November 28, 2026 · Kyty CLZERO and image-heap profile
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** Disroot Kyty `b02adf9e`, with the compressed mip fix and a local loader change that lowers AMD `CLZERO` to ordinary x86-64 stores on the Xeon. The launch used host RADV 26.2.6, private 1280×720 Wayland, and a cache seeded with 3,336 shader modules and 3,036 pipelines from the preceding run. The loader reported **2,278** instructions replaced in the main executable. [Disroot revision](https://git.disroot.org/flo/kyty/commit/b02adf9e4735a9b56c2234c5620d983b9534e868)
+
+**Result** An early 115-second sample of 3D cinematics had **130 guest flips (1.13 FPS)**. The graphics command thread averaged **87.8% of one CPU core**. AMDGPU attributed **15.20%** graphics-engine activity to Kyty over a 109.4-second DRM sample during that stretch. A later cinematic sample had **120 guest flips in 100 seconds (1.20 FPS)** and **19.41%** graphics-engine activity over 93.9 seconds. The sequence showed a night street and continued into the credits. Stick tests left player control unverified. The run reached the 945-second cap during a black loading screen. The earlier run followed a different scene sequence, so the results leave any speedup from replacing `CLZERO` unmeasured.
+
+**Profile** REA captured a report from 1,273 weighted instruction samples on the graphics command thread near the night street. Four source-line entries for the full image-heap scan accounted for **24.20% of sampled instruction weight**. The profile measures CPU work on that thread over 20 seconds. [Disroot image-heap source](https://git.disroot.org/flo/kyty/src/commit/b02adf9e4735a9b56c2234c5620d983b9534e868/src/graphics/host_gpu/renderer/pipeline/imageHeap.cpp#L563)
+
+**Follow-up fixture** On Disroot Kyty `d054552d` with the image-serial index applied, the resident image-heap fixture passed on the RX 6800 with Toolbox RADV 26.2.7 and Vulkan validation. The fixture checked descriptor behavior and allowed the GPU's coarse robust-buffer reporting. REA captured the test exit and fixture result. [Disroot base revision](https://git.disroot.org/flo/kyty/commit/d054552ded4f5a4e26b5c5a83b507d1838925fd6)
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
