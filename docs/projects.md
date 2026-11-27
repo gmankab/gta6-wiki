@@ -11,6 +11,8 @@ The status column gives the furthest stage established by the cited local run. V
 | [spidercraft/VIctory](https://github.com/spidercraft/VIctory) | Wine-free Linux loader, native vkd3d-proton, RX 6800 and Lavapipe variations | Native ELF boot and rendered menus verified. Native AMD hardware tests reached 3D submissions; software tests reached story loading. See [native snapshots](#native-snapshots). |
 | [JoshuuDev/victory-amd](https://github.com/JoshuuDev/victory-amd) | Local `test/rx6800-wine` at `255f5cd` | Built with the Wine compiler path and passed three remap-lock tests. The run archive contains RX 6800 timing and resource samples. |
 | [avatarmanz/VIctory-7900XTX](https://github.com/avatarmanz/VIctory-7900XTX) | Base fork and [Proton PR #129](https://github.com/avatarmanz/VIctory-7900XTX/pull/129) | Base passed nine synthetic Wine/Lavapipe checks. The Proton candidate passed 205 shader tests and nine targeted runtime checks. Local boots hit an early breakpoint. |
+| [readmet3xt-lab/foxhound](https://github.com/readmet3xt-lab/foxhound/tree/454ffead768aaf2fedab7e51f641523ce6f8a440) | Public `main` at `454ffead` | Fedora 45 toolbox Linux build stopped in the loader on Windows API dependencies. The title runner has a Windows gate. [Reported benchmark](benchmarks.md#windows-fork-source-comparison) |
+| [Belobug/VIctory-Belobug-AMD](https://github.com/Belobug/VIctory-Belobug-AMD/tree/4eb6cfdf9e61cb112f1f811344ec0dd309eddd6c) | Public `a-publier` at `4eb6cfd` | Fedora 45 toolbox Linux build stopped in the loader on Windows API dependencies. The title runner has a Windows gate. [Reported benchmark](benchmarks.md#windows-fork-source-comparison) |
 | [cool_fox snapshot](https://github.com/gmankab/victory/tree/cool_fox) | Original `codec-d/cool_fox` at `f4b48ad`, `pareto-residency` profile | Lavapipe hit `0x80000003` before the first captured frame. Corrected Wine/Wayland setup on RX 6800 reached legal terms at about 30 FPS. Nineteen focused tests passed and the kernel logged no reset in that run. |
 | [TuxBox](https://github.com/brcly/TuxBox) | `11a278a`; fresh-prefix documentation at `9d76fb3` | 125 Python tests and a hardware Lanes replay passed. The title created its D3D12 device and stopped at `CLWB` before its first frame on this Xeon. |
 | [XCL](https://github.com/xcl-dev/xcl) | Earlier `ivall/xcl` checkout and `c160d86`, local `3867e7b`, later `6d051da`, `08db802`, `b49be18`, and `8b957bec` | Stock Wine runs stopped at the heap-vtable or command-list path. With existing [#867](https://github.com/xcl-dev/xcl/pull/867), [#1395](https://github.com/xcl-dev/xcl/pull/1395) and adjusted Wine DLLs, RX 6800 reached the setup/terms screen at 27–29 FPS. Later patched Lavapipe builds presented a first 4K frame. Revision `8b957bec` cross-built in the Fedora toolbox. Under Wine 11.21 and Lavapipe, it began its new shader preparation step and timed out at 85 seconds. [XCL startup results](benchmarks.md#xcl-startup-preparation-under-wine) |
@@ -18,6 +20,17 @@ The status column gives the furthest stage established by the cited local run. V
 | [ubiquitarianism/leonida](https://github.com/ubiquitarianism/leonida) | `98c2f777`, `db1a22d`, `61732ac`, `ffcfe68`, `a73a57e` and alias-guard rebases | Wine/Vulkan startup and an existing shadow guard yielded large synthetic/startup gains. Inspected the Linux-native Vulkan tools; full title boot used the PE launcher through Wine. [Comparison and upstream report](https://github.com/ubiquitarianism/leonida/pull/1867#issuecomment-7174840488) |
 | [PastiiJay/klbf-lab](https://github.com/PastiiJay/klbf-lab) / [beta](https://github.com/PastiiJay/klbf-lab-beta) | Stable `1c3cc06` and `37ad2d2`, beta `67ee19c` and `f9f2419` | Wine pipeline cache and FXC selection mattered. Beta with an updated compiler rendered the courtyard at 0.1–0.6 FPS. See [the KLBF comparison](benchmarks.md#title-runs). |
 | [OpenScarlett](https://github.com/californiaAlmonds/OpenScarlett), [Five-Star Recomp](https://github.com/ThatRecompDev/five-star-recomp), [Palmwave](https://github.com/fablinoo/palmwave) | Local survey refs `46d8e2c`, `12e7f30`, `ecb988c` | Source and repository survey. No verified game benchmark was recorded for these projects. |
+
+## Foxhound and Belobug source checks
+
+GitHub API counts observed on November 27, 2026. Contributors include people listed through inherited history.
+
+| Repository | Stars | Forks | Contributors | Open issues | Open PRs |
+|---|---:|---:|---:|---:|---:|
+| [Foxhound](https://github.com/readmet3xt-lab/foxhound) | 6 | 3 | 1 | 3 | 0 |
+| [VIctory-Belobug-AMD](https://github.com/Belobug/VIctory-Belobug-AMD) | 3,718 | 1,084 | 123 | 140 | 282 |
+
+Foxhound exposed one Git commit and Belobug exposed 839 at the checked revisions. The source branches did not advertise a Linux native or Wine target. Both forks give pipelines requested by draws priority over background prewarming. Belobug also documents mapped constant uploads, tracking descriptor writes, and parallel readback. Those paths are candidates for Linux native comparisons. [Foxhound queue](https://github.com/readmet3xt-lab/foxhound/blob/454ffead768aaf2fedab7e51f641523ce6f8a440/crates/victory-gpu/src/pipeline/make.rs) · [Belobug README](https://github.com/Belobug/VIctory-Belobug-AMD/blob/4eb6cfdf9e61cb112f1f811344ec0dd309eddd6c/README.md)
 
 ## CGBJ source checks
 

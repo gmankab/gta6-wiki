@@ -37,6 +37,15 @@ For the test machine and supported configurations, see the [readme](../readme.md
 | Local decoded-BC7 cache, Lavapipe, same binary and first 155 s | Four-list submission median **1,972 → 392 ms** across 32 versus 146 samples. Cached run bound its first mesh pipeline at frame **516** after **111 s**. Control ran 155 s without a logged mesh bind. | Latest capture was still illustrated loading. |
 | Native descriptor and XMA sequence, Lavapipe | A 425 s run captured frame **850**. Empty-buffer and XMA variants both reached the illustrated loading screen and hit **460 s** caps. The first instrumented run hit a **305 s** cap before reproducing the descriptor VUID. The **460 s** trace recorded **22 zero-byte CBV calls**, **nine** validation messages and **zero** logged zero-range SRV/UAV calls. | After the null-CBV fix, a matched **460 s** run captured frame **750** with **zero** zero-byte CBV calls and **zero** validation messages. Both runs ended during loading. [Native port](https://github.com/spidercraft/VIctory/pull/27) |
 
+## Windows fork source comparison
+
+These Windows measurements come from the project authors. The two scenes, GPUs, and console profiles differ. Both local Fedora 45 Linux release builds failed in `victory-loader` on Windows API references, so no RX 6800 title result is available for either fork.
+
+| Project | Author's hardware and settings | Author's result |
+|---|---|---|
+| [Foxhound](https://github.com/readmet3xt-lab/foxhound/tree/454ffead768aaf2fedab7e51f641523ce6f8a440) | Ryzen 7 7800X3D, RTX 4070 Super, Windows 11, Series X, 1440p DLSS Quality, frame generation off | **Steady 30 FPS** at the first boat ride, with stalls earlier in the run. |
+| [VIctory-Belobug-AMD](https://github.com/Belobug/VIctory-Belobug-AMD/tree/4eb6cfdf9e61cb112f1f811344ec0dd309eddd6c) | Core i9-12900K, RX 7900 XTX, Windows 11, ray tracing off | Series S city street at **44.9 ms/frame**, about **22 FPS**, compared with **57–75 ms/frame** before the listed patches. The README also reports about **19 FPS** in Series X. |
+
 ## Cool Fox under the CGBJ reupload name
 
 The public `cgbj-reupload` resolves to the original Cool Fox `f4b48ad` commit. Both runs used the locally built Windows-target binary, the `pareto-residency` Series S profile, Wine/Wayland, RADV on the RX 6800, and a read-only title directory. The rerun granted Wine access to PulseAudio. [Source check](projects.md#cgbj-source-checks)
