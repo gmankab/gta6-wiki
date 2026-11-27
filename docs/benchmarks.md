@@ -30,6 +30,8 @@ A local Kyty change reused a compressed backing for writable mip views with iden
 
 With the nested reservation patch applied, the cold run recorded **104 presents over 13.09 seconds** in its saved trace and then continued shader preparation until the 125-second cap. The shader-cache replay recorded **270 presents over 10.03 seconds** and **3 more over 31.82 seconds** before stalling. The median present interval in its first window was **33.37 ms**. Sampled screenshots in both runs were black. By the 205-second cap, the replay registered 7,575 shader-cache hits and 2,800 misses. Its 139.9-second AMDGPU process sample added 11.7 ms of graphics-engine time and zero compute-engine time. [Linux reservation test](https://github.com/boykopovar/AnyPS5/pull/27563#issuecomment-7220622753) · [Related shader-preparation issue](https://github.com/boykopovar/AnyPS5/issues/27705)
 
+Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,667 presents over 190.21 seconds**, or **29.79 presents/s** across the recorded intervals, before the 205-second test cap. Every sampled screenshot was black. AMDGPU attributed **1.62%** graphics-engine activity to AnyPS5 over a **164-second** process sample. Its focused shader-preparation CTest passed with Khronos validation inserted and zero VUID errors. Both title runs used host RADV 26.2.6. The focused test used Toolbox RADV 26.2.7. [AnyPS5 REWIND patch and Linux result](https://github.com/boykopovar/AnyPS5/pull/27821#issuecomment-7221266032)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
