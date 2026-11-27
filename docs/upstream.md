@@ -1,6 +1,6 @@
 # Upstream changes and reports
 
-This list records verified contributions from the project account and links to relevant donor work. PR status is a GitHub snapshot from November 26, 2026. An open status includes drafts.
+This list records verified contributions from the project account and links to relevant donor work. PR status reflects GitHub observations from November 26–27, 2026. An open status includes drafts.
 
 Standalone regressions and results belong with their upstream fixes. Local diagnostics such as render overrides, watchdog bypasses, system-recovery experiments and the temporary vkd3d/Mesa instrumentation stayed outside the contribution branches.
 
@@ -81,6 +81,8 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#43](https://github.com/spidercraft/VIctory/pull/43) | Bind strides for indexed resource-heap buffer reads | Draft |
 | [#44](https://github.com/spidercraft/VIctory/pull/44) | Prove unused scalar phi inputs before substituting them | Draft |
 | [#45](https://github.com/spidercraft/VIctory/pull/45) | Snapshot only newly declared GPU write ranges | Open |
+| [#46](https://github.com/spidercraft/VIctory/pull/46) | Remember pending pipeline requests for the next launch | Open |
+| [#47](https://github.com/spidercraft/VIctory/pull/47) | Prioritize pipelines requested by a draw or dispatch | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
