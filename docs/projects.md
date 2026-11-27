@@ -40,12 +40,26 @@ The follow-up Linux native dry run of the actual PS5 title stopped during `--to-
 
 A full AnyPS5 runtime build with #27543 still aborted at the same overlap. A host stack trace identified `sceKernelReserveVirtualRange`. Adding #27563 allowed the 13 MiB fixed subreservation and the subsequent direct mapping on Fedora Linux 45. The run reached 7,585 shader cache writes before the 125-second test cap. AMDGPU process counters showed no increase in graphics or compute engine time in the 84-second sample after the reservation passed. The run had no verified rendered gameplay. [Mapping PR #27543](https://github.com/boykopovar/AnyPS5/pull/27543) · [Nested reservation PR #27563](https://github.com/boykopovar/AnyPS5/pull/27563)
 
-GitHub counts observed on November 27, 2026. Contributor counts include inherited history.
+### PS5 fork review
 
-| Project | Stars | Forks | Contributors | Open PRs |
+Source and repository counts checked on November 28, 2026 local time. GitHub contributor counts include inherited history. Open and total PR counts refer to each repository's own pull requests.
+
+| Project | Stars | Forks | Contributors | Open / total PRs |
 |---|---:|---:|---:|---:|
-| AnyPS5 | 62,519 | 6,098 | 415 | 2,366 |
-| KytyPS5 | 12,858 | 1,611 | 121 | 234 |
+| [AnyPS5](https://github.com/boykopovar/AnyPS5) | 62,691 | 6,119 | 416 | 2,081 / 25,274 |
+| [KytyPS5](https://github.com/KytyPS5/KytyPS5) | 12,872 | 1,615 | 121 | 237 / 1,202 |
+| [PaN1C27/KytyPS5](https://github.com/PaN1C27/KytyPS5) | 0 | 0 | 122 | 0 / 0 |
+| [Molier/KytyPS5](https://github.com/Molier/KytyPS5) | 1 | 1 | 129 | 0 / 1 |
+| [simnJS/AnyPS5](https://github.com/simnJS/AnyPS5) | 320 | 32 | 411 | 2 / 246 |
+| [rdna2-commons/anyps5-ps5-line](https://github.com/rdna2-commons/anyps5-ps5-line) | 0 | 0 | 414 | 0 / 0 |
+| [JamesCicada/GTAVI-Recomp](https://github.com/JamesCicada/GTAVI-Recomp) | 81 | 13 | 7 | 20 / 34 |
+
+- The current Disroot Kyty branch gained range-aware image-heap discovery, a resource-walker fast path for read-watched pages, frame replay changes and a fix for oversized descriptor-set layouts. The maintainer reports loading two imported Xbox saves into the PS5 world. The RX 6800 runs documented here reached the opening cinematic and pause menu. [Disroot revision](https://git.disroot.org/flo/kyty/commit/b02adf9e4735a9b56c2234c5620d983b9534e868) · [Save tests](https://git.disroot.org/flo/kyty/src/branch/gta6-bringup/docs/xbox-saves.md)
+- Molier's `bringup` branch targets Linux and RADV. It has an indirect draw count path, 8-bit storage image atomics, a persistent shader store, and per-frame timing and fault logs. The fork describes its GPU testing on RDNA4. [Pinned revision](https://github.com/Molier/KytyPS5/tree/b4957bc741631dcad798236482f14530444d0088) · [Run and triage tools](https://github.com/Molier/KytyPS5/blob/b4957bc741631dcad798236482f14530444d0088/tools/bringup/README.md)
+- PaN1C27's branch moves indirect draw counts and compute arguments to GPU-side handling. It is a candidate for comparing time spent waiting on readbacks. [Pinned revision](https://github.com/PaN1C27/KytyPS5/tree/fb55993332014a191eed313c8d73c8688442f505) · [Indirect work change](https://github.com/PaN1C27/KytyPS5/commit/0c8080725c02df275fef66eb35fd3ab96bac9a20)
+- AnyKyty combines AnyPS5's Linux native relinker with Kyty's Vulkan backend. The latest reviewed changes cover ray-query address calculations and bounds. Its published AMD benchmark covers 007 First Light. [AnyKyty branch](https://github.com/simnJS/AnyPS5/tree/AnyKyty) · [AMD test](https://github.com/simnJS/AnyPS5/issues/32)
+- Frozzy's Disroot branch records an earlier bring-up that reached rendered 3D, with fixes for pixel shaders on RADV and AMD indirect mesh draws. Sparky's GitHub fork adds a test shim and bounded crash diagnostics. The rdna2-commons branch carries a nested reservation fix for an issue already tested locally. [Frozzy revision](https://git.disroot.org/Frozzy/kyty/src/commit/c9e3baccb30e080a154bed7a52e423787b21d35c) · [Sparky test branch](https://github.com/Sparky-us/KytyPS5-GTA6-Tests/tree/gta6-test-01) · [rdna2-commons branch](https://github.com/rdna2-commons/anyps5-ps5-line/tree/ps5-line)
+- JamesCicada's repository organizes title-specific AnyPS5 work and appears on PortWatch's watchlist. GTaHub listed read-only copies for the two PS5 upstream projects. [Title project](https://github.com/JamesCicada/GTAVI-Recomp) · [PortWatch data](https://portwatch-vi.xyz/data/tracker.json) · [KytyPS5 mirror](https://git.gtahub.st/github/KytyPS5--KytyPS5) · [AnyPS5 mirror](https://git.gtahub.st/github/boykopovar--AnyPS5)
 
 ## PS5 and Xbox storage comparison
 
