@@ -21,6 +21,26 @@ The status column gives the furthest stage established by the cited local run. V
 | [PastiiJay/klbf-lab](https://github.com/PastiiJay/klbf-lab) / [beta](https://github.com/PastiiJay/klbf-lab-beta) | Stable `1c3cc06` and `37ad2d2`, beta `67ee19c` and `f9f2419` | Wine pipeline cache and FXC selection mattered. Beta with an updated compiler rendered the courtyard at 0.1–0.6 FPS. See [the KLBF comparison](benchmarks.md#title-runs). |
 | [OpenScarlett](https://github.com/californiaAlmonds/OpenScarlett), [Five-Star Recomp](https://github.com/ThatRecompDev/five-star-recomp), [Palmwave](https://github.com/fablinoo/palmwave) | Local survey refs `46d8e2c`, `12e7f30`, `ecb988c` | Source and repository survey. No verified game benchmark was recorded for these projects. |
 
+## PS5 runtime checks
+
+The local package has the PS5 finalized-image header, `FIH`. Its embedded plaintext metadata identifies title `PPSA38500` and content version `01.002.001`. The checks read only the package headers and manifest. Local runtime tests used synthetic inputs. [Package format](https://github.com/SvenGDK/LibProsperoPKG/blob/main/docs/ps5-pkg-format.md)
+
+| Project | Revision | Local result |
+|---|---|---|
+| [KytyPS5](https://github.com/KytyPS5/KytyPS5/tree/61db2f8874d4a94fd2908a87cefa973ddc48ef6e) | Official Linux release `61db2f8` | The archive matched its published SHA-256 and the emulator started in Fedora Linux 45 Toolbox. It accepts a game directory, an ELF, or a ZArchive. It rejected a synthetic `FIH` file. |
+| [AnyPS5](https://github.com/boykopovar/AnyPS5/tree/978eb901961fcb6e8f4bd6bbc15ac29e72c4ef42) | Native relinker-only build `978eb901` | Built with Clang, Ninja, and Kache in the Fedora Linux 45 Toolbox. All 1,145 CTest tests passed, including Linux entry-point and Intel instruction-conversion tests. The CLI identified the synthetic `FIH` file and requested an extracted ELF. |
+
+KytyPS5's read-only package-mount proposal closed unmerged. A report for `PPSA38500` on Arch Linux with an RX 6800 XT reached the menu and then crashed after accepting the terms. That report used an AMD CPU. [Package mount PR](https://github.com/KytyPS5/KytyPS5/pull/1007) · [Linux compatibility report](https://github.com/KytyPS5/KytyPS5/issues/2570)
+
+AnyPS5 relinks PS5 ELF executables against reimplemented libraries. The report for the same `01.002.001` build describes shader preparation stalls in AGC submissions. The Xeon E5-2670 v3 has AVX2 and lacks SSE4a. The local Intel conversion test passed with synthetic input. Title compatibility on this CPU remains unverified. [AnyPS5 input and CPU requirements](https://github.com/boykopovar/AnyPS5/blob/978eb901961fcb6e8f4bd6bbc15ac29e72c4ef42/docs/user/USAGE.md) · [Shader preparation report](https://github.com/boykopovar/AnyPS5/issues/27705)
+
+GitHub counts observed on November 27, 2026. Contributor counts include inherited history.
+
+| Project | Stars | Forks | Contributors | Open PRs |
+|---|---:|---:|---:|---:|
+| AnyPS5 | 62,519 | 6,098 | 415 | 2,366 |
+| KytyPS5 | 12,858 | 1,611 | 121 | 234 |
+
 ## Foxhound and Belobug source checks
 
 GitHub API counts observed on November 27, 2026. Contributors include people listed through inherited history.
