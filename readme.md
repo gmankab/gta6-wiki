@@ -1,21 +1,16 @@
-# GTA VI on AMD Linux
+# GTA VI compatibility benchmarks on AMD
 
-This wiki records local compatibility and performance experiments with GTA VI on an AMD GPU under Linux. It covers both a native Linux host that runs without Wine and Linux launches through Wine or Proton, including the Wayland Flatpak. NVIDIA hardware and Windows as a host OS are out of scope. A Windows-target runtime tested through Wine on Linux is within scope.
+This wiki records GTA VI compatibility and performance experiments on AMD hardware. The main tracks are Linux native and Wine or Proton, including the Wayland Flatpak. Windows results from the Radeon RX 7800 XT have their own contributor page. NVIDIA results appear only in attributed reports from other projects. [Benchmark index](docs/benchmarks.md)
 
-## Test machine
+## Testers
 
-| Component | Configuration |
-|---|---|
-| Operating system | Fedora Linux 45 Silverblue, deployment 45.20261112.0 |
-| Kernel | 7.3.3-300.fc45.x86_64 at the November 26, 2026 snapshot |
-| CPU | Intel Xeon E5-2670 v3, 12 cores and 24 threads, 2.30 GHz base |
-| GPU | AMD Radeon RX 6800, Navi 21, 16 GiB VRAM, AMDGPU kernel driver |
-| Memory | 46 GiB reported usable by Linux |
-| Desktop | Niri 26.04 on Wayland |
-| Graphics | RADV for hardware tests. The Fedora 45 Toolbox snapshot had Mesa 26.2.7. Some software runs used a local Mesa 26.2.6 Lavapipe build. |
-| Wine | Stock Proton Experimental, Wine 11.0 and GE-Proton were used in different runs. Each comparison identifies its configuration when recorded. |
+| Tester | OS | GPU | CPU | RAM |
+|---|---|---|---|---|
+| [@ergolyam](docs/benchmarks/ergolyam.md) | Linux | Radeon RX 6600, 8 GiB | Xeon E5-2643 v3 | 32 GiB DDR4 |
+| [@gmankab](docs/benchmarks/gmankab.md) | Fedora Linux 45 Silverblue | Radeon RX 6800, 16 GiB | Xeon E5-2670 v3 | 48 GiB DDR4 |
+| [@sillynocodecat](docs/benchmarks/sillynocodecat.md) | Windows | Radeon RX 7800 XT | Ryzen 5 5600 | 32 GiB DDR4 |
 
-## Current results
+## @gmankab’s Linux results
 
 - **Wine on the RX 6800.** A Victory integration build verified player movement, camera control, pause and resume, dialogue, and progression through part of the prison prologue. Geometry and lighting were incomplete, and heavier scenes took seconds per frame.
 - **Wine-free Linux on the RX 6800.** The native Victory ELF displayed the menus at about 30 FPS and entered heavy 3D rendering. One run reported about 0.5 FPS before an AMDGPU queue timeout.
@@ -31,6 +26,7 @@ This wiki records local compatibility and performance experiments with GTA VI on
 - [Build and launch notes](docs/build-and-run.md)
 - [Reviews, research and troubleshooting](docs/research-notes.md)
 - [Upstream changes and reports](docs/upstream.md)
-- [Recorded runs](data/runs.csv), [test summaries](data/test-results.csv), [saved benchmark measurements](data/benchmark-logs.csv), [frame timings](data/frame-timings.csv) and [branch snapshot](data/branches.csv)
+- [Branch snapshot](data/branches.csv)
+- [Contributing benchmark results](CONTRIBUTING.md)
 
-The test input was the Xbox build already available locally. A reproducible extraction from the owner’s console was unavailable when these tests were run. The wiki publishes observations and source-code references. The local tests used read-only game mounts and isolated runtime state.
+The documented runs used local Xbox and PS5 builds. A reproducible extraction from the owner’s Xbox was unavailable during the Xbox tests. The wiki publishes observations and source-code references. The local tests used read-only game mounts and isolated runtime state.
