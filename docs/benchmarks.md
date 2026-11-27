@@ -22,6 +22,8 @@ The cold run later produced three guest flips after the long loading gap. A visi
 
 On the same GPU, Kyty fork revision `8072a783` precompiled the cold run’s saved recipes offline with 12 workers. It translated 1,092 modules and created 984 pipelines in 35.2 seconds, with zero reported failures and zero recipe pipelines missing a stage. The following title launch reported zero recipe modules left to translate. [Offline precompile change](https://git.disroot.org/flo/kyty/commit/8072a7834520353e0a79acd7f5f9d059471f1711)
 
+Warm-cache retries of `8072a783` reached 3D startup and raised `SIGTRAP` inside RADV on Mesa **26.2.6** and **26.2.7**. The graphics stack reached `Addr2ComputeSurfaceInfo` during Vulkan image creation. A Vulkan-validation retry confirmed that Kyty requested **12 mip levels for a 512×512×1 image**, whose complete chain has **10** levels. The 30 FPS samples still describe loading. [Vulkan image creation limits](https://docs.vulkan.org/refpages/latest/refpages/source/VkImageCreateInfo.html#VUID-VkImageCreateInfo-mipLevels-00958)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
