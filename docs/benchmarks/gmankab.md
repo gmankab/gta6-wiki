@@ -121,6 +121,14 @@ The Linux kernel killed the emulator during a global out-of-memory event about *
 
 **Regression test** The RX 6800 Vulkan fixture forced rejection of a mapped guest buffer. It requested promotion twice and verified one import attempt, zero copies and the same Vulkan buffer still registered for the page. REA captured the passing exit with Toolbox RADV 26.2.7 and Vulkan validation.
 
+**Later story sequence** After dismissing a “Couldn't save” prompt, the run reached a daylight scene with characters, buildings, and missing geometry. The next recorded 150-second window averaged **1.15 FPS**. A later 195-second window averaged **0.63 FPS**, including shader compilation. Opposing camera inputs, forward and backward movement, and a late pause attempt did not establish control. The emulator wrote save-memory files earlier in the run. The cause of the save prompt remains undetermined.
+
+## November 28, 2026 · Kyty 1080p presentation retest
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+Disroot Kyty `70f82dbb` includes a dedicated Vulkan copy queue for buffer readbacks. A local candidate also restricted the prepared frame to the resolution registered by the title. With host RADV 26.2.6, the 1920×1080 Continue screen still occupied the top-left **640×360** of the 1280×720 Wayland output. The extent change failed the title test. REA captured the readback batch, detached submission, and refused-import fixtures passing with Vulkan validation on Toolbox RADV 26.2.7. These fixtures exercise the readback and fallback behavior. [Disroot copy queue](https://git.disroot.org/flo/kyty/commit/70f82dbb504a73cfb06b869a4e9ec70ae7ca2196)
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
