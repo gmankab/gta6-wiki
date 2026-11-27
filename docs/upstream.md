@@ -83,6 +83,7 @@ The Series S report supplies a linear rebase of the second-plane proposal, carri
 | [#45](https://github.com/spidercraft/VIctory/pull/45) | Snapshot only newly declared GPU write ranges | Open |
 | [#46](https://github.com/spidercraft/VIctory/pull/46) | Remember pending pipeline requests for the next launch | Open |
 | [#47](https://github.com/spidercraft/VIctory/pull/47) | Prioritize pipelines requested by a draw or dispatch | Open |
+| [#48](https://github.com/spidercraft/VIctory/pull/48) | Reconcile overlapping shadow writebacks once per submission | Open |
 
 ## ZSlayerHQ/zslayer-pc-port-runtime
 
