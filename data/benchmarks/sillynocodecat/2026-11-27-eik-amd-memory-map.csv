@@ -1,0 +1,11 @@
+kind,committed_mb,resident_mb
+"title heaps (private, console addresses)",4731,2009
+"views of title pages (mapped, console addresses)",5216,2909
+title page pool (mapped section),6236,0
+process heap segments,2762,2750
+title memory windows and other 4 MiB allocations,1303,1274
+write-combined buffers shared with the GPU,13880,3463
+other private allocations >= 1 MB,4597,4203
+other private allocations < 1 MB,109,105
+files and other mappings at host addresses,22386,8104
+"images (exe, DLLs)",485,199

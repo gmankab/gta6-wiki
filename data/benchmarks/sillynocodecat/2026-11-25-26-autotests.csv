@@ -1,0 +1,53 @@
+local_time,project,revision,label,launcher_args,extra_env,fps_median,play_seconds,result
+2026-11-25 09:57,victory-durov,bd34087,durov-sx,--hardware,launcher defaults,0.58,122,0.58 fps over 122 s of play; prologue after 124 s; device lost 0x; crash False
+2026-11-25 10:02,victory-durov,bd34087,durov-ss,--hardware --series-s,launcher defaults,4.14,130,4.14 fps over 130 s of play; prologue after 239 s; device lost 0x; crash False
+2026-11-25 10:14,victory-durov,bd34087,durov-sx2,--hardware,launcher defaults,3.17,129,3.17 fps over 129 s of play; prologue after 292 s; device lost 0x; crash False
+2026-11-25 10:23,victory-durov,bd34087,durov-sx-turbo,--hardware,"VICTORY_LATE_WAIT_LISTS=256, VICTORY_JOIN_COPIES=1, VICTORY_CARD_REHASH_RUNS=1, VICTORY_TEXTURE_NO_WAIT=1, VICTORY_UNWATCHED_FRAMES=2",3.33,130,3.33 fps over 130 s of play; prologue after 265 s; device lost 0x; crash False
+2026-11-25 10:30,victory-durov,bd34087,durov-sx-turbo-relay,--hardware,"VICTORY_RELAY=1, VICTORY_LATE_WAIT_LISTS=256, VICTORY_JOIN_COPIES=1, VICTORY_CARD_REHASH_RUNS=1, VICTORY_TEXTURE_NO_WAIT=1, VICTORY_UNWATCHED_FRAMES=2",3.31,128,3.31 fps over 128 s of play; prologue after 275 s; device lost 0x; crash False
+2026-11-25 11:13,victory-durov-z,895d39c,z-sx,--hardware,launcher defaults,2.7,128,2.7 fps over 128 s of play; prologue after 535 s; device lost 0x; crash False
+2026-11-25 11:25,victory-durov-z,895d39c,z-sx2,--hardware,launcher defaults,2.84,129,2.84 fps over 129 s of play; prologue after 579 s; device lost 0x; crash False
+2026-11-25 11:52,victory-durov-z,5df1288,z-sx4,--hardware,launcher defaults,2.84,129,2.84 fps over 129 s of play; prologue after 599 s; device lost 0x; crash False
+2026-11-25 12:37,victory-durov-z,5df1288,z-sx5-longholds,--hardware,launcher defaults,1.82,237,1.82 fps over 237 s of play; prologue after 720 s; device lost 0x; crash False
+2026-11-25 13:23,victory-durov2,6200ed5,d2-sx1,--hardware,launcher defaults,2.78,232,2.78 fps over 232 s of play; prologue after 95 s; device lost 0x; crash False
+2026-11-25 13:30,victory-durov2,6200ed5,d2-sx2,--hardware,launcher defaults,,,None fps over None s of play; prologue after None s; device lost 0x; crash False; prologue not reached
+2026-11-25 13:52,victory-durov2,aa84876,d2-sx3-no786,--hardware,launcher defaults,2.84,236,2.84 fps over 236 s of play; prologue after 368 s; device lost 0x; crash False
+2026-11-25 14:15,victory-durov2,74cc846,probeA-forkmain,--hardware,launcher defaults,1.98,57,1.98 fps over 57 s of play; prologue after 504 s; device lost 0x; crash False
+2026-11-25 14:25,victory-durov2,aa84876,d2-sx4-rtresolve,--hardware,launcher defaults,,,None fps over None s of play; prologue after None s; device lost 0x; crash True
+2026-11-25 14:42,victory-durov2,58fbf0f,d2-sx6-rt-skipintro,--hardware,VICTORY_SKIP_BINK=1,,,None fps over None s of play; prologue after None s; device lost 0x; crash False; prologue not reached
+2026-11-25 14:54,victory-durov2,74cc846,probeA2-forkmain-clean,--hardware,VICTORY_SKIP_BINK=1,2.01,75,2.01 fps over 75 s of play; prologue after 181 s; device lost 0x; crash False
+2026-11-25 15:03,victory-durov2,cd15154,probeX-before-picks,--hardware,VICTORY_SKIP_BINK=1,9.66,76,9.66 fps over 76 s of play; prologue after 53 s; device lost 0x; crash False
+2026-11-25 15:10,victory-durov2,f2a9668,probeX3,--hardware,VICTORY_SKIP_BINK=1,1.15,77,1.15 fps over 77 s of play; prologue after 155 s; device lost 0x; crash False
+2026-11-25 15:17,victory-durov2,e4573b6,probeY,--hardware,VICTORY_SKIP_BINK=1,1.38,69,1.38 fps over 69 s of play; prologue after 160 s; device lost 0x; crash False
+2026-11-25 15:23,victory-durov2,6e6fc72,probeP1-bridge,--hardware,VICTORY_SKIP_BINK=1,1.42,68,1.42 fps over 68 s of play; prologue after 259 s; device lost 0x; crash False
+2026-11-25 15:29,victory-durov2,41946a6,probeP2-X-no644,--hardware,VICTORY_SKIP_BINK=1,2.89,136,2.89 fps over 136 s of play; prologue after 200 s; device lost 0x; crash False
+2026-11-25 15:39,victory-durov2,6f38d81,probeB-nobridge,--hardware,VICTORY_SKIP_BINK=1,2.67,138,2.67 fps over 138 s of play; prologue after 185 s; device lost 0x; crash False
+2026-11-25 15:45,victory-durov2,3c7110c,d2-final,--hardware,VICTORY_SKIP_BINK=1,2.82,136,2.82 fps over 136 s of play; prologue after 182 s; device lost 0x; crash False
+2026-11-25 16:19,victory-durov2,3c7110c,d2-rt-builder,--hardware,VICTORY_SKIP_BINK=1,,,None fps over None s of play; prologue after 435 s; device lost 0x; crash False; camera does not turn (0% of the picture changed)
+2026-11-25 17:49,victory-durov2,152aabc,d2t-base,--hardware,VICTORY_SKIP_BINK=1,2.79,137,2.79 fps over 137 s of play; prologue after 157 s; device lost 0x; crash False
+2026-11-25 19:03,victory-durov2,152aabc,inplace1,--hardware,VICTORY_SKIP_BINK=1,31.26,111,31.26 fps over 111 s of play; prologue after 222 s; device lost 0x; crash False
+2026-11-25 19:11,victory-durov2,152aabc,inplace2-nolate,--hardware,VICTORY_SKIP_BINK=1,2.64,136,2.64 fps over 136 s of play; prologue after 205 s; device lost 0x; crash False
+2026-11-25 19:34,victory-durov2,a590942,relay1,--hardware,VICTORY_SKIP_BINK=1,2.88,136,2.88 fps over 136 s of play; prologue after 213 s; device lost 0x; crash False
+2026-11-25 19:45,victory-durov2,fe0638f,dtest-relay1,--hardware,VICTORY_SKIP_BINK=1,2.76,136,2.76 fps over 136 s of play; prologue after 186 s; device lost 0x; crash False
+2026-11-25 19:59,durov-test,7a60746,dtest-fork,--hardware,VICTORY_SKIP_BINK=1,,,None fps over None s of play; prologue after None s; device lost Nonex; crash None
+2026-11-26 13:04,,,xtx-1,,,3.3,,watch_play: gameplay median frame 306.7 ms
+2026-11-26 13:12,,,cf-1,,,7.3,,watch_play: gameplay median frame 136.6 ms
+2026-11-26 13:19,,,cf-x,,,2.2,,watch_play: gameplay median frame 457.4 ms
+2026-11-26 17:47,,,cf-warm,,,7.8,,watch_play: gameplay median frame 127.5 ms
+2026-11-26 18:11,,,dt-off-warmup,,,9.7,,watch_play: gameplay median frame 103.1 ms
+2026-11-26 18:41,,,dt-off,,,7.9,,watch_play: gameplay median frame 126.7 ms
+2026-11-26 18:57,,,dt-fast,,,8.3,,watch_play: gameplay median frame 121.1 ms
+2026-11-26 19:04,,,dt-pic-warmup,,,7.7,,watch_play: gameplay median frame 130.7 ms
+2026-11-26 19:10,,,dt-pic,,,8.2,,watch_play: gameplay median frame 122.2 ms
+2026-11-26 19:17,,,dt-all,,,8.6,,watch_play: gameplay median frame 116.9 ms
+2026-11-26 19:24,,,dt-nodesc,,,6.1,,watch_play: gameplay median frame 162.7 ms
+2026-11-26 21:51,,,dt2-boat-1,,,13.0,,watch_play: gameplay median frame 77.1 ms
+2026-11-26 22:03,,,ab-dt2-1,,,14.7,,watch_play: gameplay median frame 68.2 ms
+2026-11-26 22:09,,,ab-dt3-1,,,15.4,,watch_play: gameplay median frame 64.9 ms
+2026-11-26 22:16,,,ab-dt3-prio,,,15.7,,watch_play: gameplay median frame 63.8 ms
+2026-11-26 22:22,,,ab-dt2-2,,,13.5,,watch_play: gameplay median frame 74.0 ms
+2026-11-26 22:29,,,ab-dt3-2,,,14.6,,watch_play: gameplay median frame 68.3 ms
+2026-11-26 22:37,,,ab-dt3h-1,,,13.9,,watch_play: gameplay median frame 71.7 ms
+2026-11-26 23:25,,,d-dt2-1,,,13.4,,watch_play: gameplay median frame 74.4 ms
+2026-11-26 23:32,,,d-dt3-1,,,14.2,,watch_play: gameplay median frame 70.2 ms
+2026-11-26 23:39,,,d-dt2-2,,,13.4,,watch_play: gameplay median frame 74.3 ms
+2026-11-26 23:46,,,d-dt3-2,,,14.0,,watch_play: gameplay median frame 71.3 ms
