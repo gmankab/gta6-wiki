@@ -2,6 +2,12 @@
 
 For the test machine and supported configurations, see the [readme](../readme.md). Each FPS figure belongs to a stage and renderer. Timed loading screens and repeated presents can give a high FPS reading while story progress is stalled. The 30 FPS goal corresponds to 33.33 ms per frame with a correct picture and sustained player control.
 
+## PS5 KytyPS5 startup
+
+KytyPS5 official Linux release `61db2f8` booted `PPSA38500` version `01.002.001` from the read-only package view on a Xeon E5-2670 v3 and Radeon RX 6800. The test used a private 1280×720 Wayland session with Weston’s GL renderer and a virtual controller. REA captured the launcher lifecycle, Kyty’s overlay measured presentation rate, and AMDGPU counters confirmed graphics work. This run used SDL’s dummy audio driver. [KytyPS5 revision](https://github.com/KytyPS5/KytyPS5/tree/61db2f8874d4a94fd2908a87cefa973ddc48ef6e) · [Package path](projects.md#ps5-runtime-checks)
+
+A virtual controller advanced the 30 FPS initial setup screen to the eagle intro. The stock CPU path presented the intro at about **1.8 FPS**. With `--amd-cpu`, the same intro presented at **30.0 FPS** and passed through to the Rockstar logo. The loader reported 22,260 native replacements for `VRSQRTPS`, six for `EXTRQ`, and ten for `CLWB`. The flag still uses traps for some instructions. The flag changes several instruction families together. [CPU patch selection](https://github.com/KytyPS5/KytyPS5/blob/61db2f8874d4a94fd2908a87cefa973ddc48ef6e/src/loader/runtimeLinker.cpp#L1612)
+
 ## Title runs
 
 | Build and renderer | Stage and measured result | Scope of result |
