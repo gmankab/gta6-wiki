@@ -8,7 +8,11 @@ KytyPS5 official Linux release `61db2f8` booted `PPSA38500` version `01.002.001`
 
 A virtual controller advanced the 30 FPS initial setup screen to the eagle intro. The stock CPU path presented the intro at about **1.8 FPS**. With `--amd-cpu`, the same intro presented at **30.0 FPS** and passed through to the Rockstar logo. The loader reported 22,260 native replacements for `VRSQRTPS`, six for `EXTRQ`, and ten for `CLWB`. The flag still uses traps for some instructions. The flag changes several instruction families together. [CPU patch selection](https://github.com/KytyPS5/KytyPS5/blob/61db2f8874d4a94fd2908a87cefa973ddc48ef6e/src/loader/runtimeLinker.cpp#L1612)
 
-The repeat run loaded 35 shader programs from its saved cache and used the virtual controller through setup and Legal Notices. It reached the separate Legal Terms & Policies page at 30 FPS. That page requires both the Privacy Policy acknowledgment and Terms of Service agreement to continue. Gameplay performance remains unmeasured.
+A 10-second sample in the 720p setup menu had 300 Wayland surface commits, **30.00 FPS**, a 33.33 ms median interval and a 33.48 ms p99. AMDGPU attributed 3.6% graphics-engine activity to the emulator over that window.
+
+The first run through setup streamed assets for about 2½ minutes and started compiling opening-scene shaders. Kyty then reported **no game frame for 31 seconds** before a guest exception at `0x908bd3a40`. The emulator averaged 1.2% graphics-engine activity during the final 26 seconds before the fault. The compositor still received occasional overlay refreshes. The kernel logged no GPU reset. [Upstream report](https://github.com/KytyPS5/KytyPS5/issues/2557)
+
+The repeat run seeded the shader and pipeline caches and loaded 203 shader programs and 188 pipelines. It reached the illustrated loading screen and reproduced the same guest exception. Opening black frames and program startup are the furthest verified stock results so far.
 
 ## Title runs
 
