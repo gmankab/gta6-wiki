@@ -307,6 +307,14 @@ The warm run went on to the opening credits. The 35-second credits sample at 690
 
 The warm run reached its **25-minute** limit during the opening credits. Some later views showed missing geometry and a large green rectangle. REA counted **74 main-output flips in 50 seconds** at 1280–1330 seconds. Camera and movement tests in that sequence gave no reproducible player control, and the story save matched its prelaunch digest. The kernel logged no graphics ring timeout or reset.
 
+**GPU command timing** I reran the same emulator with the saved cache, the stock RADV 26.2.6 driver, and per-submit Mesa tracing. REA verified actual GPU timestamps in a synthetic tiling fixture and then in the title. The same-source Mesa rebuild also produced timings in the fixture. The title used the stock library despite its build warning. The per-submit trace adds CPU and I/O work, so the uninstrumented warm run is the frame-rate reference. [Mesa timing documentation](https://docs.mesa3d.org/u_trace.html)
+
+At 450–460 seconds, the exterior scene completed **16 main-output flips in 10 seconds**. It averaged **17.94%** graphics-engine use, **2.23%** compute-engine use, and **4.92 CPU core equivalents**. The GPU timestamps attributed **478 ms** to mesh draws, **402 ms** to direct compute dispatches, **397 ms** to indirect dispatches, and **113 ms** to buffer copies. These are sums of command intervals. Nested ranges such as rendering and command buffers cover some of the same work.
+
+At 520–535 seconds, direct and indirect dispatches accumulated **964 ms** and **697 ms** respectively. Direct dispatches with a single workgroup supplied **37,924 of 65,571 calls** and accumulated **295 ms**. In a separate 24-second exterior trace from the same run, **10,902** buffer readbacks accumulated **8.19 seconds** of caller-thread time.
+
+The 710–725 second credits sample included a shot of the car on the street. Indirect dispatch intervals totaled **5.04 seconds**. Across all command buffers, the trace recorded **6.99 seconds** of summed intervals. The median indirect dispatch took **3.68 µs**. Just **301 of 16,551 calls** lasted at least **1 ms**, and they accounted for **92%** of indirect dispatch time. **38 calls** each took at least **33.3 ms**, with the slowest at **86.09 ms**. These intervals are measured with tracing enabled. The trace identifies the command type and duration. Shader attribution is still pending.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
