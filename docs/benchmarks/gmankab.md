@@ -246,6 +246,8 @@ AnyKyty `eca3fe54` configured and built in Fedora Linux 45 Toolbox. REA captured
 
 **Warm loading** The retry restored **689 manifest shader modules** and **369 cached compute pipelines**. The illustrated loading screen completed **2,067 flips in 70 seconds (29.53/s)**, with **2.12%** graphics-engine activity and **0%** compute-engine activity over the matching hardware sample. Completed flips stopped at about 188 seconds. An early sample counted **68 synchronous compute shader stalls totaling 266.92 seconds**, for shaders that write images or buffers. Over 99 contiguous seconds during those stalls, the process averaged **1.50%** graphics-engine activity. The warm run was still preparing new shader variants at this checkpoint.
 
+**First outdoor frame** The warm run completed one outdoor presentation after a **964.28-second** gap. Within seconds the kernel logged an RX 6800 graphics-ring timeout and a successful ring reset. AMDGPU attributed close to 100% graphics-engine activity to the title in the final two monitored seconds around the timeout. REA decoded the title's final fault as a direct write to address zero. The process exited and Niri stayed running with its original PID. This run did not establish controllable gameplay or a sustained 3D frame rate.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
