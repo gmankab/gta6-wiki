@@ -246,7 +246,24 @@ AnyKyty `eca3fe54` configured and built in Fedora Linux 45 Toolbox. REA captured
 
 **Warm loading** The retry restored **689 manifest shader modules** and **369 cached compute pipelines**. The illustrated loading screen completed **2,067 flips in 70 seconds (29.53/s)**, with **2.12%** graphics-engine activity and **0%** compute-engine activity over the matching hardware sample. Completed flips stopped at about 188 seconds. An early sample counted **68 synchronous compute shader stalls totaling 266.92 seconds**, for shaders that write images or buffers. Over 99 contiguous seconds during those stalls, the process averaged **1.50%** graphics-engine activity. The warm run was still preparing new shader variants at this checkpoint.
 
-**First outdoor frame** The warm run completed one outdoor presentation after a **964.28-second** gap. Within seconds the kernel logged an RX 6800 graphics-ring timeout and a successful ring reset. AMDGPU attributed close to 100% graphics-engine activity to the title in the final two monitored seconds around the timeout. REA decoded the title's final fault as a direct write to address zero. The process exited and Niri stayed running with its original PID. This run did not establish controllable gameplay or a sustained 3D frame rate.
+**First outdoor frame** The warm run completed one outdoor presentation after a **964.28-second** gap. Within seconds the kernel logged an RX 6800 graphics-ring timeout and a successful ring reset. AMDGPU attributed close to 100% graphics-engine activity to the title in the final two monitored seconds around the timeout. REA decoded the title's final fault as a direct write to address zero. The process exited and Niri stayed running with its original PID. This run did not establish controllable gameplay or a sustained 3D frame rate. [Linux report on the AnyKyty issue](https://github.com/simnJS/AnyPS5/issues/314#issuecomment-7232431320)
+
+## November 28, 2026 · VIcky Blue flip-wait port
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+I applied VIcky Blue's timed flip-wait behavior to the local Disroot baseline as `7babb002`. REA captured passing PM4 flip and flip-rate fixtures under an isolated Weston session. The 1080p title smoke test reached illustrated loading and the opening 3D cinematic on host RADV 26.2.6. The test enabled processing of queued GPU commands during pending flips. [Source PR](https://github.com/wololo-wololo/VIcky-Blue/pull/42)
+
+REA counted **81 completed presentations over 39.94 seconds (2.03/s)** during the opening 3D sequence. The title averaged **20.58%** graphics-engine activity and **0.12%** compute-engine activity, with **149.15 µs** of command-thread CPU time per draw or dispatch. Separate builds ran during this smoke test. The result establishes that the port reached the cinematic and leaves its startup-speed effect unmeasured.
+
+The title continued through the exterior opening credits. Camera and movement probes did not establish player control. A separate 24.1-second Tracy capture recorded **17,491 zero-copy read waits** and **20.06 seconds of summed exclusive thread time** in those wait zones. These waits can overlap across threads. The indirect-dispatch handler accounted for **3.08 seconds** of exclusive time in the same capture.
+
+## November 28, 2026 · Later PS5 branch builds
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+- Disroot Kyty `af5e20d8` built as `1455a3d0` with the existing Intel loader and guest-memory compatibility commits. REA captured passes for the readback-wait, readback-batch, materialization-memo, memory-tracker, and recorder fixtures. [Disroot source](https://git.disroot.org/flo/kyty/commit/af5e20d8ecc8b67544d98dc31a41ceb94d97691f)
+- AnyKyty's `arch/30fps` revision `3636f61ddf70` built with the same cache-flush PR. All three focused relinker tests passed. REA captured a successful conversion of the title and both bundled modules, followed by a Linux loader check with the 58 launch libraries. These checks cover build and launch preparation. [Performance branch](https://github.com/simnJS/AnyPS5/commit/3636f61ddf70) · [Cache-flush PR](https://github.com/boykopovar/AnyPS5/pull/26606)
 
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
