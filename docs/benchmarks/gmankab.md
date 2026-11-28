@@ -215,6 +215,12 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 
 **Updated warm-cache title** AnyPS5 local revision `fba1ef8387` relinked the main executable and both bundled modules and passed a Linux dynamic-loader check. In the 240-second warm-cache run, REA counted **6,438 presentations in 220.28 recorded seconds (29.23/s)**. All **17** window captures matched the previous black image byte for byte. The RX 6800's process graphics engine averaged **1.52%** across a contiguous **104.0-second** sample. The log recorded five deferred geometry preparations and no packed 4_4_4_4 swap-1 refusal. These measurements cover startup before any rendered gameplay.
 
+## November 28, 2026 · AnyKyty Intel relinker
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+AnyKyty `eca3fe54` configured and built in Fedora Linux 45 Toolbox. REA captured passes for `amd64_only_converter` and `to_intel_linux_stubs`. The fork's stock relinker with `--to-intel --no-patches` produced a Linux executable and both bundled modules for the local PS5 title. The release tool printed a dirty suffix because three nested development submodules had checked out different commits after a recursive fetch stopped. Their pins were corrected and the source tree was clean before the runtime build. This result covers conversion. [AnyKyty source](https://github.com/simnJS/AnyPS5/commit/eca3fe546dd8381bf615d0f634ac62d7af76568d) · [Short CLZERO fix in the fork](https://github.com/simnJS/AnyPS5/commit/175a273a79cbce2da940ce3ab1ee9c7d72115ce5)
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
