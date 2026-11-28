@@ -179,6 +179,10 @@ Guest page protection calls covered about **836 MB/s** in this interval. The ear
 
 **Follow-up profile** REA summarized a separate **24.1-second** Tracy capture. It recorded **24,639** zero-copy read-wait zones with **20.07 seconds** of summed exclusive time across threads. The two busiest threads spent **4.08** and **3.82 seconds** in these waits. The indirect-dispatch handler used **4.35 seconds** of exclusive instrumented time. The profile was collected after the presentation-rate samples.
 
+**Later 3D sequence** The same run reached its 29-minute cap after rendering the opening credits and later exterior scenes. A late 29.99-second window recorded **106 completed presentations (3.53/s)**, **18.00%** graphics-engine activity, and **0.16%** compute-engine activity. The camera checks did not establish player control, and the imported story file showed reads without a subsequent write.
+
+**Indirect draw-count candidate** Molier's patch from Disroot passed four focused host tests and the PM4 multi-draw packet fixture. The GPU exposes Vulkan `drawIndirectCount`. The broader rasterization fixture stopped with a missing guest GPU context and validation faults on both candidate and preceding build. The native compute fixture's Vulkan teardown leak also reproduced on both builds. The performance candidate has a local switch and packet counter for the title comparison. [Disroot indirect-count change](https://git.disroot.org/flo/kyty/commit/f85f0e82f758e6b135609ff983d5124365e355cc)
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
@@ -195,7 +199,7 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 
 **Packed color** Both synthetic tests rejected color format 19, number type 0, component swap 1 on the Linux startup stack with its existing decoder. With PR `fc78d6bb` applied to the same stack, both tests and `agc_driver_graphics` passed on the RX 6800. Both packed tests loaded Khronos validation 1.4.350 on Toolbox RADV 26.2.7. The logs contained zero VUID entries. [Upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
 
-**Updated AnyPS5 PR** On upstream `750a5234` with the Linux startup patches and packed-color PR revision `e2e97886`, the three packed-color Vulkan fixtures passed with the validation layer loaded and zero VUID errors. The multisample fixture passed at 2×, 4×, and 8×. The prepared-shaders fixture also passed. The broader graphics suite passed when rerun with the candidate libraries pinned after an initial missing-mock-function error. [Updated upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
+**Updated AnyPS5 PR** On upstream `750a5234` with the Linux startup patches and packed-color PR revision `e2e97886`, the three packed-color Vulkan fixtures passed with the validation layer loaded and zero VUID errors. The multisample fixture passed at 2×, 4×, and 8×. The prepared-shaders fixture also passed. The broader graphics suite passed when rerun with the candidate libraries pinned after an initial missing `vkCreateRenderPass` error. [Updated upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
 
 **Warm-cache title** The newly relinked executable ran with the existing Linux startup patches and the packed-color candidate on host RADV 26.2.6. It recorded **6,756 presents in 230.23 seconds (29.35/s)** before the 240-second cap. All **17** captured images matched the same black frame. AMDGPU recorded **1.50%** graphics-engine activity and no measurable compute-engine activity over **169.8 seconds**. The log showed **19** deferred geometry-stage preparations and no packed-color swap-1 refusal. The run leaves the cause of the black output unresolved.
 
