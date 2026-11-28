@@ -303,6 +303,8 @@ The run reached its **22-minute 30-second** time limit during a later part of th
 
 The 20-second exterior cutscene sample at 505–525 seconds produced **66 main-output flips** at **3.27/s**, with **363.09 ms** p95 spacing. The title averaged **18.00%** graphics-engine activity, **2.73%** compute-engine activity, and **4.22 CPU core equivalents**. In a nearby 24-second REA capture, **11,373** buffer readbacks took **10.35 seconds** of summed caller-thread time. The corresponding profiling zone on the emulated GPU command thread totaled **3.17 seconds**. These times can overlap across threads. Flip timing measures guest main-output completions, so emulator overlay refreshes are excluded.
 
+The warm run went on to the opening credits. The 35-second credits sample at 690–725 seconds produced **38 main-output flips** at **1.07/s**, with **1,123.85 ms** p95 spacing. The title averaged **44.03%** graphics-engine activity, **1.69%** compute-engine activity, and **3.15 CPU core equivalents**. Summed graphics-engine busy time over that window was **406 ms per completed flip**. A nearby REA capture recorded **6.26 seconds** of summed readback caller time, **4.23 seconds** in command-scheduler waits, and about **0.79 seconds** across the two graphics pipeline creations.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
