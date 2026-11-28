@@ -265,6 +265,10 @@ The title continued through the exterior opening credits. Camera and movement pr
 - Disroot Kyty `af5e20d8` built as `1455a3d0` with the existing Intel loader and guest-memory compatibility commits. REA captured passes for the readback-wait, readback-batch, materialization-memo, memory-tracker, and recorder fixtures. [Disroot source](https://git.disroot.org/flo/kyty/commit/af5e20d8ecc8b67544d98dc31a41ceb94d97691f)
 - AnyKyty's `arch/30fps` revision `3636f61ddf70` built with the same cache-flush PR. All three focused relinker tests passed. REA captured a successful conversion of the title and both bundled modules, followed by a Linux loader check with the 58 launch libraries. These checks cover build and launch preparation. [Performance branch](https://github.com/simnJS/AnyPS5/commit/3636f61ddf70) · [Cache-flush PR](https://github.com/boykopovar/AnyPS5/pull/26606)
 
+**Disroot title run** Local revision `1455a3d0` reached the first exterior cinematic with shader compilation still in progress. The comparison of the writer-wait setting stopped before all four measurement windows completed. After **681 seconds**, the guest read through an invalid resource index. REA compared this run with the earlier recorder runs at **468** and **744 seconds** and reconstructed the same missing-entry value in all three. The reason for the missing resource is still unknown. The kernel logged no GPU reset in the latest run. [Disroot readback change](https://git.disroot.org/flo/kyty/commit/7db618b9)
+
+**AnyKyty title startup** The same performance-branch build stopped during Vulkan startup on host RADV 26.2.6 in both a launch using the preceding build's cache and a cold-cache launch. REA matched both stacks to the driver reporting a failed Vulkan allocation during guest host-memory import. Both crashes occurred before the Continue screen. [Performance branch](https://github.com/simnJS/AnyPS5/commit/3636f61ddf70) · [Host-memory import change](https://github.com/simnJS/AnyPS5/commit/20249ba6caa)
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
