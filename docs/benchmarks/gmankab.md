@@ -242,6 +242,10 @@ AnyKyty `eca3fe54` configured and built in Fedora Linux 45 Toolbox. REA captured
 
 **Cache-flush PR retest** I applied the four relinker commits through `0dd34404` to the same AnyKyty revision. REA captured passes for `amd64_only_converter`, `to_rosetta`, and `to_intel_linux_stubs`. The title conversion replaced the four-byte `CLWB` at the recorded fault site. With the same runtime libraries and a cold cache, the game advanced through the setup screens and entered story loading after the legal notices. [Linux retest on the upstream PR](https://github.com/boykopovar/AnyPS5/pull/26606#issuecomment-7232011970)
 
+**Shader preparation** The cold run recorded **14,474 completed flips** through 492.89 seconds and ended during shader compilation at about 11 minutes. The last captured stall summary counted 311 reports totaling 114.43 seconds. REA found zero fatal SIGILL entries in the patched run. An eight-second thread sample used **459.4% of one CPU core** across the title, including **99.3%** on the GPU command thread.
+
+**Warm loading** The retry restored **689 manifest shader modules** and **369 cached compute pipelines**. The illustrated loading screen completed **2,067 flips in 70 seconds (29.53/s)**, with **2.12%** graphics-engine activity and **0%** compute-engine activity over the matching hardware sample. Completed flips stopped at about 188 seconds. An early sample counted **68 synchronous compute shader stalls totaling 266.92 seconds**, for shaders that write images or buffers. Over 99 contiguous seconds during those stalls, the process averaged **1.50%** graphics-engine activity. The warm run was still preparing new shader variants at this checkpoint.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
