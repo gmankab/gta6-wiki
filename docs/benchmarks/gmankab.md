@@ -177,6 +177,8 @@ The warm 1080p title run used host RADV 26.2.6 with DMA-BUF backing on and the d
 
 Guest page protection calls covered about **836 MB/s** in this interval. The earlier build's four alternating cinematic intervals covered **6,324 to 10,715 MB/s**. The cinematic progressed between the samples, so the difference describes the measured intervals. Player control and 30 FPS gameplay remain unverified.
 
+**Follow-up profile** REA summarized a separate **24.1-second** Tracy capture. It recorded **24,639** zero-copy read-wait zones with **20.07 seconds** of summed exclusive time across threads. The two busiest threads spent **4.08** and **3.82 seconds** in these waits. The indirect-dispatch handler used **4.35 seconds** of exclusive instrumented time. The profile was collected after the presentation-rate samples.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
