@@ -156,7 +156,16 @@ REA captured successful full virtual-memory suite runs with legacy backing, DMA-
 
 **Profile** REA summarized a **24.1-second** Tracy capture from the beginning of the 3D cinematic. Zero-copy read fences recorded **8,752** waits and **9.54 seconds of summed thread time**. The two busiest threads spent **2.19** and **1.31 seconds** there. Threads can wait concurrently. The indirect-dispatch handler used **5.31 seconds** of exclusive instrumented time across the trace. The profile covers a cinematic and the start of buffer promotion.
 
-**Follow-up fixture** The local candidate keeps neighboring pages watched when speculative write-window widening would wait for an outstanding GPU read. The exact write fault retains its wait. REA captured the passing Vulkan fixture and the failure of its speculative-window check with the original behavior selected. Title timing for this candidate is pending.
+**Follow-up fixture** The local candidate keeps neighboring pages watched when speculative write-window widening would wait for an outstanding GPU read. The exact write fault retains its wait. REA captured the passing Vulkan fixture and the failure of its speculative-window check with the original behavior selected. REA also captured the following alternating title test on host RADV 26.2.6. Each row uses complete five-second intervals in the opening 3D cinematic, after a settling interval. Presentations are completed VideoOut events. The GPU columns are per-process AMDGPU counters.
+
+| Speculative write-window wait | Window | Presentations / s | Zero-copy read waits per 1,000 draws and dispatches | Graphics busy | Compute busy |
+|---|---:|---:|---:|---:|---:|
+| Original | 25.03 s | 3.64 | 126.47 | 16.46% | 0.24% |
+| Skipped | 25.02 s | 3.56 | 107.46 | 18.16% | 0.21% |
+| Original | 25.02 s | 3.28 | 113.71 | 17.03% | 0.20% |
+| Skipped | 20.06 s | 3.29 | 109.04 | 17.11% | 0.19% |
+
+The skipped intervals had fewer read waits per draw and dispatch. The scene changed throughout the comparison, and the presentation rates showed no repeatable gain. The run restored the original setting after measurement. Player control remains unverified.
 
 ## PS5 AnyPS5 startup cache
 
