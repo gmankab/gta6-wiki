@@ -10,4 +10,10 @@ Flo's fork documented its flat ray-query traversal fixture falling back to softw
 | Same code with `KYTY_EXEC_SELECTS=0` | Passed the positive and rejection checks. Exit 0. |
 | Local `16d1a8e2`, default passes | Passed the positive and rejection checks. Exit 0. |
 
-The fix runs ray-query recognition while the loop-carried EXEC-masked selects are still visible. It then runs the existing select simplification before SPIR-V emission. The CPU fixture passed with the default setting and the emulator built in Toolbox with Kache. Radeon GPU hit equivalence, native ray-query coverage in the title, and frame-rate effects remain unverified. The change currently lives on a local branch based on the Disroot fork.
+The fix runs ray-query recognition while the loop-carried EXEC-masked selects are still visible. It then runs the existing select simplification before SPIR-V emission. The CPU fixture passed with the default setting and the emulator built in Toolbox with Kache.
+
+## Radeon dispatch validation
+
+REA captured the full `--bvh-mirror-only` fixture running on the RX 6800 with RADV. The standard harness stopped at its byte-granular robustness check. Setting the existing `KYTY_TEST_ALLOW_COARSE_ROBUST_BUFFER_ACCESS=1` option allowed the fixture to use RADV's four-byte granularity. BVH mirror formats **1, 3, and 10** passed, and the traversal fixture produced equivalent hits in both its **32-lane** and **64-lane** variants. The test exited with code 0.
+
+Native ray-query coverage and frame-rate effects in the title remain unverified. The change lives on a local branch based on the Disroot fork.
