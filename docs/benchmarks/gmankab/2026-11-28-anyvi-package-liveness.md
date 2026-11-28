@@ -19,3 +19,9 @@ During the loading window the package decoder delivered **1.49 GB** across the 5
 REA analyzed both Tracy captures. In the first, five Vulkan compute pipeline creations took **17.28 seconds** in total across the recorded zones. In the later capture, no compute pipeline creation zone ran. Buffer readbacks took **17.10 seconds** across **12,350** caller visits, including **10.64 seconds** within GPU readbacks. The scheduler wait zone accounted for **5.33 seconds**. These zones overlap.
 
 Alternating right and left stick input during the 3D exterior left shared camera landmarks fixed while new scenery streamed in. Player control and stable 30 FPS open-world gameplay remain unverified.
+
+## Dawn watchdog
+
+The last main-output flip arrived **1,104.96 seconds** after launch. REA matched it to a guest watchdog fault record **29.74 seconds** later. AMDGPU attributed **0.0163%** graphics-engine activity over 29.03 seconds of that gap. The crash report lists 19 event-flag waits, two semaphore waits and one condition-variable wait lasting between 25 and 34 seconds.
+
+The package reader passed all **76** checks, including a successful read **6.15 seconds** before the fault record. The package decoder returned **0.008 MB** in the 27 seconds sampled during the gap. The earlier disconnect was absent here, and the guest fault recurred. These measurements narrow the failure to the title's loss of progress while it still had access to the package. The thread that first lost progress remains unidentified.
