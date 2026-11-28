@@ -305,6 +305,8 @@ The 20-second exterior cutscene sample at 505–525 seconds produced **66 main-o
 
 The warm run went on to the opening credits. The 35-second credits sample at 690–725 seconds produced **38 main-output flips** at **1.07/s**, with **1,123.85 ms** p95 spacing. The title averaged **44.03%** graphics-engine activity, **1.69%** compute-engine activity, and **3.15 CPU core equivalents**. Summed graphics-engine busy time over that window was **406 ms per completed flip**. A nearby REA capture recorded **6.26 seconds** of summed readback caller time, **4.23 seconds** in command-scheduler waits, and about **0.79 seconds** across the two graphics pipeline creations.
 
+The warm run reached its **25-minute** limit during the opening credits. Some later views showed missing geometry and a large green rectangle. REA counted **74 main-output flips in 50 seconds** at 1280–1330 seconds. Camera and movement tests in that sequence gave no reproducible player control, and the story save matched its prelaunch digest. The kernel logged no graphics ring timeout or reset.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
