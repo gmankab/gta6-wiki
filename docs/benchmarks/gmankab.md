@@ -183,6 +183,8 @@ Guest page protection calls covered about **836 MB/s** in this interval. The ear
 
 **Indirect draw-count candidate** Molier's patch from Disroot passed four focused host tests and the PM4 multi-draw packet fixture. The GPU exposes Vulkan `drawIndirectCount`. The broader rasterization fixture stopped with a missing guest GPU context and validation faults on both candidate and preceding build. The native compute fixture's Vulkan teardown leak also reproduced on both builds. The performance candidate has a local switch and packet counter for the title comparison. [Disroot indirect-count change](https://git.disroot.org/flo/kyty/commit/f85f0e82f758e6b135609ff983d5124365e355cc)
 
+**Counted-draw title run** I enabled Vulkan indirect draw counts in local revision `a3e36c7f` and kept the same warm 1080p setup. REA counted **162 completed presentations in 49.99 seconds (3.24/s)** in the first 3D sequence. Graphics-engine activity averaged **19.28%**, and the command thread used **39.37 CPU seconds**. The instrumented Vulkan counted-draw path submitted **zero packets** in the interval, so the planned A/B had no workload to compare there. A separate 24.1-second REA/Tracy profile contained **31,521 indirect draw parser calls** and **zero multi-draw packet calls**. That sample also recorded **35,940 indirect compute-dispatch calls**.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
