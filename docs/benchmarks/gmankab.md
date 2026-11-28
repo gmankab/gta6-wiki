@@ -275,6 +275,16 @@ The cold run reached its **25-minute** limit during first-scene pipeline compila
 
 The same build's warm run seeded the cache from that cold run. Its startup manifest reported **509** cached compute pipelines and **13** newly created ones before releasing the guest after **22.93 seconds** of preparation. In a separate 45-second illustrated loading window it completed **1,063 presentations (23.62/s)** with **62.27 ms** p95 and **6.58%** graphics-engine activity. These windows measure loading throughout different portions of the animation.
 
+The warm run stopped after **299 seconds**. REA verified that the reported failure came from a guest software assertion. The kernel logged no graphics-ring timeout or reset in this run.
+
+## November 28, 2026 · VIcky Blue shader compile-time branch
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+I built PR #52 with the Intel loader changes and started a 1280×720 Weston run with an empty pipeline cache and the existing setup save. REA captured passing resource-materialization and CPU compatibility fixtures. The overlay showed **1.8 FPS** during the animated intro and **30.0 FPS** during an illustrated loading sample. The title used **0.55%** of the graphics engine and **1.12 CPU core equivalents** in a 159-second intro window, then **4.80%** of the graphics engine and **4.45 core equivalents** in a 29-second loading window.
+
+The run exited after **486 seconds** when a fresh Vulkan descriptor pool failed to allocate a set during first-scene preparation. REA counted **27** unoptimized compute pipeline creations logged over the branch's slow threshold, with a maximum of **2.407 seconds**. The failure corresponds to the fresh-pool allocation path addressed by Disroot's dedicated descriptor pool change. The exact requested descriptor counts were unavailable in this run. [VIcky Blue shader PR](https://github.com/wololo-wololo/VIcky-Blue/pull/52) · [Disroot descriptor pool change](https://git.disroot.org/flo/kyty/commit/b02adf9e4735a9b56c2234c5620d983b9534e868)
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
