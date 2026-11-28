@@ -323,6 +323,10 @@ I added the bound compute pipeline's debug name to the indirect-dispatch trace i
 
 In an earlier 15-second car scene from the same diagnostic run, the longest indirect dispatch interval was **4.33 ms**, including calls to the three pipelines that later accumulated the most time. The heavy work varies by scene. The timestamps delimit GPU commands and can include waits for dependent work. These are credits samples with per-submit tracing enabled.
 
+The diagnostic run reached the daytime cinematic and exited after **23 minutes 30 seconds** with a guest null write. The kernel reported no graphics-ring timeout or reset. The run gave no confirmed player control.
+
+**Vulkan ray-query check** REA inspected checksummed records from the diagnostic run's local shader cache. The six slow pipeline names matched seven cached compute variants with **zero Vulkan ray-query instructions**. The shader-store header confirmed the run used AnyVI's default profile, which leaves ray queries disabled. The RX 6800 advertises both Vulkan ray queries and acceleration structures on RADV 26.2.6. With the test harness configured for RADV's four-byte robust-buffer alignment, its three BVH mirror formats passed. Its synthetic traversal case failed the check for recognized Vulkan ray-query lowering. A separate title run with `--native-rt` passed Continue and recorded an enabled ray-query profile in its fresh shader store. [Vulkan device setup in AnyVI](https://git.disroot.org/frozzy/kyty/src/commit/eed0c578eab39717030a9890cc0d3b0220b6e8c5/src/graphics/presentation/window/vulkanWindow.cpp)
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
