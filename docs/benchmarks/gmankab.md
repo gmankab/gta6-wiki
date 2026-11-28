@@ -289,6 +289,16 @@ The run exited after **486 seconds** when a fresh Vulkan descriptor pool failed 
 
 During the intro in that retry, REA counted **40 presenter calls in 23.58 seconds**, with a **600.01 ms** median interval, while the flip loop ran every **16.67 ms**. During first-scene compilation the guest stopped at **421 seconds**. REA matched the stop instruction and its caller to the path in the earlier AnyKyty run that ended around a GPU reset. The caller checks forward progress with one-second sleeps and a 30-count limit. The kernel logged no GPU reset in the VIcky Blue retry. [Earlier AnyKyty report](https://github.com/simnJS/AnyPS5/issues/314#issuecomment-7232431320)
 
+## November 28, 2026 · Frozzy AnyVI outdoor cinematic
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+I built Frozzy's AnyVI branch with the same seven Intel loader and Vulkan guest-memory compatibility commits used in the Disroot comparison. The Linux native build ran on the RX 6800 with RADV 26.2.6, the 1080p guest option, and a 1280×720 Weston window. It loaded a 344.27 MB driver cache from a different revision and rebuilt the incompatible shader store. REA captured passing tests for guest time during compilation and the pipeline binary store. The branch defaults to its regular Vulkan pipeline cache on RADV. [AnyVI revision](https://git.disroot.org/frozzy/kyty/commit/eed0c578eab39717030a9890cc0d3b0220b6e8c5) · [RADV cache selection](https://git.disroot.org/frozzy/kyty/commit/e197a16dc6404167202ae71be5591f68f77ae4d1)
+
+During first-scene preparation, the title averaged **0.04% graphics-engine activity** and **8.76 CPU core equivalents** from 600 to 720 seconds after launch. In a 24-second REA capture within that period, 18 compute pipeline creations each spent **5.06–7.89 seconds** in the Vulkan driver, overlapping across workers. The first outdoor image was visible by **15 minutes 17 seconds**, followed by multiple rendered frames and a cutscene. At 915–935 seconds the title used **5.99%** of the graphics engine and **0.83%** of the compute engine. The outdoor cutscene overlay briefly showed **3.2 FPS** with no active pipeline builds. Nearby REA captures found substantial buffer-readback time on caller threads and continued shader compilation. Camera and pause inputs did not establish player control in that sequence.
+
+The run reached its **22-minute 30-second** time limit during a later part of the outdoor cutscene. The kernel logged no graphics reset or timeout during this run. I kept its driver and shader caches for a repeat on the same executable.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
