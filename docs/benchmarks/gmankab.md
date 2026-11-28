@@ -208,6 +208,8 @@ I backported the recorder toggle, counters, and draining changes to the previous
 
 The recorder reduced command-thread CPU time per draw or dispatch by about 8% in both pairs and used another 38–41 µs per operation on its own thread. The title progressed through different cinematic shots, and completed presentation rates showed no repeatable gain. The four intervals had zero new graphics or compute pipelines in the captured counters. Player control remains unverified. [Per-window data](../../data/benchmarks/gmankab/2026-11-28-kyty-recorder-backport.csv)
 
+The backport continued with the recorder off and reached the opening credits. Paired camera and movement inputs did not establish player control. It exited after **12 minutes 24 seconds**, at the same guest instruction as the newer build. REA reconstructed the packed index `0xffffffff` from both fault contexts. The code used the hash lookup's miss value as a slot index and attempted an out-of-range read. The reason the expected entry was absent remains unresolved. The kernel logged no GPU reset during the run.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
@@ -235,6 +237,10 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 **Run by** [@gmankab](https://github.com/gmankab)
 
 AnyKyty `eca3fe54` configured and built in Fedora Linux 45 Toolbox. REA captured passes for `amd64_only_converter` and `to_intel_linux_stubs`. The fork's stock relinker with `--to-intel --no-patches` produced a Linux executable and both bundled modules for the local PS5 title. The release tool printed a dirty suffix because three nested development submodules had checked out different commits after a recursive fetch stopped. Their pins were corrected and the source tree was clean before the runtime build. This result covers conversion. [AnyKyty source](https://github.com/simnJS/AnyPS5/commit/eca3fe546dd8381bf615d0f634ac62d7af76568d) · [Short CLZERO fix in the fork](https://github.com/simnJS/AnyPS5/commit/175a273a79cbce2da940ce3ab1ee9c7d72115ce5)
+
+**Cold title run** After the Vulkan backend and the 58 required runtime libraries built, REA verified the Linux loader resolved them. On host RADV 26.2.6 the run rendered the Continue prompt in the upper-left quarter of the Weston output. The first **3,202 completed flips** spanned **112.13 seconds**, or **28.55 intervals/s**, with a **33.37 ms** median interval. AMDGPU attributed **1.71%** graphics-engine activity and **0%** compute-engine activity to the title over an 85-second startup sample. Pad telemetry confirmed the Continue input. The process then exited on a guest `CLWB` that the Xeon E5-2670 v3 does not support. An AnyPS5 issue identified this instruction in the title's error path on a separate Windows run. [Instruction investigation](https://github.com/boykopovar/AnyPS5/issues/27914) · [Existing relinker PR](https://github.com/boykopovar/AnyPS5/pull/26606)
+
+**Cache-flush PR retest** I applied the four relinker commits through `0dd34404` to the same AnyKyty revision. REA captured passes for `amd64_only_converter`, `to_rosetta`, and `to_intel_linux_stubs`. The title conversion replaced the four-byte `CLWB` at the recorded fault site. With the same runtime libraries and a cold cache, the game advanced through the setup screens and entered story loading after the legal notices. [Linux retest on the upstream PR](https://github.com/boykopovar/AnyPS5/pull/26606#issuecomment-7232011970)
 
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
