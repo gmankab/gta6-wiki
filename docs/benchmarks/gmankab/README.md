@@ -39,6 +39,7 @@ Run by [@gmankab](https://github.com/gmankab) on the machine below. Each result 
 - [November 28, 2026 · AnyVI indirect shared-memory readback mirror](2026-11-28-anyvi-indirect-lds-readback-mirror.md)
 - [November 28, 2026 · AnyVI with package liveness checks](2026-11-28-anyvi-package-liveness.md)
 - [November 28, 2026 · Disroot Kyty resource-walk lookahead](2026-11-28-flo-resource-lookahead.md)
+- [November 28, 2026 · Flo ray-query recognition and EXEC selects](2026-11-28-flo-ray-query-recognition.md)
 - [November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison](2026-11-28-pan1c27-kyty-indirect-dispatch-comparison.md)
 - [Title runs](title-runs.md)
 - [Linux build checks for Foxhound and Belobug AMD](linux-build-checks-for-foxhound-and-belobug-amd.md)
