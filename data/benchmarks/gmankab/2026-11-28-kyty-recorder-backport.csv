@@ -1,0 +1,5 @@
+phase,recorder_enabled,elapsed_start_seconds,elapsed_end_seconds,window_seconds,complete_5s_bins,completed_main_output_presentations,presentations_per_second,draws_and_dispatches,graphics_busy_percent,compute_busy_percent,command_thread_cpu_us_per_op,recorder_cpu_us_per_op,recorder_commands,recorder_drains,recorder_drain_ms,new_pipelines
+1,0,400.7,430.7,29.99,6,52,1.734,152537,18.21,0.23,164.75,0.09,0,0,0.00,0
+2,1,445.7,470.7,25.02,5,65,2.598,130976,21.32,0.22,152.54,40.99,1394484,4359,121.50,0
+3,0,485.7,515.7,29.98,6,57,1.901,156814,21.12,0.16,159.30,0.08,0,0,0.00,0
+4,1,530.7,555.7,25.01,5,39,1.559,131088,26.98,0.27,146.59,37.88,1348690,3364,90.87,0
