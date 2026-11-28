@@ -17,4 +17,10 @@ I alternated lookahead after the first sustained 3D reports. The table uses comp
 
 The command thread reused **26.9%** and **39.8%** of its lookahead lookups in the two enabled windows. Most misses had no prepared result for their inputs. Several compilation gaps occurred, draw counts varied, and low-priority builds overlapped parts of the trial. Those differences prevent attributing the frame-rate changes to lookahead.
 
-REA also measured a later interval near **916 seconds** with **7 completed flips in 24.1 seconds** and **29.64%** graphics-engine activity. The package monitor continued passing, and lookahead stayed enabled after the comparison. Controllable open-world gameplay at 30 FPS remains unverified.
+REA also measured a later interval near **916 seconds** with **7 completed flips in 24.1 seconds** and **29.64%** graphics-engine activity. Lookahead stayed enabled after the comparison.
+
+## Dawn and launcher interruption
+
+The title reached further into the credits with its package reader still live. During a **60-second** late window it completed **47 flips** at **0.78 flips/s**, with a **2,833 ms** p95 interval and **43.50%** graphics-engine activity. Across an earlier 18.99-second controller check it completed **23 flips**, and REA matched all three alternating right-stick commands to events on the virtual device the emulator opened. The screenshots showed changing shots within the credits sequence, so they leave player camera control unverified.
+
+The launch ended with an interruption marker after **1,556.69 seconds**. The last completed flip was about **0.86 seconds** earlier. All **104** package checks passed, with the final read **11.13 seconds** before the interruption. No guest exit record or mount failure marker was present. Controllable open-world gameplay at 30 FPS remains unverified.
