@@ -167,6 +167,16 @@ REA captured successful full virtual-memory suite runs with legacy backing, DMA-
 
 The skipped intervals had fewer read waits per draw and dispatch. The scene changed throughout the comparison, and the presentation rates showed no repeatable gain. The run restored the original setting after measurement. Player control remains unverified.
 
+## November 28, 2026 · Disroot Kyty writer-thread fence waits
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+I built Disroot Kyty `ac1d9e55` with our Intel CLZERO changes and buffer import fallback as local revision `dbf3c1af`. REA captured passing memory-tracker and DMA-BUF memory suites. The refused-import fixture passed with Khronos validation on Toolbox RADV 26.2.7 and the fixture's coarse-bounds opt-in. RADV reported four-byte robust bounds in the strict fixture. The opt-in run logged zero Vulkan validation errors. [Memory-protection change](https://git.disroot.org/flo/kyty/commit/8128b52c50751bd51ef5c0fdc67462ffc7299289) · [Writer-thread wait change](https://git.disroot.org/flo/kyty/commit/ac1d9e55dd0a4ac826c1a4598a97eb78dfa9c0aa)
+
+The warm 1080p title run used host RADV 26.2.6 with DMA-BUF backing on and the default zero-copy policy. REA counted **193 completed presentations in 50.02 s (3.86/s)** across two adjacent 25-second windows in the opening 3D cinematic. The windows recorded **3.44** and **4.28** presentations per second. The process averaged **19.33%** graphics-engine activity and **0.24%** compute-engine activity. Kyty's command thread used **40.56 CPU seconds** in the interval, and its buffer cache recorded **10.58 readbacks per 1,000 draws and dispatches**.
+
+Guest page protection calls covered about **836 MB/s** in this interval. The earlier build's four alternating cinematic intervals covered **6,324 to 10,715 MB/s**. The cinematic progressed between the samples, so the difference describes the measured intervals. Player control and 30 FPS gameplay remain unverified.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
