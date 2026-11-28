@@ -269,6 +269,8 @@ The title continued through the exterior opening credits. Camera and movement pr
 
 **AnyKyty title startup** The same performance-branch build stopped during Vulkan startup on host RADV 26.2.6 in both a launch using the preceding build's cache and a cold-cache launch. REA matched both stacks to the driver reporting a failed Vulkan allocation during guest host-memory import. Both crashes occurred before the Continue screen. [Performance branch](https://github.com/simnJS/AnyPS5/commit/3636f61ddf70) · [Host-memory import change](https://github.com/simnJS/AnyPS5/commit/20249ba6caa)
 
+**AnyKyty callback workaround** I rebuilt with a local switch to disable Vulkan memory-report callbacks. A cold run passed Continue and showed the illustrated loading screens. RADV still refused host-memory imports, and the existing sparse mirror supplied those reads. In a 45-second loading window, REA counted **1,003 completed presentations (22.29/s)**, **61.11 ms** p95 between completions, and **3.84%** graphics-engine activity for the title. In a later 125-second shader compilation window it measured **2.17%** graphics-engine activity and **3.31 CPU core equivalents**. This run used an empty shader cache. [Linux native test report](https://github.com/simnJS/AnyPS5/issues/168#issuecomment-7236154260)
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
