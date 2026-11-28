@@ -313,11 +313,15 @@ At 450–460 seconds, the exterior scene completed **16 main-output flips in 10 
 
 At 520–535 seconds, direct and indirect dispatches accumulated **964 ms** and **697 ms** respectively. Direct dispatches with a single workgroup supplied **37,924 of 65,571 calls** and accumulated **295 ms**. In a separate 24-second exterior trace from the same run, **10,902** buffer readbacks accumulated **8.19 seconds** of caller-thread time.
 
-The 710–725 second credits sample included a shot of the car on the street. Indirect dispatch intervals totaled **5.04 seconds**. Across all command buffers, the trace recorded **6.99 seconds** of summed intervals. The median indirect dispatch took **3.68 µs**. Just **301 of 16,551 calls** lasted at least **1 ms**, and they accounted for **92%** of indirect dispatch time. **38 calls** each took at least **33.3 ms**, with the slowest at **86.09 ms**. These intervals are measured with tracing enabled. The trace identifies the command type and duration. Shader attribution is still pending.
+The 710–725 second credits sample included a shot of the car on the street. Indirect dispatch intervals totaled **5.04 seconds**. Across all command buffers, the trace recorded **6.99 seconds** of summed intervals. The median indirect dispatch took **3.68 µs**. Just **301 of 16,551 calls** lasted at least **1 ms**, and they accounted for **92%** of indirect dispatch time. **38 calls** each took at least **33.3 ms**, with the slowest at **86.09 ms**. The stock trace records command type and duration.
 
 The stock-driver timing run continued into daylight and exited after **21 minutes 40 seconds**. REA confirmed that the terminal log reported a guest null write. The kernel reported no GPU reset. The camera and movement probes did not establish player control. In the movement probe, the selected background and character regions were pixel-identical before and after input.
 
 I added the bound compute pipeline's debug name to the indirect-dispatch trace in a local Mesa 26.2.6 diagnostic build. REA captured three synthetic dispatches on the RX 6800. The trace retained two distinct original names even when one pipeline was renamed before submission, and gave an empty name for the unnamed pipeline. I kept this change in the local diagnostic branch and started the title with the same translated shader store and a fresh driver cache.
+
+**Named pipeline timing** In a 15-second sample of the later credits at 840–855 seconds, the title completed **10 main-output flips** and used **50.79%** of the graphics engine and **2.91%** of the compute engine. REA matched the Vulkan pipeline names to local shader metadata for irradiance, visibility-buffer gathering, and ray tracing. Six pipelines accounted for **5.51 of 5.94 seconds** of summed indirect dispatch intervals across **120 of 14,009 calls**. **68 calls** reached the **33.3 ms** frame budget, and the longest interval was **215.3 ms**.
+
+In an earlier 15-second car scene from the same diagnostic run, the longest indirect dispatch interval was **4.33 ms**, including calls to the three pipelines that later accumulated the most time. The heavy work varies by scene. The timestamps delimit GPU commands and can include waits for dependent work. These are credits samples with per-submit tracing enabled.
 
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
