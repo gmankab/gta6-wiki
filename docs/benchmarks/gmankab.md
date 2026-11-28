@@ -185,6 +185,14 @@ Guest page protection calls covered about **836 MB/s** in this interval. The ear
 
 **Counted-draw title run** I enabled Vulkan indirect draw counts in local revision `a3e36c7f` and kept the same warm 1080p setup. REA counted **162 completed presentations in 49.99 seconds (3.24/s)** in the first 3D sequence. Graphics-engine activity averaged **19.28%**, and the command thread used **39.37 CPU seconds**. The instrumented Vulkan counted-draw path submitted **zero packets** in the interval, so the planned A/B had no workload to compare there. A separate 24.1-second REA/Tracy profile contained **31,521 indirect draw parser calls** and **zero multi-draw packet calls**. That sample also recorded **35,940 indirect compute-dispatch calls**.
 
+## November 28, 2026 · Disroot Kyty Vulkan recorder
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+Disroot Kyty `3ae51388` includes a separate Vulkan command-recording thread. I built it as local revision `24abcdb4` with the Intel loader changes. The recorder and memory tracker suites passed. The full virtual-memory suite initially found that the parallel instruction scanner did not aggregate its CLZERO counts. After adding that aggregation, the suite passed on the RX 6800 with the DMA-BUF fixture and Khronos Vulkan validation, with zero VUID errors. [Disroot revision](https://git.disroot.org/flo/kyty/commit/3ae5138853513d126e8d5b8b2b8bea3076e102da) · [Recorder change](https://git.disroot.org/flo/kyty/commit/c0795c55e30e2054f0d397f0d65bbab48cbff36f)
+
+The warm title run reached its first 3D sequence after about 7 minutes 20 seconds. It then exited at **468 seconds** during the first recorder-off interval. REA decoded the fault as a 16-bit guest memory read through an indexed pointer in the main module. The kernel logged no GPU reset. The timing establishes when the fault occurred, and the recorder comparison remains incomplete.
+
 ## PS5 AnyPS5 startup cache
 
 **Run by** [@gmankab](https://github.com/gmankab)
