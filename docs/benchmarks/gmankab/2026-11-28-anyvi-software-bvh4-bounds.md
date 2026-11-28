@@ -23,3 +23,22 @@ The game reached dawn with missing geometry and exited after **23 minutes 27 sec
 ## Offline shader precompile
 
 I ran the patched build with `--precompile-shaders --precompile-threads 12`, the recorded raw shader recipes, and the compatible cache from the title run. It processed **3,203 shader variants** and created **2,917 Vulkan pipelines** in **124.5 seconds**, with zero reported translation or pipeline failures. The next title launch loaded **3,243 shader modules** and **2,917 pipeline records** from that output. These measurements cover cache preparation and startup. The rerun enables pipeline debug names for the 3D timing comparison.
+
+## Warm PS5 run with named dispatches
+
+The precompiled build held **30.00 completed flips/s** during a 24-second sample of the illustrated loading screen. Graphics-engine activity averaged **2.16%**. During the nighttime exterior, REA counted **19 completed flips** in a separate 24-second sample, with **2,767 ms** p95 spacing and **22.66%** graphics-engine activity. The profile recorded no shader translation or compute pipeline creation in that window. It recorded **8,269 buffer readbacks**, totaling **10.30 seconds** of caller time across threads.
+
+I compared two 15-second windows from the same nighttime car sequence. REA matched indirect dispatches by shader name and their ordered position in a command batch. The table shows the four target pipelines with matching batches. Pipeline ranks follow their total GPU time in the baseline window.
+
+| Pipeline rank | Baseline dispatches | Baseline median | Patched dispatches | Patched median |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 9 | 70.49 ms | 9 | 58.87 ms |
+| 4 | 23 | 32.70 ms | 19 | 17.07 ms |
+| 5 | 16 | 22.39 ms | 18 | 15.80 ms |
+| 6 | 14 | 41.96 ms | 9 | 29.70 ms |
+
+The baseline completed **11 flips** and used **50.86%** of the graphics engine. The patched window completed **eight flips** and used **42.24%**. The camera cuts and dispatch counts differed. These GPU intervals establish the observed timings in each run, and the effect of the patch on game frame rate remains unresolved.
+
+Across 45 five-second reporting windows from the warm exterior, REA counted **332 flip requests** and **2,344 waits** to read indirect workgroup counts for storage-backed shared memory. Those waits totaled **36.12 ms per flip request**. The related frame profiler measures completed main-output flips separately.
+
+In daylight I held the right stick left and then right for eight seconds each. REA verified both axis directions on the virtual controller and counted **11 and 12 completed flips** while the stick was held. Two fixed background regions showed zero measured shifts after either hold. Player control remains unverified.
