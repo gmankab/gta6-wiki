@@ -299,6 +299,10 @@ During first-scene preparation, the title averaged **0.04% graphics-engine activ
 
 The run reached its **22-minute 30-second** time limit during a later part of the outdoor cutscene. The kernel logged no graphics reset or timeout during this run. I kept its driver and shader caches for a repeat on the same executable.
 
+**Warm-cache repeat** The launch used the first run's cache and save. It loaded **491.69 MB** of Vulkan cache data, **2,236 shader modules**, and **1,954 pipeline records**. The first outdoor screenshot was available by **8 minutes 1 second**, versus **15 minutes 17 seconds** in the first run. The Continue prompt was also advanced about 74 seconds sooner. The illustrated loading screen completed **1,800 main-output flips in 60 seconds** with **33.58 ms** p95 spacing.
+
+The 20-second exterior cutscene sample at 505–525 seconds produced **66 main-output flips** at **3.27/s**, with **363.09 ms** p95 spacing. The title averaged **18.00%** graphics-engine activity, **2.73%** compute-engine activity, and **4.22 CPU core equivalents**. In a nearby 24-second REA capture, **11,373** buffer readbacks took **10.35 seconds** of summed caller-thread time. The corresponding profiling zone on the emulated GPU command thread totaled **3.17 seconds**. These times can overlap across threads. Flip timing measures guest main-output completions, so emulator overlay refreshes are excluded.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
