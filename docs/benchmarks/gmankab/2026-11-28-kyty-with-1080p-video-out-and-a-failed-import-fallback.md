@@ -1,0 +1,13 @@
+# November 28, 2026 · Kyty with 1080p video-out and a failed-import fallback
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**Build and setup** The same Disroot base and shader-cache seed, with the local image-heap index toggle and a change that keeps the resident buffer after Vulkan refuses a zero-copy promotion. `--output-1080p` produced two **1920×1080** registered video-out buffers and the texture log included a **1280×720** target. Host RADV was 26.2.6. The initial Continue prompt occupied the upper-left quarter. The following 3D scene filled the window. [Disroot 1080p mode](https://git.disroot.org/flo/kyty/commit/1e9c7b99cc8d2fbca594c06449d397584ee5468b)
+
+**Result** REA counted **61 refused imports**, each with a different logged address and size, and no successful import in that sample. The night street cinematic issued **231 flip requests in 90 seconds (2.57/s)**. AMDGPU recorded **22.43%** graphics-engine activity over 89.1 seconds, and the command thread averaged **83.08%** of one CPU core. Output resolution, the loaded frames, and the image-heap mode differ from the 4K run, so its flip-request rate serves as a separate observation.
+
+**Within-run image-heap comparison** In three consecutive 15-second samples, the scan, index, and scan used **192,102**, **157,506**, and **172,168** command-thread instructions per draw or dispatch. The three samples averaged **1,680**, **2,128**, and **2,592** operations per flip request. This shows lower CPU instruction cost per operation in the indexed sample, with a changing cinematic workload. Disroot subsequently landed its own serial index and a fix for membership when an element resolves twice. [Disroot index](https://git.disroot.org/flo/kyty/commit/94275a4ed7076dfb1a6abd00d0b281aae88c60cf) · [Membership fix](https://git.disroot.org/flo/kyty/commit/d2d63985ad20924c416f674508888e594a772681)
+
+**Regression test** The RX 6800 Vulkan fixture forced rejection of a mapped guest buffer. It requested promotion twice and verified one import attempt, zero copies and the same Vulkan buffer still registered for the page. REA captured the passing exit with Toolbox RADV 26.2.7 and Vulkan validation.
+
+**Later story sequence** After dismissing a “Couldn't save” prompt, the run reached a daylight scene with characters, buildings, and missing geometry. The next recorded 150-second window averaged **1.15 flip requests/s**. A later 195-second window averaged **0.63 flip requests/s**, including shader compilation. Opposing camera inputs, forward and backward movement, and a late pause attempt did not establish control. The emulator wrote save-memory files earlier in the run. The cause of the save prompt remains undetermined.

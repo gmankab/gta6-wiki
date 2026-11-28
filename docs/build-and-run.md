@@ -61,7 +61,7 @@ The scripted software tests used a private headless Weston/pixman session, Lavap
 
 Kache 2.3.1 was used as `RUSTC_WRAPPER` for Rust builds. In a separate test, its `gcc` and `g++` compiler shims were selected through a local Meson native file in Toolbox. Both shims hit the cache across fresh Meson build directories. Use a cache on the build volume if you want to preserve reflink or no-copy behavior. A warm cache accelerates eligible object builds; linking runs normally. One existing Ninja build directory already skips targets that remain up to date. [Kache documentation](https://ninja.kunobi.com/docs/kache/getting-started/c-cpp)
 
-Blaze accelerated Linux checks and built a functional inspection ELF. Its Windows cross-target hit a host-platform guard before invoking the linker. Rustd stalled compiling logging code. Fedora-packaged Rust was used where compatible; the MSVC build still needs target standard libraries and the offline SDK. See the [timing table](benchmarks/gmankab.md#isolated-measurements-and-build-times).
+Blaze accelerated Linux checks and built a functional inspection ELF. Its Windows cross-target hit a host-platform guard before invoking the linker. Rustd stalled compiling logging code. Fedora-packaged Rust was used where compatible; the MSVC build still needs target standard libraries and the offline SDK. See the [timing table](benchmarks/gmankab/isolated-measurements-and-build-times.md).
 
 ## Niri window behavior
 

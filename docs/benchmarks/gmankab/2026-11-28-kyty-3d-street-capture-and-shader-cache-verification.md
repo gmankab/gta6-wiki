@@ -1,0 +1,9 @@
+# November 28, 2026 · Kyty 3D street capture and shader cache verification
+
+**Run by** [@gmankab](https://github.com/gmankab)
+
+**3D workload** A second launch of Disroot Kyty `d054552d` with the same compressed mip fix and Xeon loader change used host RADV 26.2.6. Before the recorder started, it issued **328 guest flip requests in 80 seconds (4.10/s)** during the night street cinematic. In the corresponding 79.1-second sample, AMDGPU attributed **29.28%** graphics-engine activity to Kyty. The graphics command thread used **76.56%** of one CPU core. REA captured the calculation from the runtime and DRM counters. The four-frame recording ended after 189.6 seconds of recording overhead, with 20,359 call records. Those timings describe the recorder, whose per-call memory comparisons slow the title. The later skip reached black loading before the time cap. The story save watch saw no read in this run.
+
+**Cache verification** The newer Disroot revision `ee39d796` switches the shader loop limit off by default. On this machine it retranslated **3,465 of 3,465 stored modules** from an older uncapped store in **123.9 seconds** and retained each module and all **1,719** stored pipeline records. Its shader-store fixture passed under REA in Fedora 45 Toolbox. [Default loop setting](https://git.disroot.org/flo/kyty/commit/f5281f6020f4b7b04d0305a91f6868a9a2d59958) · [Partial store carry-over](https://git.disroot.org/flo/kyty/commit/ee39d796f9e5e826e46eafdbda5062cb3e2d2ee4)
+
+**3D replay** The cold baseline reached its 150-second limit during shader and pipeline compilation. A retry started with copies of the title run's shader and driver caches and reached its 115-second limit before completing a pass. REA captured both exits. These attempts yielded no comparison between the scan and index in 3D.

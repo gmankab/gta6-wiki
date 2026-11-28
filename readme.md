@@ -7,7 +7,7 @@ This wiki records GTA VI compatibility and performance experiments on AMD hardwa
 | Tester | OS | GPU | CPU | RAM |
 |---|---|---|---|---|
 | [@ergolyam](docs/benchmarks/ergolyam.md) | Linux | Radeon RX 6600, 8 GiB | Xeon E5-2643 v3 | 32 GiB DDR4 |
-| [@gmankab](docs/benchmarks/gmankab.md) | Fedora Linux 45 Silverblue | Radeon RX 6800, 16 GiB | Xeon E5-2670 v3 | 48 GiB DDR4 |
+| [@gmankab](docs/benchmarks/gmankab/README.md) | Fedora Linux 45 Silverblue | Radeon RX 6800, 16 GiB | Xeon E5-2670 v3 | 48 GiB DDR4 |
 | [@sillynocodecat](docs/benchmarks/sillynocodecat.md) | Windows | Radeon RX 7800 XT | Ryzen 5 5600 | 32 GiB DDR4 |
 
 ## @gmankab’s Linux results
