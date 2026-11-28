@@ -8,7 +8,7 @@ I tested a local patch that selects the FP16 or FP32 bounds layout once for each
 
 **Synthetic dispatches** Both builds passed all **28** cases from `shader_recompiler_compute_tests --ray-tracing-only` on Fedora Linux 45 with the Radeon RX 6800 and RADV 26.2.6. I warmed both Mesa caches, then ran **12 paired repetitions**, alternating which build went first. Each repetition ran all 28 cases. I compared the GPU timestamps for the six ending BVH4 dispatches. Their combined median fell from **67.64 µs** to **59.86 µs**, an **11.5% reduction**. Every patched repetition was faster than its paired baseline. [Per-run timings](../../../data/benchmarks/gmankab/2026-11-28-bvh4-dispatch-pairs.csv) · [Mesa timing documentation](https://docs.mesa3d.org/u_trace.html)
 
-RADV compiled the final barycentric sorted fixture from 1,428 to 1,375 machine instructions and from 53 to 41 branches. The shader still used 64 VGPRs and reported zero spills. The measurements cover synthetic GPU dispatches. The GPU timing comparison here covers the fixture.
+RADV compiled the final barycentric sorted fixture from 1,428 to 1,375 machine instructions and from 53 to 41 branches. The shader still used 64 VGPRs and reported zero spills. The measurements cover synthetic GPU dispatches.
 
 ## PS5 title run
 
@@ -19,3 +19,7 @@ The illustrated loading screen completed **717 flips in 24 seconds** and average
 A later 24-second nighttime exterior sample completed **11 flips**, with **1,384 ms median spacing** and **34.59% graphics-engine activity**. The profile recorded **7,743 buffer readbacks** and **14.66 seconds** of summed caller time across threads. Opposite eight-second movement holds completed one flip each, and the comparisons showed the same landmarks in place. Look inputs and a later pause probe did not establish control.
 
 The game reached dawn with missing geometry and exited after **23 minutes 27 seconds**. REA confirmed that the baseline and patched runs both executed the same instruction that writes zero directly to address zero. It followed the last completed flip by **29.46 seconds** in the baseline and **30.28 seconds** in the patched run. Graphics-engine activity fell below **0.02%** during both stalls. The kernel logged no GPU reset in the patched run, and its story save matched the baseline byte for byte. The timing is consistent with a guest watchdog. [KytyPS5 compatibility thread](https://github.com/KytyPS5/KytyPS5/issues/2600)
+
+## Offline shader precompile
+
+I ran the patched build with `--precompile-shaders --precompile-threads 12`, the recorded raw shader recipes, and the compatible cache from the title run. It processed **3,203 shader variants** and created **2,917 Vulkan pipelines** in **124.5 seconds**, with zero reported translation or pipeline failures. The next title launch loaded **3,243 shader modules** and **2,917 pipeline records** from that output. These measurements cover cache preparation and startup. The rerun enables pipeline debug names for the 3D timing comparison.
