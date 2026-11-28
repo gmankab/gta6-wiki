@@ -1,0 +1,13 @@
+pair,first_build,baseline_us,patched_us
+1,baseline,67.120,59.400
+2,patched,67.961,59.920
+3,baseline,67.440,59.362
+4,patched,67.559,59.282
+5,baseline,111.841,60.200
+6,patched,68.480,59.960
+7,baseline,67.518,59.720
+8,patched,67.320,60.040
+9,baseline,67.840,59.480
+10,patched,67.682,59.919
+11,baseline,68.680,59.800
+12,patched,67.600,59.960
