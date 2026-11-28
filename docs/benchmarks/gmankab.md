@@ -271,6 +271,10 @@ The title continued through the exterior opening credits. Camera and movement pr
 
 **AnyKyty callback workaround** I rebuilt with a local switch to disable Vulkan memory-report callbacks. A cold run passed Continue and showed the illustrated loading screens. RADV still refused host-memory imports, and the existing sparse mirror supplied those reads. In a 45-second loading window, REA counted **1,003 completed presentations (22.29/s)**, **61.11 ms** p95 between completions, and **3.84%** graphics-engine activity for the title. In a later 125-second shader compilation window it measured **2.17%** graphics-engine activity and **3.31 CPU core equivalents**. This run used an empty shader cache. [Linux native test report](https://github.com/simnJS/AnyPS5/issues/168#issuecomment-7236154260)
 
+The cold run reached its **25-minute** limit during first-scene pipeline compilation. Its last completed flip was at about **306 seconds**. The renderer reported **676** pipeline wait events totaling **822.64 seconds** and saved **226** Vulkan compute pipeline binaries. Across a continuous 549-second sample late in the run, the title averaged **0.44%** graphics-engine activity and **2.10 CPU core equivalents**. The kernel logged no graphics ring timeout.
+
+The same build's warm run seeded the cache from that cold run. Its startup manifest reported **509** cached compute pipelines and **13** newly created ones before releasing the guest after **22.93 seconds** of preparation. In a separate 45-second illustrated loading window it completed **1,063 presentations (23.62/s)** with **62.27 ms** p95 and **6.58%** graphics-engine activity. These windows measure loading throughout different portions of the animation.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
