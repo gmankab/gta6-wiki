@@ -195,6 +195,8 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 
 **Packed color** Both synthetic tests rejected color format 19, number type 0, component swap 1 on the Linux startup stack with its existing decoder. With PR `fc78d6bb` applied to the same stack, both tests and `agc_driver_graphics` passed on the RX 6800. Both packed tests loaded Khronos validation 1.4.350 on Toolbox RADV 26.2.7. The logs contained zero VUID entries. [Upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
 
+**Updated AnyPS5 PR** On upstream `750a5234` with the Linux startup patches and packed-color PR revision `e2e97886`, the three packed-color Vulkan fixtures passed with the validation layer loaded and zero VUID errors. The multisample fixture passed at 2×, 4×, and 8×. The prepared-shaders fixture also passed. The broader graphics suite passed when rerun with the candidate libraries pinned after an initial missing-mock-function error. [Updated upstream test report](https://github.com/boykopovar/AnyPS5/pull/27966#issuecomment-7230420443)
+
 **Warm-cache title** The newly relinked executable ran with the existing Linux startup patches and the packed-color candidate on host RADV 26.2.6. It recorded **6,756 presents in 230.23 seconds (29.35/s)** before the 240-second cap. All **17** captured images matched the same black frame. AMDGPU recorded **1.50%** graphics-engine activity and no measurable compute-engine activity over **169.8 seconds**. The log showed **19** deferred geometry-stage preparations and no packed-color swap-1 refusal. The run leaves the cause of the black output unresolved.
 
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
