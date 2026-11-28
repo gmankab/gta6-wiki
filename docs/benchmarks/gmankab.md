@@ -203,6 +203,8 @@ Adding the AnyPS5 REWIND preparation patch to the same cached run produced **5,6
 
 **Warm-cache title** The newly relinked executable ran with the existing Linux startup patches and the packed-color candidate on host RADV 26.2.6. It recorded **6,756 presents in 230.23 seconds (29.35/s)** before the 240-second cap. All **17** captured images matched the same black frame. AMDGPU recorded **1.50%** graphics-engine activity and no measurable compute-engine activity over **169.8 seconds**. The log showed **19** deferred geometry-stage preparations and no packed-color swap-1 refusal. The run leaves the cause of the black output unresolved.
 
+**Updated warm-cache title** AnyPS5 local revision `fba1ef8387` relinked the main executable and both bundled modules and passed a Linux dynamic-loader check. In the 240-second warm-cache run, REA counted **6,438 presentations in 220.28 recorded seconds (29.23/s)**. All **17** window captures matched the previous black image byte for byte. The RX 6800's process graphics engine averaged **1.52%** across a contiguous **104.0-second** sample. The log recorded five deferred geometry preparations and no packed 4_4_4_4 swap-1 refusal. These measurements cover startup before any rendered gameplay.
+
 ## November 28, 2026 · PaN1C27 Kyty indirect-dispatch comparison
 
 **Run by** [@gmankab](https://github.com/gmankab)
